@@ -1,0 +1,18 @@
+
+
+
+Control panel username:	n260m_33498598
+Control panel password:	 roger267
+Control panel URL:	cpanel.260mb.net
+MySQL username	n260m_33498598
+MySQL password:	**********
+MySQL hostname:	sql208.260mb.net
+FTP username:	n260m_33498598
+FTP password:	**********
+FTP host name:	ftp.260mb.net
+Your Website URL:	http://pruebaafel.260mb.net
+ 	 
+
+
+ombre de usuario FTP	Nombre de servidor FTP	Puerto FTP
+n260m_33498598          	ftpupload.net     21		 
