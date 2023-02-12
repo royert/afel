@@ -1,0 +1,226 @@
+/* Content 
+
+.content{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+}
+.header{
+	background: red;
+	grid-column: 1 / span 3;
+	grid-row: 1 / 2;
+}
+.main{
+	background: blue;
+	grid-column: 1 / span 3;
+	grid-row: 2 / span 4;
+}
+.footer{
+	background: green;
+	grid-column: 1 / span 3;
+	grid-row: 5 / 6;
+}
+
+
+.navbar-brand{
+	position: relative;
+	width: 100px;
+	height: 100px;
+}
+
+
+.content-form-registro{
+	display: inline;
+	position: absolute;
+	height: 750px;
+	width: 1000px;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+
+}
+.input-registro-carnet, .btn-enviar{
+	margin: 10px;
+}*/
+
+*{
+	font-family: 'Nunito', sans-serif;
+	font-weight: 100;
+
+}
+
+body{
+	background-image: url(../img/foto-sis/fondo.jpg);
+	height: 100vh;
+	background-attachment: fixed;
+}
+
+.div-form{
+	margin: auto;
+	
+}
+
+/*LOGIN*/
+.form-login {
+ 
+  text-align: center;
+
+
+}
+
+.mb-4{
+	width: 120px;
+	height: 120px;
+}
+
+.bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+ 
+
+.mb-4{
+	text-align: center;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*Menu*/
+	.offcanvas{
+		background: #25394A;
+	}
+	.offcanvas-title{	
+		text-decoration: none;
+		color: #000;
+	}
+	.offcanvas-body{
+		margin-top: 50px;
+	}
+	.img-nav{
+		width: 75px;
+		height: 75px;
+		text-align: center;
+
+	}
+	.img-nav-active{
+		width: 150px;
+		height: 120px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+	.navbar-toggler{
+		background: #000;
+
+	}
+	.rounded-circle{
+		padding: 5px;
+	}
+
+
+/*Formulario agregar jugadores*/
+.form{
+	justify-content: center;
+}
+.titulo-re, .titulo-at{
+	text-align: center;
+}
+/*conocenos*/
+ .img-1, .img-2, .img-3, .img-4, .img-5, .img-6{
+		height: 100vh;
+	}
+	
+	.conocenos-ol-li{
+		padding-left: 10px;
+		margin-left: 50px;
+	}
+	.conocenos{
+		margin-top: 75px;
+		margin-bottom: 75px;
+		
+	}
+	.conocenos-body, .btn{
+		
+		color: #000;
+	}
+	.card{
+		text-align: justify;
+	}
+	.conocenos-ol{
+		font-size: 20px;
+		text-align: justify;
+	}
+	.h2-titulo{
+		margin-top: 50px;
+	}
+	.row{
+		text-align: center;
+	}
+	.fw-normal{
+		margin-bottom: 0px;
+	}
+	.title{
+		margin-bottom: 0px;
+	}
+
+	/*formularios validacion*/
+	.form_input_error{
+		font-size: 12px;
+		margin-bottom: 0;
+		display: none;
+	}
+	.form_input_error-activo{
+		display: block;
+	}
+
+
+	/*group check box*/
+	.form-check{
+		display: inline-block;
+		padding-right: 10px;
+	}
+
+	/*img buscar*/
+	.img_buscar{
+		border-radius: 50px;
+	}
+
+	/*btn guardar*/
+
