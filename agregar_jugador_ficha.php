@@ -2,19 +2,6 @@
 
 session_start();
 
-$id_t_us = $_SESSION['id_t_user'];
-
-switch ($id_t_us) {
-	case '6':
-	echo'<script type="text/javascript">
-    alert("No tienes acceso a esta area.");
-    window.location.href="./home_club.php";
-    </script>';
-	break;
-	case '':
-	header("location: ./login.php");;
-	break;
-}
 ?>
 
 

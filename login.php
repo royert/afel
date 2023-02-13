@@ -5,28 +5,6 @@ require './modelo/conexion.php';
 session_start();
 
 
-$id_t_us = $_SESSION['id_t_user'];
-
-
-switch ($id_t_us) {
-	case '6':
-	header("location: ./home_club.php");
-	break;
-	case '4':
-	header("location: ./home_ficha.php");
-	break;
-	case '':
-	header("location: ./login.php");;
-	break;
-}
-
-
-
-
-
-
-
-
  ?>
 
 

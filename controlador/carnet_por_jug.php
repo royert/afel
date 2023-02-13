@@ -61,6 +61,7 @@ class PDF extends FPDF
 El segundo parámetro define las unidades de mendida, que en este caso particular son Milímetros.
 El tercer parámetro define el tamaño de la página, que en este caso particular es Carta*/
 $pdf = new PDF('L','mm','Letter');
+
 $pdf->AddPage();
 $pdf->SetFont('Arial', 'B', 12);
 
@@ -172,8 +173,8 @@ $img_back = $row['carnet_back'];
 	
 $pdf->Image('../'.$img_front, 15, 50, 100, 50);
 $pdf->Image('../'.$img_back, 119, 50, 100, 50);
-$pdf->Cell(70, 42, $row['nombre_usuario'], 0, 0, 'C', 0);
-$pdf->Cell(-30, 42, $row['apellido'], 0, 1, 'C', 0);
+$pdf->Cell(75, 42, $row['nombre_usuario'], 0, 0, 'C', 0);
+$pdf->Cell(-15, 42, $row['apellido'], 0, 1, 'C', 0);
 	
 $pdf->Cell(120, -23, 'V- '.$row['ci'], 0, 1, 'C', 0);
 $pdf->Cell(110, 43, $row['nombre_categoria'], 0, 1, 'C', 0);

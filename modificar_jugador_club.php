@@ -3,22 +3,6 @@
 session_start();
 
 $id_us = $_GET['id_user'];
-$id_t_us = $_SESSION['id_t_user'];
-
-switch ($id_t_us) {
-	case '6':
-	header("location: ./modificar_jugador_club.php");
-	break;
-	case '4':
-	echo'<script type="text/javascript">
-    alert("No tienes acceso a esta area.");
-    window.location.href="./home_ficha.php";
-    </script>';
-	break;
-	case '':
-	header("location: ./login.php");
-	break;
-}
 ?>
 
 

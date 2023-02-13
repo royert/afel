@@ -5,54 +5,6 @@ require './modelo/conexion.php';
 session_start();
 
 
-$id_t_us = $_SESSION['id_t_user'];
-
-
-switch ($id_t_us) {
-	case '6':
-	header("location: ./home_club.php");
-	break;
-	case '4':
-	header("location: ./home_ficha.php");
-	break;
-	case '':
-	header("location: ./login.php");;
-	break;
-}
-
-$sql = "SELECT
-`id_usuario`,
-`nombre_usuario`,
-`segundoN`,
-`apellido`,
-`segundoA`,
-`ci`,
-`fecha_nac`,
-`fecha_registro`,
-`imagen_us`,
-`tipo_imagen`,
-`tipo_imagen_dt`,
-`image_dt`,
-`usuario`,
-`clave`,
-`id_t_usuario`,
-`id_status_sistema`,
-`id_club`,
-`id_categoria`,
-`id_status_verificacion`,
-`id_carnet_jug`
-FROM
-`usuario`
-WHERE
-`id_t_usuario` = $id_t_us";
-$res = mysqli_query($conn, $sql );
-
-$row = mysqli_fetch_assoc($res);
-
-
-
-
-
 ?>
 
 

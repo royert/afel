@@ -12,9 +12,9 @@ class PDF extends FPDF
     {
      // Logo
         //Imagen lleva: ruta, posicion x, posicion y, alto, ancho, tipo, link
-        $this->Image('../img/foto-sis/logo-afel.png',10,8,33);
+        $this->Image('../img/foto-sis/logo-afel.png',25,8,33);
     // Arial bold 17
-        $this->SetFont('Arial','B',12);
+        $this->SetFont('Arial','B',20);
         // Salto de línea
         $this->Ln(7);
     // Movernos a la derecha
@@ -43,7 +43,9 @@ class PDF extends FPDF
     $pdf->AliasNbPages();
     $pdf->AddPage();
     $pdf->SetFont('Arial', '', 9);
-    $pdf->SetMargins(10, 2, 10);
+    $pdf->SetMargins(30, 25, 30);
+    #Establecemos el margen inferior:
+    $pdf->SetAutoPageBreak(true,25); 
 
 
     $id_us = $_GET['id_user'];
@@ -150,8 +152,7 @@ $res = mysqli_query($conn, $sql);
 
 while ($row = mysqli_fetch_assoc($res)) {
 
-
-
+    $pdf->Cell(20);
    $pdf->Cell(32,7,utf8_decode('PRIMER APELLIDO: '),0,0,'L');
    $pdf->Cell(40,7,utf8_decode($row['apellido']),0,0,'L');
 
@@ -211,7 +212,7 @@ while ($row = mysqli_fetch_assoc($res)) {
        $pdf->Cell(60,7,utf8_decode('FECHA HASTA: '),0,1,'L');
 
 
-       $pdf->Image('../'.$row['img_logo'], 30, 100, 25, 0);
+   
 
        $pdf->Cell(55,7,utf8_decode($row['nombre_club']),0,0,'L');
 
