@@ -1,0 +1,17 @@
+/*GLOBALES*/
+body{
+    font-family: 'Monserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+/*MENU*/
+
+.nav li > a{
+    font-size: 18px;
+    font-weight: bold;
+    color: #3f3f3f;
+}
+.nav form > button{
+    font-size: 18px;
+    font-weight: bold;
+}
