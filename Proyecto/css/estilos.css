@@ -21,3 +21,12 @@ body{
 .carrousel-inner{
     max-height: 39rem;
 }
+
+/*MEDIA PANTALLA SM*/
+@media (max-width: 768px) {
+    
+    .intro{
+        width: 90% ;
+    }
+
+}
