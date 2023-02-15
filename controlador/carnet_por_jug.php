@@ -16,7 +16,7 @@ class PDF extends FPDF
 	{
     // Logo
 		//Imagen lleva: ruta, posicion x, posicion y, alto, ancho, tipo, link
-    	$this->Image('../img/foto-sis/logo-afel.png',10,8,33);
+    $this->Image('../img/foto-sis/logo-afel.png',30,8,33);
     // Arial bold 15
 		$this->SetFont('Arial','B',12);
 		// Salto de línea
@@ -77,8 +77,8 @@ $sql = "SELECT
     `usuario`.`apellido`,
     `usuario`.`segundoA`,
     `usuario`.`ci`,
-    `usuario`.`fecha_nac`,
-    `usuario`.`fecha_registro`,
+    `usuario`.`fecha_nac_us`,
+    `usuario`.`fecha_registro_us`,
     `usuario`.`imagen_us`,
     `usuario`.`tipo_imagen`,
     `usuario`.`usuario`,
@@ -167,19 +167,23 @@ $res = mysqli_query($conn, $sql);
 while ($row = mysqli_fetch_assoc($res)) {
 
 /*Despues del row los valores son: Border, Salto de linea, Justificacion, Relleno*/
-$pdf->Cell(10);
+
 $img_front = $row['carnet_front'];
 $img_back = $row['carnet_back'];
 	
-$pdf->Image('../'.$img_front, 15, 50, 100, 50);
-$pdf->Image('../'.$img_back, 119, 50, 100, 50);
-$pdf->Cell(75, 42, $row['nombre_usuario'], 0, 0, 'C', 0);
-$pdf->Cell(-15, 42, $row['apellido'], 0, 1, 'C', 0);
+$pdf->Image('../'.$img_front, 50, 50, 100, 50);
+$pdf->Image('../'.$img_back, 154, 50, 100, 50);
+$pdf->Cell(165, 42, $row['nombre_usuario'], 0, 0, 'C', 0);
+$pdf->Cell(-100, 42, $row['apellido'], 0, 1, 'C', 0);
+$pdf->Cell(190, -23, 'V- '.$row['ci'], 0, 1, 'C', 0);
+$pdf->Cell(185, 43, $row['fecha_nac_us'], 0, 1, 'C', 0);
+$pdf->Cell(187, -22, $row['nombre_club'], 0, 1, 'C', 0);
+$pdf->Image('../'.$row['imagen_us'], 53, 62, 33, 33);
+
+
 	
-$pdf->Cell(120, -23, 'V- '.$row['ci'], 0, 1, 'C', 0);
-$pdf->Cell(110, 43, $row['nombre_categoria'], 0, 1, 'C', 0);
-$pdf->Cell(120, -22, $row['nombre_club'], 0, 1, 'C', 0);
-$pdf->Image('../'.$row['imagen_us'], 19, 62, 33, 33);
+
+
 										
 }
 

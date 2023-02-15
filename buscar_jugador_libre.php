@@ -296,49 +296,80 @@ session_start();
 
 
 				$sql = "SELECT
-				`representante_to_usuario`.`id_r_t_u`,
-				`representante_to_usuario`.`id_representante`,
-				`representante_to_usuario`.`id_usuario`,
-				`usuario`.`nombre_usuario`,
-				`usuario`.`segundoN`,
-				`usuario`.`apellido`,
-				`usuario`.`segundoA`,
-				`usuario`.`ci`,
-				`usuario`.`fecha_nac_us`,
-				`usuario`.`fecha_registro_us`,
-				`usuario`.`imagen_us`,
-				`usuario`.`tipo_imagen`,
-				`usuario`.`usuario`,
-				`usuario`.`clave`,
-				`usuario`.`id_t_usuario`,
-				`usuario`.`id_status_sistema`,
-				`usuario`.`id_club`,
-				`usuario`.`id_categoria`,
-				`usuario`.`id_status_verificacion`,
-				`usuario`.`id_carnet_jug`,
-				`representante`.`nombre_representante`,
-				`representante`.`segundoN_representante`,
-				`representante`.`apellido_representante`,
-				`representante`.`segundoA_representante`,
-				`representante`.`ci_representante`,
-				`representante`.`fecha_nac`,
-				`representante`.`fecha_registro`,
-				`representante`.`tlf`,
-				`representante`.`direccion`,
-				`representante`.`id_status_sistema`
-			FROM
-				`representante_to_usuario`,
-				`usuario`,
-				`representante`
-			WHERE
-				(
-					`usuario`.`id_status_verificacion` = $v_status
-				) AND(`usuario`.`id_status_sistema` = $s_status) AND (`usuario`.`id_club` = $club)
-				AND(
-					`representante_to_usuario`.`id_representante` = `representante`.`id_representante`
-				) AND(
-					`representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
-				);";
+                `representante_to_usuario`.`id_r_t_u`,
+                `representante_to_usuario`.`id_representante`,
+                `representante_to_usuario`.`id_usuario`,
+                `usuario`.`id_usuario`,
+                `usuario`.`nombre_usuario`,
+                `usuario`.`segundoN`,
+                `usuario`.`apellido`,
+                `usuario`.`segundoA`,
+                `usuario`.`ci`,
+                `usuario`.`fecha_nac_us`,
+                `usuario`.`fecha_registro_us`,
+                `usuario`.`imagen_us`,
+                `usuario`.`tipo_imagen`,
+                `usuario`.`usuario`,
+                `usuario`.`clave`,
+                `usuario`.`id_t_usuario`,
+                `usuario`.`id_status_sistema`,
+                `usuario`.`id_club`,
+                `usuario`.`id_categoria`,
+                `usuario`.`id_status_verificacion`,
+                `usuario`.`id_carnet_jug`,
+                `representante`.`id_representante`,
+                `representante`.`nombre_representante`,
+                `representante`.`segundoN_representante`,
+                `representante`.`apellido_representante`,
+                `representante`.`segundoA_representante`,
+                `representante`.`ci_representante`,
+                `representante`.`fecha_nac`,
+                `representante`.`fecha_registro`,
+                `representante`.`tlf`,
+                `representante`.`direccion`,
+                `representante`.`id_status_sistema`,
+                `club`.`id_club`,
+                `club`.`nombre_club`,
+                `club`.`fecha_fund`,
+                `club`.`fecha_reg`,
+                `club`.`id_status_sistema`,
+                `club`.`tipo_acta`,
+                `club`.`img_acta`,
+                `club`.`tipo_logo`,
+                `club`.`img_logo`,
+                `club`.`id_status_club`,
+                `categoria`.`id_categoria`,
+                `categoria`.`nombre_categoria`,
+                `categoria`.`edad_max`,
+                `categoria`.`id_status_sistema`,
+                `status_sistema`.`id_status_sistema`,
+                `status_sistema`.`nombre_status_sistema`,
+                `status_verificacion`.`id_status_verificacion`,
+                `status_verificacion`.`nombre_verificacion`
+                FROM
+                `representante_to_usuario`,
+                `usuario`,
+                `representante`,
+                `club`,
+                `categoria`,
+                `status_sistema`,
+                `status_verificacion`
+                WHERE
+                (
+                    `usuario`.`id_status_verificacion` = $v_status
+                ) AND(`usuario`.`id_status_sistema` = $s_status) AND(
+                    `representante_to_usuario`.`id_representante` = `representante`.`id_representante`
+                ) AND(
+                    `representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
+                ) AND(
+                    `categoria`.`id_categoria` = `usuario`.`id_categoria`
+                ) AND(
+                    `usuario`.`id_categoria` = `categoria`.`id_categoria`
+                ) AND(
+                    `usuario`.`id_status_sistema` = `status_sistema`.`id_status_sistema`
+                ) AND(
+                    `usuario`.`id_status_verificacion` = `status_verificacion`.`id_status_verificacion`
+                )AND (`usuario`.`id_club` = $club AND `usuario`.`id_club` = `club`.`id_club`);";
 
 
 
@@ -399,49 +430,80 @@ session_start();
 
 
 				$sql = "SELECT
-				`representante_to_usuario`.`id_r_t_u`,
-				`representante_to_usuario`.`id_representante`,
-				`representante_to_usuario`.`id_usuario`,
-				`usuario`.`nombre_usuario`,
-				`usuario`.`segundoN`,
-				`usuario`.`apellido`,
-				`usuario`.`segundoA`,
-				`usuario`.`ci`,
-				`usuario`.`fecha_nac_us`,
-				`usuario`.`fecha_registro_us`,
-				`usuario`.`imagen_us`,
-				`usuario`.`tipo_imagen`,
-				`usuario`.`usuario`,
-				`usuario`.`clave`,
-				`usuario`.`id_t_usuario`,
-				`usuario`.`id_status_sistema`,
-				`usuario`.`id_club`,
-				`usuario`.`id_categoria`,
-				`usuario`.`id_status_verificacion`,
-				`usuario`.`id_carnet_jug`,
-				`representante`.`nombre_representante`,
-				`representante`.`segundoN_representante`,
-				`representante`.`apellido_representante`,
-				`representante`.`segundoA_representante`,
-				`representante`.`ci_representante`,
-				`representante`.`fecha_nac`,
-				`representante`.`fecha_registro`,
-				`representante`.`tlf`,
-				`representante`.`direccion`,
-				`representante`.`id_status_sistema`
-			FROM
-				`representante_to_usuario`,
-				`usuario`,
-				`representante`
-			WHERE
-				(
-					`usuario`.`id_status_verificacion` = $v_status
-				) AND(`usuario`.`id_status_sistema` = $s_status) AND (`usuario`.`id_categoria` = $cat)
-				AND(
-					`representante_to_usuario`.`id_representante` = `representante`.`id_representante`
-				) AND(
-					`representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
-				);";
+                `representante_to_usuario`.`id_r_t_u`,
+                `representante_to_usuario`.`id_representante`,
+                `representante_to_usuario`.`id_usuario`,
+                `usuario`.`id_usuario`,
+                `usuario`.`nombre_usuario`,
+                `usuario`.`segundoN`,
+                `usuario`.`apellido`,
+                `usuario`.`segundoA`,
+                `usuario`.`ci`,
+                `usuario`.`fecha_nac_us`,
+                `usuario`.`fecha_registro_us`,
+                `usuario`.`imagen_us`,
+                `usuario`.`tipo_imagen`,
+                `usuario`.`usuario`,
+                `usuario`.`clave`,
+                `usuario`.`id_t_usuario`,
+                `usuario`.`id_status_sistema`,
+                `usuario`.`id_club`,
+                `usuario`.`id_categoria`,
+                `usuario`.`id_status_verificacion`,
+                `usuario`.`id_carnet_jug`,
+                `representante`.`id_representante`,
+                `representante`.`nombre_representante`,
+                `representante`.`segundoN_representante`,
+                `representante`.`apellido_representante`,
+                `representante`.`segundoA_representante`,
+                `representante`.`ci_representante`,
+                `representante`.`fecha_nac`,
+                `representante`.`fecha_registro`,
+                `representante`.`tlf`,
+                `representante`.`direccion`,
+                `representante`.`id_status_sistema`,
+                `club`.`id_club`,
+                `club`.`nombre_club`,
+                `club`.`fecha_fund`,
+                `club`.`fecha_reg`,
+                `club`.`id_status_sistema`,
+                `club`.`tipo_acta`,
+                `club`.`img_acta`,
+                `club`.`tipo_logo`,
+                `club`.`img_logo`,
+                `club`.`id_status_club`,
+                `categoria`.`id_categoria`,
+                `categoria`.`nombre_categoria`,
+                `categoria`.`edad_max`,
+                `categoria`.`id_status_sistema`,
+                `status_sistema`.`id_status_sistema`,
+                `status_sistema`.`nombre_status_sistema`,
+                `status_verificacion`.`id_status_verificacion`,
+                `status_verificacion`.`nombre_verificacion`
+                FROM
+                `representante_to_usuario`,
+                `usuario`,
+                `representante`,
+                `club`,
+                `categoria`,
+                `status_sistema`,
+                `status_verificacion`
+                WHERE
+                (
+                    `usuario`.`id_status_verificacion` = $v_status
+                ) AND(`usuario`.`id_status_sistema` = $s_status) AND(
+                    `representante_to_usuario`.`id_representante` = `representante`.`id_representante`
+                ) AND(
+                    `representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
+                ) AND(
+                    `usuario`.`id_categoria` = $cat AND `categoria`.`id_categoria` = `usuario`.`id_categoria`
+                ) AND(
+                    `usuario`.`id_categoria` = `categoria`.`id_categoria`
+                ) AND(
+                    `usuario`.`id_status_sistema` = `status_sistema`.`id_status_sistema`
+                ) AND(
+                    `usuario`.`id_status_verificacion` = `status_verificacion`.`id_status_verificacion`
+                )AND (`usuario`.`id_club` = `club`.`id_club`)";
 
 
 
@@ -490,7 +552,7 @@ session_start();
                         <td scope="col"><?php echo $row['nombre_verificacion']; ?></td>
 
 
-                        <td><a href="./fichar_jugador_ficha.php?id_user=<?php echo $row['id_usuario']; ?>"
+                        <td><a href="./fichar_jugador_libre.php?id_user=<?php echo $row['id_usuario']; ?>"
                                 name="seleccionar"><i class="fa-solid fa-pen-to-square"></i></a></td>
 
                     </tr>
@@ -499,48 +561,80 @@ session_start();
 				}
 			}else {
 				$sql = "SELECT
-				`representante_to_usuario`.`id_r_t_u`,
-				`representante_to_usuario`.`id_representante`,
-				`representante_to_usuario`.`id_usuario`,
-				`usuario`.`nombre_usuario`,
-				`usuario`.`segundoN`,
-				`usuario`.`apellido`,
-				`usuario`.`segundoA`,
-				`usuario`.`ci`,
-				`usuario`.`fecha_nac_us`,
-				`usuario`.`fecha_registro_us`,
-				`usuario`.`imagen_us`,
-				`usuario`.`tipo_imagen`,
-				`usuario`.`usuario`,
-				`usuario`.`clave`,
-				`usuario`.`id_t_usuario`,
-				`usuario`.`id_status_sistema`,
-				`usuario`.`id_club`,
-				`usuario`.`id_categoria`,
-				`usuario`.`id_status_verificacion`,
-				`usuario`.`id_carnet_jug`,
-				`representante`.`nombre_representante`,
-				`representante`.`segundoN_representante`,
-				`representante`.`apellido_representante`,
-				`representante`.`segundoA_representante`,
-				`representante`.`ci_representante`,
-				`representante`.`fecha_nac`,
-				`representante`.`fecha_registro`,
-				`representante`.`tlf`,
-				`representante`.`direccion`,
-				`representante`.`id_status_sistema`
-			FROM
-				`representante_to_usuario`,
-				`usuario`,
-				`representante`
-			WHERE
-				(
-					`usuario`.`id_status_verificacion` = $v_status
-				) AND(`usuario`.`id_status_sistema` = $s_status) AND(
-					`representante_to_usuario`.`id_representante` = `representante`.`id_representante`
-				) AND(
-					`representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
-				);";
+                `representante_to_usuario`.`id_r_t_u`,
+                `representante_to_usuario`.`id_representante`,
+                `representante_to_usuario`.`id_usuario`,
+                `usuario`.`id_usuario`,
+                `usuario`.`nombre_usuario`,
+                `usuario`.`segundoN`,
+                `usuario`.`apellido`,
+                `usuario`.`segundoA`,
+                `usuario`.`ci`,
+                `usuario`.`fecha_nac_us`,
+                `usuario`.`fecha_registro_us`,
+                `usuario`.`imagen_us`,
+                `usuario`.`tipo_imagen`,
+                `usuario`.`usuario`,
+                `usuario`.`clave`,
+                `usuario`.`id_t_usuario`,
+                `usuario`.`id_status_sistema`,
+                `usuario`.`id_club`,
+                `usuario`.`id_categoria`,
+                `usuario`.`id_status_verificacion`,
+                `usuario`.`id_carnet_jug`,
+                `representante`.`id_representante`,
+                `representante`.`nombre_representante`,
+                `representante`.`segundoN_representante`,
+                `representante`.`apellido_representante`,
+                `representante`.`segundoA_representante`,
+                `representante`.`ci_representante`,
+                `representante`.`fecha_nac`,
+                `representante`.`fecha_registro`,
+                `representante`.`tlf`,
+                `representante`.`direccion`,
+                `representante`.`id_status_sistema`,
+                `club`.`id_club`,
+                `club`.`nombre_club`,
+                `club`.`fecha_fund`,
+                `club`.`fecha_reg`,
+                `club`.`id_status_sistema`,
+                `club`.`tipo_acta`,
+                `club`.`img_acta`,
+                `club`.`tipo_logo`,
+                `club`.`img_logo`,
+                `club`.`id_status_club`,
+                `categoria`.`id_categoria`,
+                `categoria`.`nombre_categoria`,
+                `categoria`.`edad_max`,
+                `categoria`.`id_status_sistema`,
+                `status_sistema`.`id_status_sistema`,
+                `status_sistema`.`nombre_status_sistema`,
+                `status_verificacion`.`id_status_verificacion`,
+                `status_verificacion`.`nombre_verificacion`
+                FROM
+                `representante_to_usuario`,
+                `usuario`,
+                `representante`,
+                `club`,
+                `categoria`,
+                `status_sistema`,
+                `status_verificacion`
+                WHERE
+                (
+                    `usuario`.`id_status_verificacion` = $v_status
+                ) AND(`usuario`.`id_status_sistema` = $s_status) AND(
+                    `representante_to_usuario`.`id_representante` = `representante`.`id_representante`
+                ) AND(
+                    `representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
+                ) AND(
+                    `categoria`.`id_categoria` = `usuario`.`id_categoria`
+                ) AND(
+                    `usuario`.`id_categoria` = `categoria`.`id_categoria`
+                ) AND(
+                    `usuario`.`id_status_sistema` = `status_sistema`.`id_status_sistema`
+                ) AND(
+                    `usuario`.`id_status_verificacion` = `status_verificacion`.`id_status_verificacion`
+                )AND (`usuario`.`id_club` = `club`.`id_club`)";
 
 
 
@@ -603,6 +697,7 @@ $sql = "SELECT
 `representante_to_usuario`.`id_r_t_u`,
 `representante_to_usuario`.`id_representante`,
 `representante_to_usuario`.`id_usuario`,
+`usuario`.`id_usuario`,
 `usuario`.`nombre_usuario`,
 `usuario`.`segundoN`,
 `usuario`.`apellido`,
@@ -620,6 +715,7 @@ $sql = "SELECT
 `usuario`.`id_categoria`,
 `usuario`.`id_status_verificacion`,
 `usuario`.`id_carnet_jug`,
+`representante`.`id_representante`,
 `representante`.`nombre_representante`,
 `representante`.`segundoN_representante`,
 `representante`.`apellido_representante`,
@@ -629,26 +725,56 @@ $sql = "SELECT
 `representante`.`fecha_registro`,
 `representante`.`tlf`,
 `representante`.`direccion`,
-`representante`.`id_status_sistema`
+`representante`.`id_status_sistema`,
+`club`.`id_club`,
+`club`.`nombre_club`,
+`club`.`fecha_fund`,
+`club`.`fecha_reg`,
+`club`.`id_status_sistema`,
+`club`.`tipo_acta`,
+`club`.`img_acta`,
+`club`.`tipo_logo`,
+`club`.`img_logo`,
+`club`.`id_status_club`,
+`categoria`.`id_categoria`,
+`categoria`.`nombre_categoria`,
+`categoria`.`edad_max`,
+`categoria`.`id_status_sistema`,
+`status_sistema`.`id_status_sistema`,
+`status_sistema`.`nombre_status_sistema`,
+`status_verificacion`.`id_status_verificacion`,
+`status_verificacion`.`nombre_verificacion`
 FROM
 `representante_to_usuario`,
 `usuario`,
-`representante`
+`representante`,
+`club`,
+`categoria`,
+`status_sistema`,
+`status_verificacion`
 WHERE
 (
-	`usuario`.`id_status_verificacion` = $v_status
+    `usuario`.`id_status_verificacion` = $v_status
 ) AND(`usuario`.`id_status_sistema` = $s_status) AND(
-	`representante_to_usuario`.`id_representante` = `representante`.`id_representante`
+    `representante_to_usuario`.`id_representante` = `representante`.`id_representante`
 ) AND(
-	`representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
-);";
+    `representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
+) AND(
+    `categoria`.`id_categoria` = `usuario`.`id_categoria`
+) AND(
+    `usuario`.`id_categoria` = `categoria`.`id_categoria`
+) AND(
+    `usuario`.`id_status_sistema` = `status_sistema`.`id_status_sistema`
+) AND(
+    `usuario`.`id_status_verificacion` = `status_verificacion`.`id_status_verificacion`
+)AND (`usuario`.`id_club` = `club`.`id_club`);";
 
 
 
 
 
 
-				$res = mysqli_query($conn, $sql);
+$res = mysqli_query($conn, $sql);
 
 
 
@@ -690,7 +816,7 @@ WHERE
                         <td scope="col"><?php echo $row['nombre_verificacion']; ?></td>
 
 
-                        <td><a href="./fichar_jugador_ficha.php?id_user=<?php echo $row['id_usuario']; ?>"
+                        <td><a href="./fichar_jugador_libre.php?id_user=<?php echo $row['id_usuario']; ?>"
                                 name="seleccionar"><i class="fa-solid fa-pen-to-square"></i></a></td>
 
                     </tr>

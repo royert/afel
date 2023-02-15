@@ -137,7 +137,7 @@
 			} elseif (mysqli_num_rows($resul_ver_ci) > 0) {
 				echo'<script type="text/javascript">
 				alert("Cedula existente");
-				window.location.href="../agregar_jugador_club.php";
+				window.location.href="../buscar_jugador_libre.php";
 				</script>';
 			}elseif ($id_categoria == $c_cat){
 
@@ -264,8 +264,8 @@
 					`usuario`.`apellido`,
 					`usuario`.`segundoA`,
 					`usuario`.`ci`,
-					`usuario`.`fecha_nac`,
-					`usuario`.`fecha_registro`,
+					`usuario`.`fecha_nac_us`,
+					`usuario`.`fecha_registro_us`,
 					`usuario`.`imagen_us`,
 					`usuario`.`tipo_imagen`,
 					`usuario`.`tipo_imagen_dt`,
@@ -284,7 +284,7 @@
 					`usuario`,
 					`representante`
 					WHERE
-					`usuario`.`ci` = $ci_us AND `representante`.`ci_representante` = $ci_us_representante ";
+					`usuario`.`ci` = $ci_us AND `representante`.`ci_representante` = $ci_us_representante";
 
 					$res_itu = mysqli_query($conn, $sql_itu);
 

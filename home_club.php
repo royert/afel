@@ -52,6 +52,7 @@ session_start();
 										<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small ">
 											<li><a href="agregar_jugador_club.php" class="offcanvas-title">Agregar Jugador</a></li>
 											<li><a href="buscar_jugador_club.php" class="offcanvas-title">Buscar Jugador</a></li>
+											<li><a href="buscar_jugador_libre.php" class="offcanvas-title">Jugador Libre</a></li>
 										</ul>
 									</div>
 								</li>

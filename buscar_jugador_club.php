@@ -144,7 +144,7 @@ session_start();
 					/*	AND `usuario`.`id_status_sistema`= 1 */
 					/*AND `usuario`.`id_status_verificacion`= 2*/) 
 					AND (`usuario`.`id_club` = `club`.`id_club`) 
-					And (`usuario`.`id_categoria` = `categoria`.`id_categoria`) 
+					AND (`usuario`.`id_categoria` = `categoria`.`id_categoria`) 
 					AND (`usuario`.`id_status_sistema` = `status_sistema`.`id_status_sistema`) 
 					AND (`usuario`.`id_status_verificacion`= `status_verificacion`.`id_status_verificacion`))";
 

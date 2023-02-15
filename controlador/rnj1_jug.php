@@ -166,7 +166,7 @@ while ($row = mysqli_fetch_assoc($res)) {
 
 
    $pdf->Cell(37,7,utf8_decode('FECHA DE REGISTRO: '),0,0,'L');
-   $pdf->Cell(30,7,utf8_decode($row['fecha_reg_us']),0,1,'L');
+   $pdf->Cell(30,7,utf8_decode($row['fecha_reg']),0,1,'L');
 
 
    $pdf->Cell(30,7,utf8_decode('PRIMER NOMBRE: '),0,0,'L');
@@ -267,3 +267,11 @@ while ($row = mysqli_fetch_assoc($res)) {
 }
 
 $pdf->Output();
+
+
+
+
+
+
+
+

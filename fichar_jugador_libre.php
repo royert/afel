@@ -140,41 +140,55 @@ $id_us = $_GET['id_user'];
 		include './modelo/conexion.php';
 		$tipo_jug = 7;
 		//controlador de sistema y verificacion
-		$v_sistema = 2;
-		$s_sistema = 2;
+		$v_status = 2;
+		$s_status = 2;
 
 
 
 
 		$sql = "SELECT
-		`id_usuario`,
-		`nombre_usuario`,
-		`nombre_club`,
-		`segundoN`,
-		`apellido`,
-		`segundoA`,
-		`ci`,
-		`fecha_nac_us`,
-		`fecha_registro_us`,
-		`imagen_us`,
-		`tipo_imagen`,
-		`usuario`,
-		`clave`,
-		`id_t_usuario`,
-		`id_status_sistema`,
-		`id_club`,
-		`id_categoria`,
-		`id_status_verificacion`,
-		`id_carnet_jug`,
-		`nombre_categoria`,
-		`nombre_status_sistema`,
-		`nombre_verificacion`,
-		`nombre_tipo_usuario`
-	FROM
-		`listado`
-	WHERE
-		`id_t_usuario` = $tipo_jug AND `id_status_verificacion` = $v_sistema AND `id_status_sistema` = $s_sistema AND `id_usuario` = $id_us";
-
+        `representante_to_usuario`.`id_r_t_u`,
+        `representante_to_usuario`.`id_representante`,
+        `representante_to_usuario`.`id_usuario`,
+        `usuario`.`nombre_usuario`,
+        `usuario`.`segundoN`,
+        `usuario`.`apellido`,
+        `usuario`.`segundoA`,
+        `usuario`.`ci`,
+        `usuario`.`fecha_nac_us`,
+        `usuario`.`fecha_registro_us`,
+        `usuario`.`imagen_us`,
+        `usuario`.`tipo_imagen`,
+        `usuario`.`usuario`,
+        `usuario`.`clave`,
+        `usuario`.`id_t_usuario`,
+        `usuario`.`id_status_sistema`,
+        `usuario`.`id_club`,
+        `usuario`.`id_categoria`,
+        `usuario`.`id_status_verificacion`,
+        `usuario`.`id_carnet_jug`,
+        `representante`.`nombre_representante`,
+        `representante`.`segundoN_representante`,
+        `representante`.`apellido_representante`,
+        `representante`.`segundoA_representante`,
+        `representante`.`ci_representante`,
+        `representante`.`fecha_nac`,
+        `representante`.`fecha_registro`,
+        `representante`.`tlf`,
+        `representante`.`direccion`,
+        `representante`.`id_status_sistema`
+    FROM
+        `representante_to_usuario`,
+        `usuario`,
+        `representante`
+    WHERE
+       (`usuario`.`id_usuario` = $id_us)AND (
+            `usuario`.`id_status_verificacion` = $v_status
+        ) AND(`usuario`.`id_status_sistema` = $s_status) AND(
+            `representante_to_usuario`.`id_representante` = `representante`.`id_representante`
+        ) AND(
+            `representante_to_usuario`.`id_usuario` = `usuario`.`id_usuario`
+        );";
 		$res = mysqli_query($conn, $sql);
 
 		while ($row = mysqli_fetch_assoc($res)) {
