@@ -33,16 +33,18 @@ $fecha_final = $_POST['fecha_ven'];
 
 if ($id_t_user == 4) {
 	$sql_ver = "UPDATE
-	`usuario`,
-	`fichaje`
-	SET
-	`usuario`.`id_status_verificacion` = '$id_status_verificacion',
-	`fichaje`.`id_status_verificacion` = '$id_status_verificacion',
-	`fichaje`.`fecha_f` = '$fecha_final'
-	WHERE
-	(`usuario`.`id_usuario` = '$id_us') AND(
-	`usuario`.`id_usuario` = `fichaje`.`id_usuario`
-)";
+    `usuario`,
+    `fichaje`,
+     `historico_fichaje` 
+SET
+    `usuario`.`id_status_verificacion` = '$id_status_verificacion',
+    `fichaje`.`id_status_verificacion` = '$id_status_verificacion',
+    `fichaje`.`fecha_f` = '$fecha_final',
+    `historico_fichaje`.`id_status_verificacion` = '$id_status_verificacion'
+WHERE
+    (`usuario`.`id_usuario` = '$id_us') AND(
+        `usuario`.`id_usuario` = `fichaje`.`id_usuario`
+    )AND( `usuario`.`id_usuario` =  `historico_fichaje`.`id_usuario`)";
 
 
 $res_ver = mysqli_query($conn, $sql_ver);
@@ -51,10 +53,7 @@ $res_ver = mysqli_query($conn, $sql_ver);
 if ($res_ver) {
 
 
-		echo'<script type="text/javascript">
-		alert("Se ha modificado correctamente");
-		window.location.href="../buscar_jugador_club_ficha.php";
-		</script>';
+		header("Location: ../buscar_jugador_club_ficha.php");
 }else{
 	echo mysqli_error($conn);
 }
@@ -86,10 +85,7 @@ if ($res_ver) {
 			move_uploaded_file($imagen_us, '../img/foto-jug/'.$nombre_img_us);
 			move_uploaded_file($imagen_us_dt, '../img/papeles-ent/'.$nombre_img_us_dt);
 
-			echo'<script type="text/javascript">
-			alert("Se ha modificado correctamente");
-			window.location.href="../buscar_jugador_club.php";
-			</script>';
+			header("Location: ../buscar_jugador_club.php");
 		}else{
 			echo mysqli_error($conn);
 		}
@@ -112,10 +108,7 @@ if ($res_ver) {
 
 		$res = mysqli_query($conn, $sql);
 		if ($res) {
-		echo'<script type="text/javascript">
-			alert("Se ha modificado correctamente");
-			window.location.href="../buscar_jugador_club.php";
-			</script>';
+		header("Location: ../buscar_jugador_club.php");
 		}else{
 			echo mysqli_error($conn);
 		}
