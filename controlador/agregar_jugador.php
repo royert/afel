@@ -63,6 +63,9 @@
 			//control categoria y club
 			$c_cat = 8;
 			$c_club = 2;
+			//control status sistema y verificacion para fichaje
+			$v_status = 2;
+			$s_status = 2;
 
 
 			$sql_ver_us = "SELECT
@@ -115,13 +118,40 @@
 			FROM
 			`usuario`
 			WHERE
-			`ci` = '$ci_us' ";
+			`ci` = '$ci_us'";
+
+			$sql_ver_ci_fi = "SELECT
+			`id_usuario`,
+			`nombre_usuario`,
+			`segundoN`,
+			`apellido`,
+			`segundoA`,
+			`ci`,
+			`fecha_nac`,
+			`fecha_registro`,
+			`imagen_us`,
+			`tipo_imagen`,
+			`tipo_imagen_dt`,
+			`image_dt`,
+			`usuario`,
+			`clave`,
+			`id_t_usuario`,
+			`id_status_sistema`,
+			`id_club`,
+			`id_categoria`,
+			`id_status_verificacion`,
+			`id_carnet_jug`
+			FROM
+			`usuario`
+			WHERE
+			`ci` = '$ci_us' AND `id_status_verificacion` = '$v_status' AND `id_status_sistema` = '$s_status'";
 
 
 
 
 			$resul_ver_us = mysqli_query($conn, $sql_ver_us);
 			$resul_ver_ci = mysqli_query($conn, $sql_ver_ci);
+			$resul_ver_ci_fi = mysqli_query($conn, $sql_ver_ci_fi);
 
 
 			if (mysqli_num_rows($resul_ver_us) > 0) {
@@ -134,6 +164,12 @@
 				alert("Cedula existente");
 				window.location.href="../agregar_jugador_club.php";
 				</script>';
+			}elseif (mysqli_num_rows($resul_ver_ci_fi) > 0) {
+
+				echo'<script type="text/javascript">
+				alert("Cedula existente");
+				window.location.href="../buscar_jugador_libre.php";
+				</script>';
 			}elseif ($id_categoria == $c_cat){
 
 				echo'<script type="text/javascript">
@@ -145,7 +181,8 @@
 				echo'<script type="text/javascript">
 				alert("Usted no tiene acceso a esta accion");
 				window.location.href="../agregar_jugador_club.php";
-				</script>';			}else {
+				</script>';			
+			}else {
 
 
 					if (!((strpos($tipo_foto, 'jpg') || strpos($tipo_foto, 'jpeg') || strpos($tipo_foto, 'png') || strpos($tipo_foto_ci, 'jpg') || strpos($tipo_foto_ci, 'jpeg') || strpos($tipo_foto_ci, 'png') || strpos($tipo_foto_dt, 'jpg') || strpos($tipo_foto_dt, 'jpeg') || strpos($tipo_foto_dt, 'png')))) {
@@ -366,3 +403,14 @@
 	</script>';
 }
 }
+
+
+
+
+
+
+
+
+
+
+		

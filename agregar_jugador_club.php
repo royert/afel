@@ -352,7 +352,8 @@ session_start();
 							</div>
 
 
-
+</div>
+</div>
 
 							<button class="w-100 btn btn-primary btn-lg" type="submit" name="guardar">GUARDAR</button>
 
