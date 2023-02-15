@@ -120,38 +120,13 @@
 			WHERE
 			`ci` = '$ci_us'";
 
-			$sql_ver_ci_fi = "SELECT
-			`id_usuario`,
-			`nombre_usuario`,
-			`segundoN`,
-			`apellido`,
-			`segundoA`,
-			`ci`,
-			`fecha_nac_us`,
-			`fecha_registro_us`,
-			`imagen_us`,
-			`tipo_imagen`,
-			`tipo_imagen_dt`,
-			`image_dt`,
-			`usuario`,
-			`clave`,
-			`id_t_usuario`,
-			`id_status_sistema`,
-			`id_club`,
-			`id_categoria`,
-			`id_status_verificacion`,
-			`id_carnet_jug`
-			FROM
-			`usuario`
-			WHERE
-			`ci` = '$ci_us' AND `id_status_verificacion` = '$v_status' AND `id_status_sistema` = '$s_status'";
-
+			
 
 
 
 			$resul_ver_us = mysqli_query($conn, $sql_ver_us);
 			$resul_ver_ci = mysqli_query($conn, $sql_ver_ci);
-			$resul_ver_ci_fi = mysqli_query($conn, $sql_ver_ci_fi);
+			
 
 
 			if (mysqli_num_rows($resul_ver_us) > 0) {
@@ -160,14 +135,10 @@
 				window.location.href="../agregar_jugador_club.php";
 				</script>';
 			} elseif (mysqli_num_rows($resul_ver_ci) > 0) {
-				
-			if (mysqli_num_rows($resul_ver_ci_fi) > 0) {
-
 				echo'<script type="text/javascript">
 				alert("Cedula existente");
-				window.location.href="../buscar_jugador_libre.php";
+				window.location.href="../agregar_jugador_club.php";
 				</script>';
-			}
 			}elseif ($id_categoria == $c_cat){
 
 				echo'<script type="text/javascript">
