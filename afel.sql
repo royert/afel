@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 12, 2023 at 09:25 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 7.3.2
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 15-02-2023 a las 22:02:41
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `afel`
+-- Base de datos: `afel`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Estructura de tabla para la tabla `admin`
 --
 
 CREATE TABLE `admin` (
@@ -40,7 +39,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `admin`
+-- Volcado de datos para la tabla `admin`
 --
 
 INSERT INTO `admin` (`id_adm`, `nombre_admin`, `segundoN`, `apellido`, `segundoA`, `usuario_adm`, `contraseña`, `id_status_sistema`) VALUES
@@ -49,7 +48,7 @@ INSERT INTO `admin` (`id_adm`, `nombre_admin`, `segundoN`, `apellido`, `segundoA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `carnet`
+-- Estructura de tabla para la tabla `carnet`
 --
 
 CREATE TABLE `carnet` (
@@ -64,7 +63,7 @@ CREATE TABLE `carnet` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `carnets`
+-- Estructura de tabla para la tabla `carnets`
 --
 
 CREATE TABLE `carnets` (
@@ -77,7 +76,7 @@ CREATE TABLE `carnets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `carnets`
+-- Volcado de datos para la tabla `carnets`
 --
 
 INSERT INTO `carnets` (`id_carnet_jug`, `nombre_carnet`, `carnet_front`, `carnet_back`, `tipo_carnet_front`, `tipo_carnet_back`) VALUES
@@ -86,7 +85,7 @@ INSERT INTO `carnets` (`id_carnet_jug`, `nombre_carnet`, `carnet_front`, `carnet
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria`
+-- Estructura de tabla para la tabla `categoria`
 --
 
 CREATE TABLE `categoria` (
@@ -97,7 +96,7 @@ CREATE TABLE `categoria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `categoria`
+-- Volcado de datos para la tabla `categoria`
 --
 
 INSERT INTO `categoria` (`id_categoria`, `nombre_categoria`, `edad_max`, `id_status_sistema`) VALUES
@@ -113,7 +112,7 @@ INSERT INTO `categoria` (`id_categoria`, `nombre_categoria`, `edad_max`, `id_sta
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cat_to_mod_atl`
+-- Estructura de tabla para la tabla `cat_to_mod_atl`
 --
 
 CREATE TABLE `cat_to_mod_atl` (
@@ -129,18 +128,18 @@ CREATE TABLE `cat_to_mod_atl` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ciudades`
+-- Estructura de tabla para la tabla `ciudades`
 --
 
 CREATE TABLE `ciudades` (
   `id_ciudad` int(11) NOT NULL,
   `id_estado` int(11) NOT NULL,
   `ciudad` varchar(200) NOT NULL,
-  `capital` tinyint(1) NOT NULL DEFAULT '0'
+  `capital` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ciudades`
+-- Volcado de datos para la tabla `ciudades`
 --
 
 INSERT INTO `ciudades` (`id_ciudad`, `id_estado`, `ciudad`, `capital`) VALUES
@@ -646,7 +645,7 @@ INSERT INTO `ciudades` (`id_ciudad`, `id_estado`, `ciudad`, `capital`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `club`
+-- Estructura de tabla para la tabla `club`
 --
 
 CREATE TABLE `club` (
@@ -663,20 +662,20 @@ CREATE TABLE `club` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `club`
+-- Volcado de datos para la tabla `club`
 --
 
 INSERT INTO `club` (`id_club`, `nombre_club`, `fecha_fund`, `fecha_reg`, `id_status_sistema`, `tipo_acta`, `img_acta`, `tipo_logo`, `img_logo`, `id_status_club`) VALUES
 (2, 'afel', '2022-12-13', '2022-12-26 11:32:19', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.47 AM (1).jpeg', 'image/jpeg', 'img/logo/aa.jpeg', 1),
 (3, 'el carmen', '2022-12-08', '2022-12-26 11:36:37', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/aa.jpeg', 1),
 (4, 'el bellone', '2022-12-08', '2022-12-26 11:37:24', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/WhatsApp Image 2022-12-01 at 12.05.47 AM (1).jpeg', 1),
-(5, 'seleccion 3', '2022-12-08', '2022-12-26 11:37:46', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/WhatsApp Image 2022-12-01 at 12.05.47 AM (1).jpeg', 1),
+(5, 'seleccion 3', '2022-12-08', '2022-12-26 11:37:46', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/346-3464419_o-club-deportivo-lara-um-clube-de.jpg', 2),
 (6, 'sporting', '2022-12-08', '2022-12-26 11:38:19', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/WhatsApp Image 2022-12-01 at 12.05.47 AM (1).jpeg', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `equipo_tec`
+-- Estructura de tabla para la tabla `equipo_tec`
 --
 
 CREATE TABLE `equipo_tec` (
@@ -690,7 +689,7 @@ CREATE TABLE `equipo_tec` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `estadio`
+-- Estructura de tabla para la tabla `estadio`
 --
 
 CREATE TABLE `estadio` (
@@ -704,7 +703,7 @@ CREATE TABLE `estadio` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `estados`
+-- Estructura de tabla para la tabla `estados`
 --
 
 CREATE TABLE `estados` (
@@ -714,7 +713,7 @@ CREATE TABLE `estados` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `estados`
+-- Volcado de datos para la tabla `estados`
 --
 
 INSERT INTO `estados` (`id_estado`, `estado`, `iso_3166-2`) VALUES
@@ -747,7 +746,7 @@ INSERT INTO `estados` (`id_estado`, `estado`, `iso_3166-2`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fichaje`
+-- Estructura de tabla para la tabla `fichaje`
 --
 
 CREATE TABLE `fichaje` (
@@ -762,17 +761,47 @@ CREATE TABLE `fichaje` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `fichaje`
+-- Volcado de datos para la tabla `fichaje`
 --
 
 INSERT INTO `fichaje` (`id_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
-(1, 5, 29, 1, '2023-02-05 02:15:19', '2023-12-31', 2, 'Urb Los Crepusculos'),
-(2, 5, 30, 1, '2023-02-05 04:54:38', '2023-12-31', 1, 'Urb Los Crepusculos');
+(1, 5, 9, 1, '2023-01-26 00:00:00', '2023-12-31', 2, 'Urb Los Crepusculos'),
+(2, 5, 10, 1, '2023-01-26 00:00:00', '2023-12-31', 2, 'Urb Los Crepusculos'),
+(3, 5, 11, 1, '0000-00-00 00:00:00', '2023-12-31', 1, 'Urb Los Crepusculos'),
+(4, 5, 12, 1, '0000-00-00 00:00:00', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(5, 5, 13, 1, '2026-01-23 00:00:00', '1999-03-12', 2, 'asdasd'),
+(6, 5, 15, 1, '2023-01-26 00:00:00', '1999-03-12', 2, 'asdasdw'),
+(12, 5, 1, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(13, 5, 2, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(14, 5, 5, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(15, 5, 9, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(16, 5, 10, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(17, 5, 11, 1, '2023-02-01 09:38:49', '2023-12-31', 1, ''),
+(18, 5, 12, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(19, 5, 13, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(20, 5, 14, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(21, 5, 15, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(22, 5, 16, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(23, 5, 19, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(24, 5, 20, 1, '2023-02-03 04:33:51', '2023-12-31', 2, 'Urb Los Crepusculos'),
+(25, 5, 21, 1, '2023-02-13 06:03:55', '2023-03-31', 2, 'Urb Los Crepusculos'),
+(26, 5, 20, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(27, 5, 20, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(28, 5, 22, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(29, 5, 22, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(30, 5, 23, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(31, 5, 23, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(32, 5, 20, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
+(33, 5, 22, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
+(34, 5, 23, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
+(35, 5, 24, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
+(36, 5, 28, 1, '2023-02-15 09:27:32', '2023-12-31', 2, 'Urb Los Crepusculos'),
+(37, 5, 29, 1, '2023-02-15 09:28:33', '2023-12-31', 2, 'Urb Los Crepusculos');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `historico`
+-- Estructura de tabla para la tabla `historico`
 --
 
 CREATE TABLE `historico` (
@@ -789,7 +818,7 @@ CREATE TABLE `historico` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `historico_fichaje`
+-- Estructura de tabla para la tabla `historico_fichaje`
 --
 
 CREATE TABLE `historico_fichaje` (
@@ -804,18 +833,43 @@ CREATE TABLE `historico_fichaje` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `historico_fichaje`
+-- Volcado de datos para la tabla `historico_fichaje`
 --
 
 INSERT INTO `historico_fichaje` (`id_h_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
-(1, 5, 29, 1, '2023-02-05 02:15:19', '2023-12-31', 2, 'Urb Los Crepusculos'),
-(2, 5, 30, 1, '2023-02-05 04:54:38', '2023-12-31', 2, 'Urb Los Crepusculos');
+(1, 5, 15, 1, '2023-01-26 12:50:27', '1999-03-12', 2, 'asdasdw'),
+(2, 5, 1, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(3, 5, 2, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(4, 5, 5, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(5, 5, 9, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(6, 5, 10, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(7, 5, 11, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(8, 5, 12, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(9, 5, 13, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(10, 5, 14, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(11, 5, 15, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(12, 5, 16, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(13, 5, 19, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
+(14, 5, 20, 1, '2023-02-03 04:33:51', '2023-12-31', 2, 'Urb Los Crepusculos'),
+(15, 5, 21, 1, '2023-02-13 06:03:55', '2023-03-31', 2, 'Urb Los Crepusculos'),
+(16, 5, 20, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(17, 5, 20, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(18, 5, 22, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(19, 5, 22, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(20, 5, 23, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(21, 5, 23, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
+(22, 5, 20, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
+(23, 5, 22, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
+(24, 5, 23, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
+(25, 5, 24, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
+(26, 5, 28, 1, '2023-02-15 09:27:32', '2023-12-31', 2, 'Urb Los Crepusculos'),
+(27, 5, 29, 1, '2023-02-15 09:28:33', '2023-12-31', 2, 'Urb Los Crepusculos');
 
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `listado`
--- (See below for the actual view)
+-- Estructura Stand-in para la vista `listado`
+-- (Véase abajo para la vista actual)
 --
 CREATE TABLE `listado` (
 `id_usuario` int(11)
@@ -825,8 +879,8 @@ CREATE TABLE `listado` (
 ,`apellido` varchar(60)
 ,`segundoA` varchar(60)
 ,`ci` int(8)
-,`fecha_nac` date
-,`fecha_registro` date
+,`fecha_nac_us` date
+,`fecha_registro_us` date
 ,`imagen_us` varchar(300)
 ,`tipo_imagen` varchar(60)
 ,`usuario` varchar(60)
@@ -846,39 +900,7 @@ CREATE TABLE `listado` (
 -- --------------------------------------------------------
 
 --
--- Stand-in structure for view `listado_entrenadores`
--- (See below for the actual view)
---
-CREATE TABLE `listado_entrenadores` (
-`id_usuario` int(11)
-,`nombre_usuario` varchar(60)
-,`nombre_club` varchar(60)
-,`segundoN` varchar(60)
-,`apellido` varchar(60)
-,`segundoA` varchar(60)
-,`ci` int(8)
-,`fecha_nac` date
-,`fecha_registro` date
-,`imagen_us` varchar(300)
-,`tipo_imagen` varchar(60)
-,`usuario` varchar(60)
-,`clave` varchar(33)
-,`id_t_usuario` int(11)
-,`id_status_sistema` int(11)
-,`id_club` int(11)
-,`id_categoria` int(11)
-,`id_status_verificacion` int(11)
-,`id_carnet_jug` int(11)
-,`nombre_categoria` varchar(60)
-,`nombre_status_sistema` varchar(30)
-,`nombre_verificacion` varchar(20)
-,`nombre_tipo_usuario` varchar(30)
-);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `modalidad`
+-- Estructura de tabla para la tabla `modalidad`
 --
 
 CREATE TABLE `modalidad` (
@@ -887,7 +909,7 @@ CREATE TABLE `modalidad` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `modalidad`
+-- Volcado de datos para la tabla `modalidad`
 --
 
 INSERT INTO `modalidad` (`id_modalidad`, `nom_modalidad`) VALUES
@@ -898,7 +920,7 @@ INSERT INTO `modalidad` (`id_modalidad`, `nom_modalidad`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `municipios`
+-- Estructura de tabla para la tabla `municipios`
 --
 
 CREATE TABLE `municipios` (
@@ -908,7 +930,7 @@ CREATE TABLE `municipios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `municipios`
+-- Volcado de datos para la tabla `municipios`
 --
 
 INSERT INTO `municipios` (`id_municipio`, `id_estado`, `municipio`) VALUES
@@ -1251,7 +1273,7 @@ INSERT INTO `municipios` (`id_municipio`, `id_estado`, `municipio`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `parroquias`
+-- Estructura de tabla para la tabla `parroquias`
 --
 
 CREATE TABLE `parroquias` (
@@ -1261,7 +1283,7 @@ CREATE TABLE `parroquias` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `parroquias`
+-- Volcado de datos para la tabla `parroquias`
 --
 
 INSERT INTO `parroquias` (`id_parroquia`, `id_municipio`, `parroquia`) VALUES
@@ -2407,7 +2429,7 @@ INSERT INTO `parroquias` (`id_parroquia`, `id_municipio`, `parroquia`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prueba`
+-- Estructura de tabla para la tabla `prueba`
 --
 
 CREATE TABLE `prueba` (
@@ -2416,7 +2438,7 @@ CREATE TABLE `prueba` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `prueba`
+-- Volcado de datos para la tabla `prueba`
 --
 
 INSERT INTO `prueba` (`img`, `imgacta`) VALUES
@@ -2432,7 +2454,7 @@ INSERT INTO `prueba` (`img`, `imgacta`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `representante`
+-- Estructura de tabla para la tabla `representante`
 --
 
 CREATE TABLE `representante` (
@@ -2453,17 +2475,33 @@ CREATE TABLE `representante` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `representante`
+-- Volcado de datos para la tabla `representante`
 --
 
 INSERT INTO `representante` (`id_representante`, `nombre_representante`, `segundoN_representante`, `apellido_representante`, `segundoA_representante`, `ci_representante`, `fecha_nac`, `fecha_registro`, `tlf`, `direccion`, `ci_imagen_representante`, `tipo_imagen_representante`, `id_status_sistema`, `id_status_representante`) VALUES
-(1, 'Juan', 'Romero', 'Romero', 'Escalona', 7362415, '1999-03-12', '2023-02-05 02:15:19', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/121696851_2631843603794507_8263145407357699119_o.jpg', 'image/jpeg', 1, 1),
-(2, 'Juan', 'Romero', 'jiji', 'Escalona', 10770823, '1999-03-12', '2023-02-05 04:54:38', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/325925064_593042532657512_6534913210267114589_n.jpg', 'image/jpeg', 1, 1);
+(1, 'YULABERSON', 'LABAS', 'PETRONILO', 'SINFOROSO', 12304932, '1999-03-12', '2023-01-23 04:18:01', 2147483647, 'Urb Los Crepusculos', '', '', 1, 1),
+(5, 'Keiberr', 'David', 'Perdomo', 'Jhsua', 14787989, '1999-02-15', '2023-01-26 12:28:06', 2147483647, 'Urb Los Crepusculos', '', '', 1, 1),
+(6, 'auyama', 'jose', 'petro', 'sanford', 21456543, '1999-03-12', '2026-01-23 00:00:00', 2147483647, 'Urb Los Crepusculos', '', '', 1, 1),
+(7, 'asdqw', 'asdas', 'dasdasd', 'asdasd', 12356806, '1990-03-12', '2023-01-26 12:45:53', 1234567, 'Urb Los Crepusculos', '', '', 1, 1),
+(8, 'asdqwe', 'adqwe', 'asdqwe', 'asdqwd', 12312341, '1566-03-12', '2023-01-26 12:46:48', 123123, 'Urb Los Crepusculos', '', '', 1, 1),
+(9, 'dasd', 'asda', 'sdasd', 'asdas', 123123, '1212-12-12', '2023-01-26 12:47:49', 123123, 'asdasd', '', '', 1, 1),
+(10, 'asdasdasd', 'asdasd', 'asdasda', 'sdasdasd', 2147483647, '1111-03-12', '2023-01-26 12:50:05', 123123, 'asdasdw', '', '', 1, 1),
+(11, 'asdasdasd', 'asdasd', 'asdasda', 'sdasdasd', 2323, '1111-03-12', '2023-01-26 12:50:27', 123123, 'asdasdw', '', '', 1, 1),
+(12, 'Keiberr', 'Romero', 'Perdomo', 'Escalona', 25478965, '1999-03-12', '2023-02-03 04:33:51', 2147483647, 'Urb Los Crepusculos', '', '', 1, 1),
+(13, 'Keiberr', 'Romero', 'Perdomo', 'Escalona', 26768416, '1999-03-12', '2023-02-13 06:03:55', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/IMG-20221127-WA0031.jpg', 'image/jpeg', 1, 1),
+(14, 'r', 'r', 'r', 'r', 1234, '2023-02-08', '2023-02-15 03:56:29', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/1629287252_471087_1632935001_noticiareportajes_grande.jpg', 'image/jpeg', 1, 1),
+(15, 'r', 'r', 'r', 'r', 1234, '2023-02-08', '2023-02-15 03:57:45', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/1629287252_471087_1632935001_noticiareportajes_grande.jpg', 'image/jpeg', 1, 1),
+(16, 'a', 'a', 'a', 'a', 41235234, '1999-03-12', '2023-02-15 03:58:43', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/1627992640838.png', 'image/png', 1, 1),
+(17, 'Luis', 'Fernando', 'Rodriguez', 'Perez', 26750277, '1999-01-10', '2023-02-15 09:09:24', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Bellones.jpg', 'image/jpeg', 1, 1),
+(18, 'feqw', 'few', 'fewq', 'fewq', 98765567, '1999-03-12', '2023-02-15 09:17:23', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Edades_page-0004.jpg', 'image/jpeg', 1, 1),
+(19, 'feqw', 'few', 'fewq', 'fewq', 98765566, '1999-03-12', '2023-02-15 09:18:06', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Edades_page-0004.jpg', 'image/jpeg', 1, 1),
+(20, 'feqw', 'few', 'fewq', 'fewq', 98762566, '1999-03-12', '2023-02-15 09:27:32', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Edades_page-0004.jpg', 'image/jpeg', 1, 1),
+(21, 'feqw', 'few', 'fewq', 'fewq', 12762566, '1999-03-12', '2023-02-15 09:28:33', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Edades_page-0004.jpg', 'image/jpeg', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `representante_to_usuario`
+-- Estructura de tabla para la tabla `representante_to_usuario`
 --
 
 CREATE TABLE `representante_to_usuario` (
@@ -2473,17 +2511,36 @@ CREATE TABLE `representante_to_usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `representante_to_usuario`
+-- Volcado de datos para la tabla `representante_to_usuario`
 --
 
 INSERT INTO `representante_to_usuario` (`id_r_t_u`, `id_representante`, `id_usuario`) VALUES
-(1, 1, 29),
-(2, 2, 30);
+(1, 1, 5),
+(2, 5, 9),
+(3, 6, 10),
+(4, 7, 11),
+(5, 8, 12),
+(6, 9, 13),
+(7, 11, 15),
+(8, 12, 20),
+(9, 13, 21),
+(10, 14, 20),
+(12, 14, 22),
+(14, 14, 23),
+(11, 15, 20),
+(13, 15, 22),
+(15, 15, 23),
+(16, 16, 20),
+(17, 16, 22),
+(18, 16, 23),
+(19, 16, 24),
+(20, 20, 28),
+(21, 21, 29);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `status_club`
+-- Estructura de tabla para la tabla `status_club`
 --
 
 CREATE TABLE `status_club` (
@@ -2492,7 +2549,7 @@ CREATE TABLE `status_club` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `status_club`
+-- Volcado de datos para la tabla `status_club`
 --
 
 INSERT INTO `status_club` (`id_status_club`, `nombre_status_club`) VALUES
@@ -2502,7 +2559,7 @@ INSERT INTO `status_club` (`id_status_club`, `nombre_status_club`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `status_representante`
+-- Estructura de tabla para la tabla `status_representante`
 --
 
 CREATE TABLE `status_representante` (
@@ -2511,7 +2568,7 @@ CREATE TABLE `status_representante` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `status_representante`
+-- Volcado de datos para la tabla `status_representante`
 --
 
 INSERT INTO `status_representante` (`id_status_representante`, `nombre_status`) VALUES
@@ -2522,7 +2579,7 @@ INSERT INTO `status_representante` (`id_status_representante`, `nombre_status`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `status_sistema`
+-- Estructura de tabla para la tabla `status_sistema`
 --
 
 CREATE TABLE `status_sistema` (
@@ -2531,7 +2588,7 @@ CREATE TABLE `status_sistema` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `status_sistema`
+-- Volcado de datos para la tabla `status_sistema`
 --
 
 INSERT INTO `status_sistema` (`id_status_sistema`, `nombre_status_sistema`) VALUES
@@ -2541,7 +2598,7 @@ INSERT INTO `status_sistema` (`id_status_sistema`, `nombre_status_sistema`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `status_verificacion`
+-- Estructura de tabla para la tabla `status_verificacion`
 --
 
 CREATE TABLE `status_verificacion` (
@@ -2550,7 +2607,7 @@ CREATE TABLE `status_verificacion` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `status_verificacion`
+-- Volcado de datos para la tabla `status_verificacion`
 --
 
 INSERT INTO `status_verificacion` (`id_status_verificacion`, `nombre_verificacion`) VALUES
@@ -2560,7 +2617,7 @@ INSERT INTO `status_verificacion` (`id_status_verificacion`, `nombre_verificacio
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipo_usuario`
+-- Estructura de tabla para la tabla `tipo_usuario`
 --
 
 CREATE TABLE `tipo_usuario` (
@@ -2570,7 +2627,7 @@ CREATE TABLE `tipo_usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tipo_usuario`
+-- Volcado de datos para la tabla `tipo_usuario`
 --
 
 INSERT INTO `tipo_usuario` (`id_t_usuario`, `nombre_tipo_usuario`, `id_status_sistema`) VALUES
@@ -2588,7 +2645,7 @@ INSERT INTO `tipo_usuario` (`id_t_usuario`, `nombre_tipo_usuario`, `id_status_si
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -2598,8 +2655,8 @@ CREATE TABLE `usuario` (
   `apellido` varchar(60) NOT NULL,
   `segundoA` varchar(60) NOT NULL,
   `ci` int(8) NOT NULL,
-  `fecha_nac` date NOT NULL,
-  `fecha_registro` date NOT NULL,
+  `fecha_nac_us` date NOT NULL,
+  `fecha_registro_us` date NOT NULL,
   `imagen_us` varchar(300) NOT NULL,
   `tipo_imagen` varchar(60) NOT NULL,
   `tipo_imagen_dt` varchar(30) NOT NULL,
@@ -2615,49 +2672,55 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `usuario`
+-- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`, `segundoN`, `apellido`, `segundoA`, `ci`, `fecha_nac`, `fecha_registro`, `imagen_us`, `tipo_imagen`, `tipo_imagen_dt`, `image_dt`, `usuario`, `clave`, `id_t_usuario`, `id_status_sistema`, `id_club`, `id_categoria`, `id_status_verificacion`, `id_carnet_jug`) VALUES
+INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`, `segundoN`, `apellido`, `segundoA`, `ci`, `fecha_nac_us`, `fecha_registro_us`, `imagen_us`, `tipo_imagen`, `tipo_imagen_dt`, `image_dt`, `usuario`, `clave`, `id_t_usuario`, `id_status_sistema`, `id_club`, `id_categoria`, `id_status_verificacion`, `id_carnet_jug`) VALUES
 (1, 'roger', 'eduardo', 'romero', 'escalona', 26768416, '2022-11-09', '0000-00-00', 'img/foto-jug/milena.jpg', 'image/jpg', '0', '0', 'rere', 'bd134207f74532a8b094676c4a2ca9ed', 6, 1, 4, 8, 1, 1),
 (2, 'juan', 'eduardo', 'romero', 'mujica', 7362415, '0000-00-00', '0000-00-00', 'img/foto-jug/milena.jpg', 'image/jpg', '0', '0', 'juan', 'a94652aa97c7211ba8954dd15a3cf838', 6, 1, 5, 8, 1, 1),
+(5, 'YONKLEIBERSON', 'JESUS', 'CASANOVA', 'PEREZ', 25478965, '1999-03-12', '2023-01-23', 'img/foto-jug/PARTIDA NACIMIENTO ANDERSON BAEZ SUB12.jpg', 'image/jpeg', '0', '0', 'yon', '44c5d489dc9bc9bcfefec7dd22a8d4b9', 7, 1, 4, 6, 2, 1),
+(9, 'Juansito', 'Jose', 'Perez', 'Diaz', 25879654, '2010-02-12', '2023-01-26', 'img/foto-jug/SDC10075.JPG', 'image/jpeg', '0', '0', 'aae', 'cf34362ab126ce8338d8991cc1404980', 7, 2, 5, 4, 2, 1),
+(10, 'juancho', 'jacus', 'jasw', 'aseq', 45789456, '1999-10-12', '2023-01-26', 'img/foto-jug/milena.jpg', 'image/jpeg', '0', '0', 'eeq', 'e81d183b6de1ea62e8e967f08639f44c', 7, 1, 5, 4, 2, 1),
+(11, 'asd', 'asd', 'asd', 'asd', 12345678, '1999-03-12', '0000-00-00', 'img/foto-jug/photo_2021-03-27_19-39-33.jpg', 'image/jpeg', '0', '0', 'aswq', 'e4342892ef11682807c5a74c181ca576', 7, 1, 5, 6, 1, 1),
+(12, 'asdasdasd', 'asdasdasd', 'asdasdas', 'dasdasdasd', 123123123, '1119-03-12', '0000-00-00', 'img/foto-jug/Edades_page-0001.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'asdasd', 'a8f5f167f44f4964e6c998dee827110c', 7, 1, 5, 6, 2, 1),
+(13, 'qweasd', 'qwdasdq', 'wdqsdqw', 'dqsdqs', 123123, '1333-10-12', '2026-01-23', 'img/foto-jug/photo_2021-03-27_19-39-34.jpg', 'image/jpeg', '0', '0', 'asdasd12', '0acf03f408f90ea0dcba786d300620db', 7, 1, 5, 6, 2, 1),
+(14, 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2147483647, '1239-03-12', '2023-01-26', 'img/foto-jug/PARTIDA NACIMIENTO ANDERSON BAEZ SUB12.jpg', 'image/jpeg', '0', '0', '10239', 'a8f5f167f44f4964e6c998dee827110c', 7, 1, 5, 5, 2, 1),
+(15, 'asdasd', 'asdasd', 'asdasd', 'asdasd', 33124, '1239-03-12', '2023-01-26', 'img/foto-jug/PARTIDA NACIMIENTO ANDERSON BAEZ SUB12.jpg', 'image/jpeg', '0', '0', '102392', '47bce5c74f589f4867dbd57e9ca9f808', 7, 1, 5, 5, 2, 1),
 (16, 'jaja', 'jaja', 'jaja', 'jaja', 26768321, '0000-00-00', '0000-00-00', 'img/foto-jug/PARTIDA NACIMIENTO ANDERSON BAEZ SUB12.jpg', 'image/jpeg', '0', '0', 'afel', 'a94652aa97c7211ba8954dd15a3cf838', 4, 1, 2, 8, 1, 1),
 (19, 'juan', 'juan', 'juan', 'juan', 12345676, '1999-09-12', '2023-02-01', 'img/foto-ent/346-3464419_o-club-deportivo-lara-um-clube-de.png', 'image/png', '0', '0', 'asda', '5f039b4ef0058a1d652f13d612375a5b', 9, 1, 5, 6, 2, 1),
-(27, 'Roger', 'Eduardo', 'romero', 'Escalona', 25888999, '1999-03-12', '2023-02-04', 'img/foto-ent/326001965_5850445371710945_4737417462987982914_n.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/325925064_593042532657512_6534913210267114589_n.jpg', 'aer', 'd194f6194fc458544482bbb8f0b74c6b', 9, 1, 5, 6, 2, 1),
-(29, 'Roger', 'Eduardo', 'Romero', 'Escalona', 25643532, '2015-03-12', '2023-02-05', 'img/foto-jug/WhatsApp Image 2021-04-27 at 8.53.10 AM (1).jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/WhatsApp Image 2022-04-21 at 12.23.06 AM.jpeg', 'afelito', '8f90b38f39a6dd71d6a5200e8812e77a', 7, 1, 5, 4, 2, 1),
-(30, 'Jesus', 'Ejelias', 'Perez', 'Twin', 25648730, '2017-01-12', '2023-02-05', 'img/foto-jug/121696851_2631843603794507_8263145407357699119_o.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/ARANCELES SISTEMA DE ESTUDIOS ABIERTOS.jpeg', 'carmen', '880cbc1ed48043cbcdaa7286e058ef7f', 7, 1, 5, 2, 1, 1);
+(20, 'SANTIAGO', 'JOSE', 'CASTILLO', 'PEREZ', 33996682, '2012-02-01', '2023-02-03', 'img/foto-jug/Edades_page-0001.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'SANTIAGO', 'a6f30815a43f38ec6de95b9a9d74da37', 7, 2, 5, 6, 2, 1),
+(21, 'Roger', 'Eduardo', 'Romero', 'Escalona', 35789456, '2012-03-12', '2023-02-13', 'img/foto-jug/Edades_page-0002.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'aeq', '81922c6e7c4bdebebd7be669d60b7a59', 7, 1, 5, 7, 2, 1),
+(22, 'roger', 'r', 'r', 'r', 33996682, '1999-03-12', '2023-02-15', 'img/foto-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'r', '0cc175b9c0f1b6a831c399e269772661', 7, 1, 5, 4, 2, 1),
+(23, 'roger', 'r', 'r', 'r', 33996682, '1999-03-12', '2023-02-15', 'img/foto-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'rw', 'f1290186a5d0b1ceab27f4e77c0c5d68', 7, 1, 5, 4, 2, 1),
+(24, 'a', 'a', 'a', 'a', 33996682, '2023-02-22', '2023-02-15', 'img/foto-jug/57b896c9-88a9-4c34-92d2-44e72bc1b8a9.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'a', '0cc175b9c0f1b6a831c399e269772661', 7, 1, 5, 3, 2, 1),
+(25, 'Elvis', 'Jose', 'Perez', 'Perez', 18737201, '2010-02-25', '2023-02-15', 'img/foto-jug/Edades_page-0004.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'elvis', '8b28c7134887bb938e1ffed68456ffb2', 7, 1, 5, 7, 2, 1),
+(26, 're', 're', 're', 're', 1234321, '2022-01-01', '2023-02-15', 'img/foto-jug/Edades_page-0003.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/Edades_page-0005.jpg', 'reas', '8d8391fcc8148ac2628972ad541ad057', 7, 1, 5, 5, 2, 1),
+(27, 're', 're', 're', 're', 1234323, '2022-01-01', '2023-02-15', 'img/foto-jug/Edades_page-0003.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/Edades_page-0005.jpg', 're2as', '723e3c49d56dde1783e6b070e80d2836', 7, 1, 5, 5, 2, 1),
+(28, 're', 're', 're', 're', 12343233, '2022-01-01', '2023-02-15', 'img/foto-jug/Edades_page-0003.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/Edades_page-0005.jpg', 're2as2', 'e1671797c52e15f763380b45e841ec32', 7, 1, 5, 5, 2, 1),
+(29, 'fafa', 're', 're', 're', 33343233, '2022-01-01', '2023-02-15', 'img/foto-jug/Edades_page-0001.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'fafa', '89e6d2b383471fc370d828e552c19e65', 7, 1, 5, 5, 2, 1);
 
 -- --------------------------------------------------------
 
 --
--- Structure for view `listado`
+-- Estructura para la vista `listado`
 --
 DROP TABLE IF EXISTS `listado`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `listado`  AS  select `usuario`.`id_usuario` AS `id_usuario`,`usuario`.`nombre_usuario` AS `nombre_usuario`,`club`.`nombre_club` AS `nombre_club`,`usuario`.`segundoN` AS `segundoN`,`usuario`.`apellido` AS `apellido`,`usuario`.`segundoA` AS `segundoA`,`usuario`.`ci` AS `ci`,`usuario`.`fecha_nac` AS `fecha_nac`,`usuario`.`fecha_registro` AS `fecha_registro`,`usuario`.`imagen_us` AS `imagen_us`,`usuario`.`tipo_imagen` AS `tipo_imagen`,`usuario`.`usuario` AS `usuario`,`usuario`.`clave` AS `clave`,`usuario`.`id_t_usuario` AS `id_t_usuario`,`usuario`.`id_status_sistema` AS `id_status_sistema`,`usuario`.`id_club` AS `id_club`,`usuario`.`id_categoria` AS `id_categoria`,`usuario`.`id_status_verificacion` AS `id_status_verificacion`,`usuario`.`id_carnet_jug` AS `id_carnet_jug`,`categoria`.`nombre_categoria` AS `nombre_categoria`,`status_sistema`.`nombre_status_sistema` AS `nombre_status_sistema`,`status_verificacion`.`nombre_verificacion` AS `nombre_verificacion`,`tipo_usuario`.`nombre_tipo_usuario` AS `nombre_tipo_usuario` from (((((`usuario` join `club`) join `categoria`) join `status_sistema`) join `status_verificacion`) join `tipo_usuario`) where ((`usuario`.`nombre_usuario` like '%') and (`usuario`.`segundoN` like '%') and (`usuario`.`apellido` like '%') and (`usuario`.`segundoA` like '%') and (`usuario`.`ci` like '%') and (`usuario`.`fecha_nac` like '%') and (`usuario`.`fecha_registro` like '%') and (`usuario`.`id_club` like '%') and (`club`.`id_club` = `usuario`.`id_club`) and (`usuario`.`id_t_usuario` like '7') and (`tipo_usuario`.`id_t_usuario` = `usuario`.`id_t_usuario`) and (`usuario`.`id_categoria` like '%') and (`categoria`.`id_categoria` = `usuario`.`id_categoria`) and (`usuario`.`id_status_sistema` like '%') and (`status_sistema`.`id_status_sistema` = `usuario`.`id_status_sistema`) and (`usuario`.`id_status_verificacion` like '%') and (`status_verificacion`.`id_status_verificacion` = `usuario`.`id_status_verificacion`)) order by `usuario`.`nombre_usuario` ;
-
--- --------------------------------------------------------
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `listado`  AS SELECT `usuario`.`id_usuario` AS `id_usuario`, `usuario`.`nombre_usuario` AS `nombre_usuario`, `club`.`nombre_club` AS `nombre_club`, `usuario`.`segundoN` AS `segundoN`, `usuario`.`apellido` AS `apellido`, `usuario`.`segundoA` AS `segundoA`, `usuario`.`ci` AS `ci`, `usuario`.`fecha_nac_us` AS `fecha_nac_us`, `usuario`.`fecha_registro_us` AS `fecha_registro_us`, `usuario`.`imagen_us` AS `imagen_us`, `usuario`.`tipo_imagen` AS `tipo_imagen`, `usuario`.`usuario` AS `usuario`, `usuario`.`clave` AS `clave`, `usuario`.`id_t_usuario` AS `id_t_usuario`, `usuario`.`id_status_sistema` AS `id_status_sistema`, `usuario`.`id_club` AS `id_club`, `usuario`.`id_categoria` AS `id_categoria`, `usuario`.`id_status_verificacion` AS `id_status_verificacion`, `usuario`.`id_carnet_jug` AS `id_carnet_jug`, `categoria`.`nombre_categoria` AS `nombre_categoria`, `status_sistema`.`nombre_status_sistema` AS `nombre_status_sistema`, `status_verificacion`.`nombre_verificacion` AS `nombre_verificacion`, `tipo_usuario`.`nombre_tipo_usuario` AS `nombre_tipo_usuario` FROM (((((`usuario` join `club`) join `categoria`) join `status_sistema`) join `status_verificacion`) join `tipo_usuario`) WHERE `usuario`.`nombre_usuario` like '%' AND `usuario`.`segundoN` like '%' AND `usuario`.`apellido` like '%' AND `usuario`.`segundoA` like '%' AND `usuario`.`ci` like '%' AND `usuario`.`fecha_nac_us` like '%' AND `usuario`.`fecha_registro_us` like '%' AND `usuario`.`id_club` like '%' AND `club`.`id_club` = `usuario`.`id_club` AND `usuario`.`id_t_usuario` like '7' AND `tipo_usuario`.`id_t_usuario` = `usuario`.`id_t_usuario` AND `usuario`.`id_categoria` like '%' AND `categoria`.`id_categoria` = `usuario`.`id_categoria` AND `usuario`.`id_status_sistema` like '%' AND `status_sistema`.`id_status_sistema` = `usuario`.`id_status_sistema` AND `usuario`.`id_status_verificacion` like '%' AND `status_verificacion`.`id_status_verificacion` = `usuario`.`id_status_verificacion` ORDER BY `usuario`.`nombre_usuario` ASC  ;
 
 --
--- Structure for view `listado_entrenadores`
---
-DROP TABLE IF EXISTS `listado_entrenadores`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `listado_entrenadores`  AS  select `usuario`.`id_usuario` AS `id_usuario`,`usuario`.`nombre_usuario` AS `nombre_usuario`,`club`.`nombre_club` AS `nombre_club`,`usuario`.`segundoN` AS `segundoN`,`usuario`.`apellido` AS `apellido`,`usuario`.`segundoA` AS `segundoA`,`usuario`.`ci` AS `ci`,`usuario`.`fecha_nac` AS `fecha_nac`,`usuario`.`fecha_registro` AS `fecha_registro`,`usuario`.`imagen_us` AS `imagen_us`,`usuario`.`tipo_imagen` AS `tipo_imagen`,`usuario`.`usuario` AS `usuario`,`usuario`.`clave` AS `clave`,`usuario`.`id_t_usuario` AS `id_t_usuario`,`usuario`.`id_status_sistema` AS `id_status_sistema`,`usuario`.`id_club` AS `id_club`,`usuario`.`id_categoria` AS `id_categoria`,`usuario`.`id_status_verificacion` AS `id_status_verificacion`,`usuario`.`id_carnet_jug` AS `id_carnet_jug`,`categoria`.`nombre_categoria` AS `nombre_categoria`,`status_sistema`.`nombre_status_sistema` AS `nombre_status_sistema`,`status_verificacion`.`nombre_verificacion` AS `nombre_verificacion`,`tipo_usuario`.`nombre_tipo_usuario` AS `nombre_tipo_usuario` from (((((`usuario` join `club`) join `categoria`) join `status_sistema`) join `status_verificacion`) join `tipo_usuario`) where ((`usuario`.`nombre_usuario` like '%') and (`usuario`.`segundoN` like '%') and (`usuario`.`apellido` like '%') and (`usuario`.`segundoA` like '%') and (`usuario`.`ci` like '%') and (`usuario`.`fecha_nac` like '%') and (`usuario`.`fecha_registro` like '%') and (`usuario`.`id_club` like '%') and (`club`.`id_club` = `usuario`.`id_club`) and (`usuario`.`id_t_usuario` like 9) and (`tipo_usuario`.`id_t_usuario` = `usuario`.`id_t_usuario`) and (`usuario`.`id_categoria` like '%') and (`categoria`.`id_categoria` = `usuario`.`id_categoria`) and (`usuario`.`id_status_sistema` like '%') and (`status_sistema`.`id_status_sistema` = `usuario`.`id_status_sistema`) and (`usuario`.`id_status_verificacion` like '%') and (`status_verificacion`.`id_status_verificacion` = `usuario`.`id_status_verificacion`)) order by `usuario`.`nombre_usuario` ;
-
---
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `admin`
+-- Indices de la tabla `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_adm`),
   ADD KEY `id_status_sistema` (`id_status_sistema`);
 
 --
--- Indexes for table `carnet`
+-- Indices de la tabla `carnet`
 --
 ALTER TABLE `carnet`
   ADD PRIMARY KEY (`id_carnet`),
@@ -2666,20 +2729,20 @@ ALTER TABLE `carnet`
   ADD KEY `id_status_sistema` (`id_status_sistema`);
 
 --
--- Indexes for table `carnets`
+-- Indices de la tabla `carnets`
 --
 ALTER TABLE `carnets`
   ADD PRIMARY KEY (`id_carnet_jug`);
 
 --
--- Indexes for table `categoria`
+-- Indices de la tabla `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id_categoria`),
   ADD KEY `id_status_sistema` (`id_status_sistema`);
 
 --
--- Indexes for table `cat_to_mod_atl`
+-- Indices de la tabla `cat_to_mod_atl`
 --
 ALTER TABLE `cat_to_mod_atl`
   ADD PRIMARY KEY (`id_cat_to_mod_atl`),
@@ -2688,14 +2751,14 @@ ALTER TABLE `cat_to_mod_atl`
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
--- Indexes for table `ciudades`
+-- Indices de la tabla `ciudades`
 --
 ALTER TABLE `ciudades`
   ADD PRIMARY KEY (`id_ciudad`),
   ADD KEY `id_estado` (`id_estado`);
 
 --
--- Indexes for table `club`
+-- Indices de la tabla `club`
 --
 ALTER TABLE `club`
   ADD PRIMARY KEY (`id_club`),
@@ -2703,7 +2766,7 @@ ALTER TABLE `club`
   ADD KEY `id_status_club` (`id_status_club`);
 
 --
--- Indexes for table `equipo_tec`
+-- Indices de la tabla `equipo_tec`
 --
 ALTER TABLE `equipo_tec`
   ADD PRIMARY KEY (`id_equipo_tec`),
@@ -2713,7 +2776,7 @@ ALTER TABLE `equipo_tec`
   ADD KEY `id_status_sistema` (`id_status_sistema`);
 
 --
--- Indexes for table `estadio`
+-- Indices de la tabla `estadio`
 --
 ALTER TABLE `estadio`
   ADD PRIMARY KEY (`id_estadio`),
@@ -2721,13 +2784,13 @@ ALTER TABLE `estadio`
   ADD KEY `id_modalidad` (`id_modalidad`);
 
 --
--- Indexes for table `estados`
+-- Indices de la tabla `estados`
 --
 ALTER TABLE `estados`
   ADD PRIMARY KEY (`id_estado`);
 
 --
--- Indexes for table `fichaje`
+-- Indices de la tabla `fichaje`
 --
 ALTER TABLE `fichaje`
   ADD PRIMARY KEY (`id_fichaje`),
@@ -2737,14 +2800,14 @@ ALTER TABLE `fichaje`
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
--- Indexes for table `historico`
+-- Indices de la tabla `historico`
 --
 ALTER TABLE `historico`
   ADD PRIMARY KEY (`id_histo`),
   ADD KEY `id_status_sistema` (`id_status_sistema`);
 
 --
--- Indexes for table `historico_fichaje`
+-- Indices de la tabla `historico_fichaje`
 --
 ALTER TABLE `historico_fichaje`
   ADD PRIMARY KEY (`id_h_fichaje`),
@@ -2754,27 +2817,27 @@ ALTER TABLE `historico_fichaje`
   ADD KEY `id_status_sistema` (`id_status_sistema`);
 
 --
--- Indexes for table `modalidad`
+-- Indices de la tabla `modalidad`
 --
 ALTER TABLE `modalidad`
   ADD PRIMARY KEY (`id_modalidad`);
 
 --
--- Indexes for table `municipios`
+-- Indices de la tabla `municipios`
 --
 ALTER TABLE `municipios`
   ADD PRIMARY KEY (`id_municipio`),
   ADD KEY `id_estado` (`id_estado`);
 
 --
--- Indexes for table `parroquias`
+-- Indices de la tabla `parroquias`
 --
 ALTER TABLE `parroquias`
   ADD PRIMARY KEY (`id_parroquia`),
   ADD KEY `id_municipio` (`id_municipio`);
 
 --
--- Indexes for table `representante`
+-- Indices de la tabla `representante`
 --
 ALTER TABLE `representante`
   ADD PRIMARY KEY (`id_representante`),
@@ -2782,7 +2845,7 @@ ALTER TABLE `representante`
   ADD KEY ```id_status_representante``` (`id_status_representante`);
 
 --
--- Indexes for table `representante_to_usuario`
+-- Indices de la tabla `representante_to_usuario`
 --
 ALTER TABLE `representante_to_usuario`
   ADD PRIMARY KEY (`id_r_t_u`),
@@ -2790,38 +2853,38 @@ ALTER TABLE `representante_to_usuario`
   ADD KEY `id_usuario` (`id_usuario`);
 
 --
--- Indexes for table `status_club`
+-- Indices de la tabla `status_club`
 --
 ALTER TABLE `status_club`
   ADD PRIMARY KEY (`id_status_club`);
 
 --
--- Indexes for table `status_representante`
+-- Indices de la tabla `status_representante`
 --
 ALTER TABLE `status_representante`
   ADD PRIMARY KEY (`id_status_representante`);
 
 --
--- Indexes for table `status_sistema`
+-- Indices de la tabla `status_sistema`
 --
 ALTER TABLE `status_sistema`
   ADD PRIMARY KEY (`id_status_sistema`);
 
 --
--- Indexes for table `status_verificacion`
+-- Indices de la tabla `status_verificacion`
 --
 ALTER TABLE `status_verificacion`
   ADD PRIMARY KEY (`id_status_verificacion`);
 
 --
--- Indexes for table `tipo_usuario`
+-- Indices de la tabla `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
   ADD PRIMARY KEY (`id_t_usuario`),
   ADD KEY `id_status_sistema` (`id_status_sistema`);
 
 --
--- Indexes for table `usuario`
+-- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id_usuario`),
@@ -2834,165 +2897,165 @@ ALTER TABLE `usuario`
   ADD KEY `id_carnet_jug` (`id_carnet_jug`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT de la tabla `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id_adm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `carnet`
+-- AUTO_INCREMENT de la tabla `carnet`
 --
 ALTER TABLE `carnet`
   MODIFY `id_carnet` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `carnets`
+-- AUTO_INCREMENT de la tabla `carnets`
 --
 ALTER TABLE `carnets`
   MODIFY `id_carnet_jug` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `categoria`
+-- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `cat_to_mod_atl`
+-- AUTO_INCREMENT de la tabla `cat_to_mod_atl`
 --
 ALTER TABLE `cat_to_mod_atl`
   MODIFY `id_cat_to_mod_atl` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `ciudades`
+-- AUTO_INCREMENT de la tabla `ciudades`
 --
 ALTER TABLE `ciudades`
   MODIFY `id_ciudad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=523;
 
 --
--- AUTO_INCREMENT for table `club`
+-- AUTO_INCREMENT de la tabla `club`
 --
 ALTER TABLE `club`
   MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `equipo_tec`
+-- AUTO_INCREMENT de la tabla `equipo_tec`
 --
 ALTER TABLE `equipo_tec`
   MODIFY `id_equipo_tec` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `estadio`
+-- AUTO_INCREMENT de la tabla `estadio`
 --
 ALTER TABLE `estadio`
   MODIFY `id_estadio` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `estados`
+-- AUTO_INCREMENT de la tabla `estados`
 --
 ALTER TABLE `estados`
   MODIFY `id_estado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `fichaje`
+-- AUTO_INCREMENT de la tabla `fichaje`
 --
 ALTER TABLE `fichaje`
-  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
--- AUTO_INCREMENT for table `historico`
+-- AUTO_INCREMENT de la tabla `historico`
 --
 ALTER TABLE `historico`
   MODIFY `id_histo` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `historico_fichaje`
+-- AUTO_INCREMENT de la tabla `historico_fichaje`
 --
 ALTER TABLE `historico_fichaje`
-  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `modalidad`
+-- AUTO_INCREMENT de la tabla `modalidad`
 --
 ALTER TABLE `modalidad`
   MODIFY `id_modalidad` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `municipios`
+-- AUTO_INCREMENT de la tabla `municipios`
 --
 ALTER TABLE `municipios`
   MODIFY `id_municipio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=463;
 
 --
--- AUTO_INCREMENT for table `parroquias`
+-- AUTO_INCREMENT de la tabla `parroquias`
 --
 ALTER TABLE `parroquias`
   MODIFY `id_parroquia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1139;
 
 --
--- AUTO_INCREMENT for table `representante`
+-- AUTO_INCREMENT de la tabla `representante`
 --
 ALTER TABLE `representante`
-  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `representante_to_usuario`
+-- AUTO_INCREMENT de la tabla `representante_to_usuario`
 --
 ALTER TABLE `representante_to_usuario`
-  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
--- AUTO_INCREMENT for table `status_club`
+-- AUTO_INCREMENT de la tabla `status_club`
 --
 ALTER TABLE `status_club`
   MODIFY `id_status_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `status_representante`
+-- AUTO_INCREMENT de la tabla `status_representante`
 --
 ALTER TABLE `status_representante`
   MODIFY `id_status_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `status_sistema`
+-- AUTO_INCREMENT de la tabla `status_sistema`
 --
 ALTER TABLE `status_sistema`
   MODIFY `id_status_sistema` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `status_verificacion`
+-- AUTO_INCREMENT de la tabla `status_verificacion`
 --
 ALTER TABLE `status_verificacion`
   MODIFY `id_status_verificacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tipo_usuario`
+-- AUTO_INCREMENT de la tabla `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
   MODIFY `id_t_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `usuario`
+-- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `admin`
+-- Filtros para la tabla `admin`
 --
 ALTER TABLE `admin`
   ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`);
 
 --
--- Constraints for table `carnet`
+-- Filtros para la tabla `carnet`
 --
 ALTER TABLE `carnet`
   ADD CONSTRAINT `carnet_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`),
@@ -3000,13 +3063,13 @@ ALTER TABLE `carnet`
   ADD CONSTRAINT `carnet_ibfk_3` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`);
 
 --
--- Constraints for table `categoria`
+-- Filtros para la tabla `categoria`
 --
 ALTER TABLE `categoria`
   ADD CONSTRAINT `categoria_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`);
 
 --
--- Constraints for table `cat_to_mod_atl`
+-- Filtros para la tabla `cat_to_mod_atl`
 --
 ALTER TABLE `cat_to_mod_atl`
   ADD CONSTRAINT `cat_to_mod_atl_ibfk_1` FOREIGN KEY (`id_modalidad`) REFERENCES `modalidad` (`id_modalidad`),
@@ -3014,20 +3077,20 @@ ALTER TABLE `cat_to_mod_atl`
   ADD CONSTRAINT `cat_to_mod_atl_ibfk_3` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`);
 
 --
--- Constraints for table `ciudades`
+-- Filtros para la tabla `ciudades`
 --
 ALTER TABLE `ciudades`
   ADD CONSTRAINT `ciudades_ibfk_1` FOREIGN KEY (`id_estado`) REFERENCES `estados` (`id_estado`);
 
 --
--- Constraints for table `club`
+-- Filtros para la tabla `club`
 --
 ALTER TABLE `club`
   ADD CONSTRAINT `club_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`),
   ADD CONSTRAINT `club_ibfk_2` FOREIGN KEY (`id_status_club`) REFERENCES `status_club` (`id_status_club`);
 
 --
--- Constraints for table `equipo_tec`
+-- Filtros para la tabla `equipo_tec`
 --
 ALTER TABLE `equipo_tec`
   ADD CONSTRAINT `equipo_tec_ibfk_1` FOREIGN KEY (`id_club`) REFERENCES `club` (`id_club`),
@@ -3036,14 +3099,14 @@ ALTER TABLE `equipo_tec`
   ADD CONSTRAINT `equipo_tec_ibfk_4` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`);
 
 --
--- Constraints for table `estadio`
+-- Filtros para la tabla `estadio`
 --
 ALTER TABLE `estadio`
   ADD CONSTRAINT `estadio_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`),
   ADD CONSTRAINT `estadio_ibfk_2` FOREIGN KEY (`id_modalidad`) REFERENCES `modalidad` (`id_modalidad`);
 
 --
--- Constraints for table `fichaje`
+-- Filtros para la tabla `fichaje`
 --
 ALTER TABLE `fichaje`
   ADD CONSTRAINT `fichaje_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`),
@@ -3052,13 +3115,13 @@ ALTER TABLE `fichaje`
   ADD CONSTRAINT `fichaje_ibfk_4` FOREIGN KEY (`id_club`) REFERENCES `club` (`id_club`);
 
 --
--- Constraints for table `historico`
+-- Filtros para la tabla `historico`
 --
 ALTER TABLE `historico`
   ADD CONSTRAINT `historico_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`);
 
 --
--- Constraints for table `historico_fichaje`
+-- Filtros para la tabla `historico_fichaje`
 --
 ALTER TABLE `historico_fichaje`
   ADD CONSTRAINT `historico_fichaje_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`),
@@ -3067,33 +3130,33 @@ ALTER TABLE `historico_fichaje`
   ADD CONSTRAINT `historico_fichaje_ibfk_4` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`);
 
 --
--- Constraints for table `municipios`
+-- Filtros para la tabla `municipios`
 --
 ALTER TABLE `municipios`
   ADD CONSTRAINT `municipios_ibfk_1` FOREIGN KEY (`id_estado`) REFERENCES `estados` (`id_estado`);
 
 --
--- Constraints for table `parroquias`
+-- Filtros para la tabla `parroquias`
 --
 ALTER TABLE `parroquias`
   ADD CONSTRAINT `parroquias_ibfk_1` FOREIGN KEY (`id_municipio`) REFERENCES `municipios` (`id_municipio`);
 
 --
--- Constraints for table `representante`
+-- Filtros para la tabla `representante`
 --
 ALTER TABLE `representante`
   ADD CONSTRAINT `representante_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`),
   ADD CONSTRAINT `representante_ibfk_2` FOREIGN KEY (`id_status_representante`) REFERENCES `status_representante` (`id_status_representante`);
 
 --
--- Constraints for table `representante_to_usuario`
+-- Filtros para la tabla `representante_to_usuario`
 --
 ALTER TABLE `representante_to_usuario`
   ADD CONSTRAINT `representante_to_usuario_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`),
   ADD CONSTRAINT `representante_to_usuario_ibfk_2` FOREIGN KEY (`id_representante`) REFERENCES `representante` (`id_representante`);
 
 --
--- Constraints for table `tipo_usuario`
+-- Filtros para la tabla `tipo_usuario`
 --
 ALTER TABLE `tipo_usuario`
   ADD CONSTRAINT `tipo_usuario_ibfk_1` FOREIGN KEY (`id_status_sistema`) REFERENCES `status_sistema` (`id_status_sistema`);
