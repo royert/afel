@@ -42,7 +42,7 @@ SET
     `apellido` = '$apellido_us',
     `segundoA` = '$segundoA_us',
     `ci` = '$ci_us',
-    `fecha_nac` = '$fecha_nac_us',
+    `fecha_nac_us` = '$fecha_nac_us',
     `imagen_us` = '$url_img_us',
     `tipo_imagen` = '$tipo_foto',
     `tipo_imagen_dt` = '$tipo_foto_dt',
@@ -79,7 +79,7 @@ SET
     `apellido` = '$apellido_us',
     `segundoA` = '$segundoA_us',
     `ci` = '$ci_us',
-    `fecha_nac` = '$fecha_nac_us',
+    `fecha_nac_us` = '$fecha_nac_us',
     `id_status_sistema` = '$id_status_sistema_us',
     `id_categoria` = '$id_categoria',
   

@@ -100,8 +100,8 @@ $id_us = $_GET['id_usuario'];
 			`usuario`.`segundoN`, `usuario`.`apellido` , `usuario`.`segundoA`, 
 			`usuario`.`ci`, `club`.`nombre_club`, `categoria`.`nombre_categoria`, 
 			`status_sistema`.`nombre_status_sistema`, 
-			`status_verificacion`.`nombre_verificacion` , `usuario`.`fecha_nac`, 
-			`usuario`.`fecha_registro`, `usuario`.`imagen_us`,  `usuario`.`id_status_sistema`, `usuario`.`id_categoria`, 
+			`status_verificacion`.`nombre_verificacion` , `usuario`.`fecha_nac_us`, 
+			`usuario`.`fecha_registro_us`, `usuario`.`imagen_us`,  `usuario`.`id_status_sistema`, `usuario`.`id_categoria`, 
 			`usuario`.`id_club`, `usuario`.`id_categoria`, `usuario`.`id_status_verificacion`
 			FROM `usuario`, `club`, `categoria`, `status_sistema`, `status_verificacion` 
 								WHERE ((`usuario`.`id_t_usuario` = 9 
@@ -168,7 +168,7 @@ $id_us = $_GET['id_usuario'];
 							</div>
 							<div class="col-sm-6">
 								<label for="inputAddress2">Fecha de Nacimiento</label>
-								<input type="date" class="form-control" id="inputAddress2" placeholder="Fecha de Nacimiento" name="fecha_nac" value="<?php echo $row['fecha_nac']; ?>">
+								<input type="date" class="form-control" id="inputAddress2" placeholder="Fecha de Nacimiento" name="fecha_nac" value="<?php echo $row['fecha_nac_us']; ?>">
 							</div>
 
 

@@ -173,7 +173,7 @@ $id_us = $_GET['id_user'];
 							</div>
 							<div class="col-sm-6">
 								<label for="inputAddress2">Fecha de Nacimiento</label>
-								<input type="date" class="form-control" id="inputAddress2" placeholder="Fecha de Nacimiento" name="fecha_nac" value="<?php echo $row['fecha_nac']; ?>">
+								<input type="date" class="form-control" id="inputAddress2" placeholder="Fecha de Nacimiento" name="fecha_nac" value="<?php echo $row['fecha_nac_us']; ?>">
 							</div>
 
 

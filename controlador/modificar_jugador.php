@@ -69,7 +69,7 @@ if ($res_ver) {
 		`apellido` = '$apellido_us',
 		`segundoA` = '$segundoA_us',
 		`ci` = '$ci_us',
-		`fecha_nac` = '$fecha_nac_us',
+		`fecha_nac_us` = '$fecha_nac_us',
 		`imagen_us` = '$url_img_us',
 		`tipo_imagen` = '$tipo_foto',
 		`tipo_imagen_dt` = '$tipo_foto_dt',
@@ -101,7 +101,7 @@ if ($res_ver) {
 		`apellido` = '$apellido_us',
 		`segundoA` = '$segundoA_us',
 		`ci` = '$ci_us',
-		`fecha_nac` = '$fecha_nac_us',
+		`fecha_nac_us` = '$fecha_nac_us',
 		`id_categoria` = '$id_categoria',
 		WHERE
 		`id_usuario` = '$id_us'";

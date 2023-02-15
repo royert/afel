@@ -307,7 +307,7 @@ session_start();
 				//$id_club_us = $_SESSION['id_club'];
 				
 if (isset($_POST['buscar'])) {
-					$ac = $_POST['select-sis'];
+			$ac = $_POST['select-sis'];
 			$club = $_POST['select-club'];
 			$cat = $_POST['select-categoria'];
 			$ver = $_POST['select-ver'];
@@ -344,9 +344,9 @@ if (isset($_POST['buscar'])) {
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -407,9 +407,9 @@ if (isset($_POST['buscar'])) {
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -470,9 +470,9 @@ if (isset($_POST['buscar'])) {
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -533,9 +533,9 @@ if (isset($_POST['buscar'])) {
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -592,9 +592,9 @@ if (isset($_POST['buscar'])) {
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -653,9 +653,9 @@ if (isset($_POST['buscar'])) {
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>

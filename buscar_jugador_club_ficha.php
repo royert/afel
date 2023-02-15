@@ -369,9 +369,9 @@ session_start();
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -432,9 +432,9 @@ session_start();
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -495,9 +495,9 @@ session_start();
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -558,9 +558,9 @@ session_start();
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -617,9 +617,9 @@ session_start();
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>
@@ -678,9 +678,9 @@ $sql = "SELECT
 						</td>
 						<td scope="col"><?php echo $row['ci']; ?></td>
 						<td scope="col">
-							<?php echo $row['fecha_nac']; ?>
+							<?php echo $row['fecha_nac_us']; ?>
 						</td>
-						<td scope="col"><?php echo $row['fecha_registro']; ?></td>
+						<td scope="col"><?php echo $row['fecha_registro_us']; ?></td>
 						<td>
 							<img class="img_buscar img-thumbnail" width="100" height="100" src="<?php echo $row['imagen_us'] ?>">
 						</td>

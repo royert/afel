@@ -26,7 +26,7 @@ require '../modelo/conexion.php';
 
 if (isset($imagen_us) && $imagen_us != "" ) 
 	{
-$sql = "UPDATE `usuario` SET `nombre_usuario`='$nombre_us',`segundoN`='$segundoN_us',`apellido`='$apellido_us',`segundoA`='$segundoA_us',`ci`='$ci_us',`fecha_nac`='$fecha_nac_us', `imagen_us`='$url_img_us', `tipo_imagen`='$tipo_foto', `id_status_sistema`='$id_status_sistema_us', `id_club` = '$id_club',`id_categoria`='$id_categoria',`id_status_verificacion`='$id_status_verificacion' WHERE `id_usuario` = '$id_us' ";
+$sql = "UPDATE `usuario` SET `nombre_usuario`='$nombre_us',`segundoN`='$segundoN_us',`apellido`='$apellido_us',`segundoA`='$segundoA_us',`ci`='$ci_us',`fecha_nac_us`='$fecha_nac_us', `imagen_us`='$url_img_us', `tipo_imagen`='$tipo_foto', `id_status_sistema`='$id_status_sistema_us', `id_club` = '$id_club',`id_categoria`='$id_categoria',`id_status_verificacion`='$id_status_verificacion' WHERE `id_usuario` = '$id_us' ";
 
 		$res = mysqli_query($conn, $sql);
 
@@ -43,7 +43,7 @@ $sql = "UPDATE `usuario` SET `nombre_usuario`='$nombre_us',`segundoN`='$segundoN
 }
 else{
 
-	$sql = "UPDATE `usuario` SET `nombre_usuario`='$nombre_us',`segundoN`='$segundoN_us',`apellido`='$apellido_us',`segundoA`='$segundoA_us',`ci`='$ci_us',`fecha_nac`='$fecha_nac_us',  `id_status_sistema`='$id_status_sistema_us', `id_club` = '$id_club',`id_categoria`='$id_categoria',`id_status_verificacion`='$id_status_verificacion' WHERE `id_usuario` = '$id_us'";
+	$sql = "UPDATE `usuario` SET `nombre_usuario`='$nombre_us',`segundoN`='$segundoN_us',`apellido`='$apellido_us',`segundoA`='$segundoA_us',`ci`='$ci_us',`fecha_nac_us`='$fecha_nac_us',  `id_status_sistema`='$id_status_sistema_us', `id_club` = '$id_club',`id_categoria`='$id_categoria',`id_status_verificacion`='$id_status_verificacion' WHERE `id_usuario` = '$id_us'";
 	
 	$res = mysqli_query($conn, $sql);
 	if ($res) {

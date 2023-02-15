@@ -75,8 +75,8 @@
 			`apellido`,
 			`segundoA`,
 			`ci`,
-			`fecha_nac`,
-			`fecha_registro`,
+			`fecha_nac_us`,
+			`fecha_registro_us`,
 			`imagen_us`,
 			`tipo_imagen`,
 			`tipo_imagen_dt`,
@@ -101,8 +101,8 @@
 			`apellido`,
 			`segundoA`,
 			`ci`,
-			`fecha_nac`,
-			`fecha_registro`,
+			`fecha_nac_us`,
+			`fecha_registro_us`,
 			`imagen_us`,
 			`tipo_imagen`,
 			`tipo_imagen_dt`,
@@ -127,8 +127,8 @@
 			`apellido`,
 			`segundoA`,
 			`ci`,
-			`fecha_nac`,
-			`fecha_registro`,
+			`fecha_nac_us`,
+			`fecha_registro_us`,
 			`imagen_us`,
 			`tipo_imagen`,
 			`tipo_imagen_dt`,
@@ -160,16 +160,14 @@
 				window.location.href="../agregar_jugador_club.php";
 				</script>';
 			} elseif (mysqli_num_rows($resul_ver_ci) > 0) {
-				echo'<script type="text/javascript">
-				alert("Cedula existente");
-				window.location.href="../agregar_jugador_club.php";
-				</script>';
-			}elseif (mysqli_num_rows($resul_ver_ci_fi) > 0) {
+				
+			if (mysqli_num_rows($resul_ver_ci_fi) > 0) {
 
 				echo'<script type="text/javascript">
 				alert("Cedula existente");
 				window.location.href="../buscar_jugador_libre.php";
 				</script>';
+			}
 			}elseif ($id_categoria == $c_cat){
 
 				echo'<script type="text/javascript">
@@ -201,8 +199,8 @@
 						`apellido`,
 						`segundoA`,
 						`ci`,
-						`fecha_nac`,
-						`fecha_registro`,
+						`fecha_nac_us`,
+						`fecha_registro_us`,
 						`imagen_us`,
 						`tipo_imagen`,
 						`tipo_imagen_dt`,

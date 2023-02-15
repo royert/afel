@@ -61,8 +61,8 @@ class PDF extends FPDF
     `usuario`.`apellido`,
     `usuario`.`segundoA`,
     `usuario`.`ci`,
-    `usuario`.`fecha_nac`,
-    `usuario`.`fecha_registro`,
+    `usuario`.`fecha_nac_us`,
+    `usuario`.`fecha_registro_us`,
     `usuario`.`imagen_us`,
     `usuario`.`tipo_imagen`,
     `usuario`.`usuario`,
@@ -158,7 +158,7 @@ while ($row = mysqli_fetch_assoc($res)) {
 
 
    $pdf->Cell(40,7,utf8_decode('FECHA DE NACIMIENTO: '),0,0,'L');
-   $pdf->Cell(30,7,utf8_decode($row['fecha_nac']),0,1,'L');
+   $pdf->Cell(30,7,utf8_decode($row['fecha_nac_us']),0,1,'L');
 
 
    $pdf->Cell(35,7,utf8_decode('SEGUNDO APELLIDO: '),0,0,'L');
@@ -166,7 +166,7 @@ while ($row = mysqli_fetch_assoc($res)) {
 
 
    $pdf->Cell(37,7,utf8_decode('FECHA DE REGISTRO: '),0,0,'L');
-   $pdf->Cell(30,7,utf8_decode($row['fecha_reg']),0,1,'L');
+   $pdf->Cell(30,7,utf8_decode($row['fecha_reg_us']),0,1,'L');
 
 
    $pdf->Cell(30,7,utf8_decode('PRIMER NOMBRE: '),0,0,'L');
