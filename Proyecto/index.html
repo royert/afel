@@ -1,113 +1,156 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="./css/bootstrap.min.css" rel="stylesheet" >
-    <link href="./css/bootstrap.css" rel="stylesheet" >
-    <script src="https://kit.fontawesome.com/f9302dd666.js" crossorigin="anonymous"></script>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="./css/bootstrap.min.css" rel="stylesheet" >
+  <link href="./css/bootstrap.css" rel="stylesheet" >
+  <script src="https://kit.fontawesome.com/f9302dd666.js" crossorigin="anonymous"></script>
 
-  </head>
-  <body>
+</head>
+<body>
 
-    <!--MENU-->
+  <!--MENU-->
 
-    <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top nav">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">ASOCIACION DE FUTBOL DEL ESTADO LARA</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ASOCIACION DE FUTBOL DEL ESTADO LARA</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
+  <header>
+    <nav class="navbar navbar-dark bg-dark fixed-top nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">ASOCIACION DE FUTBOL DEL ESTADO LARA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ASOCIACION DE FUTBOL DEL ESTADO LARA</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
 
-            <div class="offcanvas-body">
+          <div class="offcanvas-body">
 
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
 
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
+              </li>
 
-                <li class="nav-item">
-                  <a class="nav-link" href="login.html">INICIAR SESION</a>
-                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">INICIAR SESION</a>
+              </li>
 
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    QUIEN SOMOS
-                  </a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  QUIEN SOMOS
+                </a>
 
-                  <ul class="dropdown-menu dropdown-menu-dark">
+                <ul class="dropdown-menu dropdown-menu-dark">
 
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
 
-                  </ul>
-                </li>
-              </ul>
-              <form class="d-flex mt-3" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-success" type="submit">Search</button>
-              </form>
-            </div>
+                </ul>
+              </li>
+            </ul>
+            <form class="d-flex mt-3" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success" type="submit">Search</button>
+            </form>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
 
-<!--SLIDER DE IMAGENES-->
+  <!--SLIDER DE IMAGENES-->
 
 
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 
-  <div class="carousel-inner">
+    <div class="carousel-inner">
 
-    <div class="carousel-item active" data-bs-interval="3000">
-      <img src="./img/foto-sis/img1.jpeg" class="d-block w-100" alt="...">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="./img/foto-sis/img1.jpeg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="./img/foto-sis/img2.jpeg" class="d-block w-100" alt="...">
+      </div>
+
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="./img/foto-sis/img3.jpeg" class="d-block w-100" alt="...">
+      </div>
+
     </div>
 
-    <div class="carousel-item" data-bs-interval="3000">
-      <img src="./img/foto-sis/img2.jpeg" class="d-block w-100" alt="...">
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
 
-    <div class="carousel-item" data-bs-interval="3000">
-      <img src="./img/foto-sis/img3.jpeg" class="d-block w-100" alt="...">
-    </div>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
 
   </div>
 
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
+  <!--INTRO-->
 
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+  <section class="w-50 mx-auto text-center intro pt-5 ">
+    <h1 class="p-3 fs-2 border-top border-3">Titulo 1 <span class="text-primary"> Contenido el que sea </span></h1>
+    <p class="p-3 fs-4 ">parrafo 1 <span class="text-primary"> Contenido el que sea 2 </span></p>
+  </section> 
 
-</div>
+  <!-- SERVICIOS -->
 
-<!--INTRO-->
+  <section class="container-fluid">
+    <div class="row w-75 mx-auto my-5 servicio-fila">
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+        <img src="./img/foto-sis/img1.jpeg" alt="des" width="180" height="160">
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
+          <p class="px-4">Desarrollo de prueba</p>
+        </div>
+      </div>
 
-<section class="w-50 mx-auto text-center intro pt-5 ">
-  <h1 class="p-3 fs-2 border-top border-3">Titulo 1 <span class="text-primary"> Contenido el que sea </span></h1>
-  <p class="p-3 fs-4 ">parrafo 1 <span class="text-primary"> Contenido el que sea 2 </span></p>
-</section> 
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+        <img src="./img/foto-sis/img1.jpeg" alt="des" width="180" height="160">
+        <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
+          <p class="px-4">Desarrollo de prueba</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+        <img src="./img/foto-sis/img1.jpeg" alt="des" width="180" height="160">
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
+          <p class="px-4">Desarrollo de prueba</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
+        <img src="./img/foto-sis/img1.jpeg" alt="des" width="180" height="160">
+        <div>
+          <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
+          <p class="px-4">Desarrollo de prueba</p>
+        </div>
+      </div>
 
 
+        <!-- NOSOTROS -->
 
-    <script src="./js/bootstrap.bundle.min.js"></script>
-  </body>
+
+    </div>
+
+  </section>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+</body>
 </html>

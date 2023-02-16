@@ -22,11 +22,24 @@ body{
     max-height: 39rem;
 }
 
-/*MEDIA PANTALLA SM*/
+/*MEDIA PANTALLA ANCHA*/
 @media (max-width: 768px) {
     
     .intro{
-        width: 90% ;
+        width: 90% !important;
     }
+    .servicio-fila{
+        width: 100%  !important;
+        text-align: center;
+    }
+}
 
+/*PANTALLAS MEDIANAS*/
+
+@media (max-width:  576px){
+
+    .icono-wrap{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
