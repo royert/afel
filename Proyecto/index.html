@@ -1,199 +1,106 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ees">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
-  <link href="./css/bootstrap.min.css" rel="stylesheet" >
-  <link href="./css/bootstrap.css" rel="stylesheet" >
-  <script src="https://kit.fontawesome.com/f9302dd666.js" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AFEL</title>
+	<link rel="shortcut icon" href="./img/foto-sis/logo-afel.png" type="image/x-icon">
+	<link rel="stylesheet" href="./css/estilos.css">
+	<link rel="stylesheet" href="./css/normalize.css">
 
 </head>
 <body>
 
-  <!--MENU-->
 
-  <header>
-    <nav class="navbar navbar-dark bg-dark fixed-top nav">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">ASOCIACION DE FUTBOL DEL ESTADO LARA</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">ASOCIACION DE FUTBOL DEL ESTADO LARA</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
+	<header class="hero">
+		<nav class="nav container">
+			<div class="nav_logo">
+				<h2 class="nav_title">
+					AFEL
+				</h2>
+			</div>
+				<ul class="nav_link nav_link_menu">
+					<li class="nav_items">
+						<a href="" class="nav_links">
+							Inicio
+						</a>
+					</li>
+					<li class="nav_items">
+						<a href="" class="nav_links">
+							Iniciar Sesion
+						</a>
+					</li>
+					<li class="nav_items">
+						<a href="" class="nav_links">
+							Otros
+						</a>
+					</li>
 
-          <div class="offcanvas-body">
+					<img src="./img/foto-sis/close.svg" alt="cerrar" class="nav_close">
 
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+				</ul>
 
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">INICIO</a>
-              </li>
+					<div class="nav_menu">
+						<img src="./img/foto-sis/menu.svg" alt="menu" class="nav_img">
+					</div>			
+		</nav>
 
-              <li class="nav-item">
-                <a class="nav-link" href="login.html">INICIAR SESION</a>
-              </li>
+		<section class="hero_container container">
+			<h1 class="hero_title">
+				Aprende css
+			</h1>
+			<p class="hero_paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore et a, natus sequi esse dolor architecto nemo, assumenda deserunt non amet nesciunt at, necessitatibus libero modi, ipsum vero commodi quos. </p>
+			<a href="#" class="cta">PRUEBA</a>
+		</section>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  QUIEN SOMOS
-                </a>
-
-                <ul class="dropdown-menu dropdown-menu-dark">
-
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-                </ul>
-              </li>
-            </ul>
-            <form class="d-flex mt-3" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+	</header>
 
 
-  <!--SLIDER DE IMAGENES-->
+<main>
+	<section class="container about">
+		<h2 class="subtitle">¿Que aprenderas?</h2>
+		<p class="about_paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aliquam voluptatem placeat enim quisquam voluptates reprehenderit accusamus voluptas in et quas porro animi quos, tempora molestiae harum, soluta laboriosam saepe?</p>
+		<div class="about_main">
+			<article class="about_icons">
+				<img src="img/foto-sis/shapes.svg" alt="shapes" class="about_icon">
+				<h3 class="about_title">Css Layouts</h3>
+				<p class="about_paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque, velit animi ullam!</p>
+			</article>
+			<article class="about_icons">
+				<img src="img/foto-sis/paint.svg" alt="shapes" class="about_icon">
+				<h3 class="about_title">Css Layouts</h3>
+				<p class="about_paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque, velit animi ullam!</p>
+			</article>
+			<article class="about_icons">
+				<img src="img/foto-sis/code.svg" alt="shapes" class="about_icon">
+				<h3 class="about_title">Css Layouts</h3>
+				<p class="about_paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque, velit animi ullam!</p>
+			</article>
+		</div>
+	</section>
 
 
-  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+	<section class="knowledge">
+		 
+		<div class="container knowledge_container">
+			<div class="knowledge_text">
+				<h2 class="subtitle">
+					Clase Full
+				</h2>
+				<p class="knowledge_paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A excepturi labore minus, totam?</p>
+				<a href="#" class="cta">Ingresa </a>
+			</div>
 
-    <div class="carousel-inner">
+			<figure class="knowledge_picture">
+				<img src="img/foto-sis/macbook.png" alt="" class="knowledge_img">
+			</figure>
+		</div>
 
-      <div class="carousel-item active" data-bs-interval="3000">
-        <img src="./img/foto-sis/img1.jpeg" class="d-block w-100" alt="...">
-      </div>
-
-      <div class="carousel-item" data-bs-interval="3000">
-        <img src="./img/foto-sis/img2.jpeg" class="d-block w-100" alt="...">
-      </div>
-
-      <div class="carousel-item" data-bs-interval="3000">
-        <img src="./img/foto-sis/img3.jpeg" class="d-block w-100" alt="...">
-      </div>
-
-    </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-
-  </div>
-
-  <!--INTRO-->
-
-  <section class="w-50 mx-auto text-center intro pt-5 ">
-    <h1 class="p-3 fs-2 border-top border-3">Titulo 1 <span class="text-primary"> Contenido el que sea </span></h1>
-    <p class="p-3 fs-4 ">parrafo 1 <span class="text-primary"> Contenido el que sea 2 </span></p>
-  </section> 
-
-  <!-- SERVICIOS -->
-
-  <section class="container-fluid">
-    <div class="row w-75 mx-auto my-5 servicio-fila">
-      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
-        <img src="./img/foto-sis/img1.jpeg" alt="des" width="180" height="160">
-        <div>
-          <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
-          <p class="px-4">Desarrollo de prueba</p>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
-        <img src="./img/foto-sis/img1.jpeg" alt="des" width="180" height="160">
-        <div>
-        <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
-          <p class="px-4">Desarrollo de prueba</p>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
-        <img src="./img/foto-sis/img1.jpeg" alt="des" width="180" height="160">
-        <div>
-          <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
-          <p class="px-4">Desarrollo de prueba</p>
-        </div>
-      </div>
-
-      <div class="col-lg-6 col-md-12 col-sm-12 d-flex  my-5 icono-wrap">
-        <img src="./img/foto-sis/img1.jpeg" alt="des" width="180" height="160">
-        <div>
-          <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
-          <p class="px-4">Desarrollo de prueba</p>
-        </div>
-      </div>
+	</section>
 
 
-        <!-- NOSOTROS -->
+</main>
 
-        <section>
-          <div class="equipos w-75 m-auto text-center">
-            <h1 class="mb-5 fs-2">
-              <span class="text-primary ">
-                Equipos afiliados son:
-              </span> 
-            </h1>
-            <p class="fs-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore impedit quaerat iure labore at tenetur nihil itaque animi veritatis, a eveniet voluptatem, minus quasi dolore fuga ex molestias odio aut!</p>
-            
-          </div>
-        
-          <div class="mt-5 text-center">
-            <img class="img-fluid" src="./img/foto-sis/logo-afel.png" alt="">
-          </div>
-        
-          <div class="local">
-            <div class="mapa">
-              <div>
-                <div class="wrapper">
-                  <h2>Ubicado en la Av. Libertador con Calle 37, Barquisimeto</h2>
-                  <h2 class="text-primary mb-4 typewriter"></h2>
-                  <p class="fs-5 text-body"></p>
-                  <section>
-                    <div>
-                      <p class="text-primary">248</p>
-                      <p> Dias de sol</p>
-                    </div>
-                    <div>
-                      <p class="text-primary"> 100%</p>
-                      <p> Aprobado</p>
-                    </div>
-                    <div>
-                      <p></p>
-                      <p></p>
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </section>
-
-
-    </div>
-
-  </section>
-
-  <script src="./js/bootstrap.bundle.min.js"></script>
-  <script src="./js/popper.min.js"></script>
+	
 </body>
 </html>
