@@ -4,117 +4,343 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>AFEL</title>
-	<link rel="stylesheet" href="./css/pdcc.min.css">
-	<script charset="utf-8" src="./js/pdcc.min.js"></script>
-	<script type="text/javascript">
-		PDCookieConsent.config({
-			"defaultLang" : "es",
-			"brand": {
-				"dev" : false,
-				"name": "AFEL",
-				"url" : "https://localhost/",
-				"websiteOwner" : "AFEL"
-			},
-			"cookiePolicyLink": "http://localhost/cookies.php",
-			"hideModalIn": ["http://localhost/cookies.php"],
-			"styles": {
-				"primaryButton": {
-					"bgColor" : "#A1FFA1",
-					"txtColor": "#036900"
-				},
-				"secondaryButton": {
-					"bgColor" : "#EEEEEE",
-					"txtColor": "#333333"
-				}
-			}
-		});
-	</script>
-	<link rel="stylesheet" href="./css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="./css/estilos.css">
-
-	<link rel="stylesheet" href="./js/bootstrap.js">
+	<link rel="shortcut icon" href="./img/foto-sis/logo-afel.png" type="image/x-icon">
+	<link rel="stylesheet" href="./css/estilos1.css">
 	<link rel="stylesheet" href="./css/normalize.css">
-	<script src="https://kit.fontawesome.com/f9302dd666.js" crossorigin="anonymous"></script>
+
+
+
+
 </head>
-<body class="body-index">
-	<div class="content">
-		<header>
-			<nav class="navbar navbar-dark  fixed-top">
-				<div class="container-fluid">
-
-					<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-						<div class="offcanvas-header">
-							<a class="navbar-brand" href="index.html"><img src="./img/foto-sis/logo-afel.png" alt="" class="img-nav-active"></a>
-							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-						</div>
-						<div class="offcanvas-body">
-							<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-								<li class="mb-1">
-									<a href="index.html">
-										<button class="btn btn-toggle align-items-center rounded collapsed offcanvas-title">
-											Inicio
-										</button>
-									</a>
-									
-								</li>
-								<li class="mb-1">
-									<a href="login.php">
-										<button class="btn btn-toggle align-items-center rounded collapsed offcanvas-title">
-											Iniciar Sesion
-										</button>
-									</a>
-									
-								</li>
+<body>
 
 
-								<li class="mb-1">
-									<a href="quien_somos.php"><button class="btn btn-toggle align-items-center rounded collapsed offcanvas-title" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
-										Quien Somos
-									</button></a>
-									
-								</li>
-
-
-							</ul>
-
-						</div>
-					</div>
-				</div>
-
-			</nav>
-		</header>
-		<main class="main">
-			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<img src="./img/foto-sis/img1.jpeg" class="d-block w-100 img-1" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="./img/foto-sis/img2.jpeg" class="d-block w-100 img-2" alt="...">
-					</div>
-					<div class="carousel-item">
-						<img src="./img/foto-sis/img3.jpeg" class="d-block w-100 img-3" alt="...">
-					</div>
-
-				</div>
-				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Previous</span>
-				</button>
-				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="visually-hidden">Next</span>
-				</button>
+	<header class="hero">
+		<nav class="nav container">
+			<div class="nav_logo">
+				<h2 class="nav_title">
+					AFEL
+				</h2>
 			</div>
-		</main>
-		<footer class="footer">
+			<ul class="nav_link nav_link--menu">
+				<li class="nav_items">
+					<a href="" class="nav_links">
+						Inicio
+					</a>
+				</li>
+				<li class="nav_items">
+					<a href="" class="nav_links">
+						Iniciar Sesion
+					</a>
+				</li>
 
-		</footer>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+				<img src="./img/foto-sis/close.svg" alt="cerrar" class="nav_close">
+
+			</ul>
+
+			<div class="nav_menu">
+				
+				<img src="./img/foto-sis/menu.svg" alt="menu" class="nav_img">
+				
+			</div>			
+		</nav>
+
+		<section class="hero_container container">
+			<h1 class="hero_title">
+				ASOCIACION DE FUTBOL DEL ESTADO LARA
+			</h1>
+			<p class="hero_paragraph">Ubicada en la Av Libertador esquina Calle 37, Estadio Farid Richa. Barquisimeto, Estado Lara.</p>
+			<a href="login.php" class="cta">INICIAR SESION</a>
+		</section>
+
+	</header>
+
+
+	<main>
+		<section class="container about">
+			<h2 class="subtitle">¿Que es la Asociacion de Futbol del Estado Lara?</h2>
+			<p class="about_paragraph">Es una Entidad autorizada de
+				forma exclusiva, por las mismas, para dirigir y controlar la estructura del fútbol en el
+				estado Lara, según lo previsto en la Ley Orgánica de Deporte, Actividad Física y Educación
+				Física
+			</p>
+			<div class="about_main">
+				<article class="about_icons">
+					<img src="img/foto-sis/shapes.svg" alt="shapes" class="about_icon">
+					<h3 class="about_title">Mision</h3>
+					<p class="about_paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque, velit animi ullam!</p>
+				</article>
+				<article class="about_icons">
+					<img src="img/foto-sis/paint.svg" alt="shapes" class="about_icon">
+					<h3 class="about_title">Vision</h3>
+					<p class="about_paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque, velit animi ullam!</p>
+				</article>
+				<article class="about_icons">
+					<img src="img/foto-sis/code.svg" alt="shapes" class="about_icon">
+					<h3 class="about_title">Objetivos</h3>
+					<p class="about_paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et doloremque, velit animi ullam!</p>
+				</article>
+			</div>
+		</section>
+
+
+		<section class="knowledge">
+
+			<div class="container knowledge_container">
+				<div class="knowledge_text">
+					<h2 class="subtitle">
+						Clase Full
+					</h2>
+					<p class="knowledge_paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. A excepturi labore minus, totam?</p>
+					<a href="#" class="cta">Ingresa </a>
+				</div>
+
+				<figure class="knowledge_picture">
+					<img src="img/foto-sis/macbook.png" alt="" class="knowledge_img">
+				</figure>
+			</div>
+		</section>
+
+
+		<section class="price container">
+			<h2 class="subtitle">
+				Obten los planes
+			</h2>
+
+			<div class="price_table">
+				<div class="price_element">
+					<p class="price_name">
+						flexbox
+					</p>
+					<h3 class="price_price">
+						free	
+					</h3>
+					<div class="price_items">
+						<p class="price_features">Flexbox</p>
+						<p class="price_features">Layouts</p>
+						<p class="price_features">Responsive</p>
+					</div>
+
+
+					<a href="#" class="price_cta">Empieza ahora</a>
+				</div>
+
+
+				<div class="price_element price_element--best">
+					<p class="price_name">
+						flexbox
+					</p>
+					<h3 class="price_price">
+						free	
+					</h3>
+					<div class="price_items">
+						<p class="price_features">Flexbox</p>
+						<p class="price_features">Layouts</p>
+						<p class="price_features">Responsive</p>
+					</div>
+
+
+					<a href="#" class="price_cta">Empieza ahora</a>
+				</div>
+
+
+				<div class="price_element">
+					<p class="price_name">
+						flexbox
+					</p>
+					<h3 class="price_price">
+						free	
+					</h3>
+					<div class="price_items">
+						<p class="price_features">Flexbox</p>
+						<p class="price_features">Layouts</p>
+						<p class="price_features">Responsive</p>
+					</div>
+
+
+					<a href="#" class="price_cta">Empieza ahora</a>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="testimony">
+			<div class="testimony__container container">
+				<img src="./img/foto-sis/leftarrow.svg" class="testimony__arrow" id="before">
+
+				<section class="testimony__body testimony__body--show" data-id="1">
+					<div class="testimony__texts">
+						<h2 class="subtitle">Mi nombre es Jordan Alexander, <span class="testimony__course">estudiante
+						de CSS.</span></h2>
+						<p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+							esse, asperiores eaque totam nulla repudiandae quasi, deserunt culpa exercitationem
+						blanditiis laborum veniam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+					</div>
+
+					<figure class="testimony__picture">
+						<img src="./img/foto-sis/face.jpg" class="testimony__img">
+					</figure>
+				</section>
+
+				<section class="testimony__body" data-id="2">
+					<div class="testimony__texts">
+						<h2 class="subtitle">Mi nombre es Alejandra Perez, <span class="testimony__course">estudiante de
+						CSS.</span></h2>
+						<p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+							esse, asperiores eaque laborum veniam laboriosam saepe reiciendis dolorem. Cum, ratione
+						voluptatum!</p>
+					</div>
+
+					<figure class="testimony__picture">
+						<img src="./img/foto-sis/face2.jpg" class="testimony__img">
+					</figure>
+				</section>
+
+				<section class="testimony__body" data-id="3">
+					<div class="testimony__texts">
+						<h2 class="subtitle">Mi nombre es Karen Arteaga, <span class="testimony__course">estudiante de
+						CSS.</span></h2>
+						<p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+						esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+					</div>
+
+					<figure class="testimony__picture">
+						<img src="./img/foto-sis/face3.jpg" class="testimony__img">
+					</figure>
+				</section>
+
+				<section class="testimony__body" data-id="4">
+					<div class="testimony__texts">
+						<h2 class="subtitle">Mi nombre es Kevin Ramirez, <span class="testimony__course">estudiante de
+						CSS.</span></h2>
+						<p class="testimony__review">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut est
+						esse, niam laboriosam saepe reiciendis dolorem. Cum, ratione voluptatum!</p>
+					</div>
+
+					<figure class="testimony__picture">
+						<img src="./img/foto-sis/face4.jpg" class="testimony__img">
+					</figure>
+				</section>
+
+
+				<img src="./img/foto-sis/rightarrow.svg" class="testimony__arrow" id="next">
+			</div>
+		</section>
+
+
+
+		<section class="questions container">
+			<h2 class="subtitle">Preguntas frecuentes</h2>
+			<p class="questions__paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, porro
+			doloribus neque perspiciatis sapiente fuga.</p>
+
+			<section class="questions__container">
+				<article class="questions__padding">
+					<div class="questions__answer">
+						<h3 class="questions__title">¿Qué es CSS?
+							<span class="questions__arrow">
+								<img src="./img/foto-sis/arrow.svg" class="questions__img">
+							</span>
+						</h3>
+
+						<p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+							facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
+							eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
+							nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
+						quam atque?</p>
+					</div>
+				</article>
+
+				<article class="questions__padding">
+					<div class="questions__answer">
+						<h3 class="questions__title">¿Qué aprenderé en este curso?
+							<span class="questions__arrow">
+								<img src="./img/foto-sis/arrow.svg" class="questions__img">
+							</span>
+						</h3>
+
+						<p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+							facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
+							eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
+							nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
+						quam atque?</p>
+					</div>
+				</article>
+
+				<article class="questions__padding">
+					<div class="questions__answer">
+						<h3 class="questions__title">¿Qué es CSS GRID?
+							<span class="questions__arrow">
+								<img src="./img/foto-sis/arrow.svg" class="questions__img">
+							</span>
+						</h3>
+
+						<p class="questions__show">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos
+							facere, quidem eum id excepturi assumenda explicabo nam accusamus veritatis voluptates
+							eveniet adipisci, dicta nihil nemo modi possimus officiis quam atque? Lorem ipsum, dolor sit
+							amet consectetur adipisicing elit. Quos facere, quidem eum id excepturi assumenda explicabo
+							nam accusamus veritatis voluptates eveniet adipisci, dicta nihil nemo modi possimus officiis
+						quam atque?</p>
+					</div>
+				</article>
+			</section>
+
+			<section class="questions__offer">
+				<h2 class="subtitle">¿Estas listo para aprender CSS?</h2>
+				<p class="questions__copy">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet ratione
+					architecto magnam, officiis ex porro vero est voluptates quaerat quibusdam illo veniam reprehenderit
+				eius atque tempora iure ab non autem.</p>
+				<a href="#" class="cta">Aprende ahora</a>
+			</section>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<section class="footer__container container">
+			<nav class="nav nav--footer">
+				<h2 class="footer__title">Curso CSS.</h2>
+
+				<ul class="nav_link nav_link--footer">
+					<li class="nav_items">
+						<a href="#" class="nav_links">Inicio</a>
+					</li>
+					<li class="nav_items">
+						<a href="#" class="nav_links">Acerca de</a>
+					</li>
+					<li class="nav_items">
+						<a href="#" class="nav_links">Contacto</a>
+					</li>
+					<li class="nav_items">
+						<a href="#" class="nav_links">Blog</a>
+					</li>
+				</ul>
+			</nav>
+
+			<form class="footer__form" action="https://formspree.io/f/mknkkrkj" method="POST">
+				<h2 class="footer__newsletter">Suscribete a la newsletter</h2>
+				<div class="footer__inputs">
+					<input type="email" placeholder="Email:" class="footer__input" name="_replyto">
+					<input type="submit" value="Registrate" class="footer__submit">
+				</div>
+			</form>
+		</section>
+
+		<section class="footer__copy container">
+			<div class="footer__social">
+				<a href="#" class="footer__icons"><img src="./img/foto-sis/facebook.svg" class="footer__img"></a>
+				<a href="#" class="footer__icons"><img src="./img/foto-sis/twitter.svg" class="footer__img"></a>
+				<a href="#" class="footer__icons"><img src="./img/foto-sis/youtube.svg" class="footer__img"></a>
+			</div>
+
+			<h3 class="footer__copyright">Derechos reservados &copy; Jordan Alexander</h3>
+		</section>
+	</footer>
+
+
+	<script src="./js/slider.js"></script>
+	<script src="./js/questions.js"></script>
+	<script src="./js/menu.js"></script>
 </body>
 </html>
