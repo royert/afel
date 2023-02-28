@@ -62,7 +62,7 @@
 
 			//control categoria y club
 			$c_cat = 8;
-			$c_club = 2;
+			$c_club = 1;
 			//control status sistema y verificacion para fichaje
 			$v_status = 2;
 			$s_status = 2;

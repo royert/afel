@@ -143,23 +143,42 @@ session_start();
 
 					include './modelo/conexion.php';
 
-					$sql = "SELECT `usuario`.`id_usuario`, `usuario`.`nombre_usuario` , 
-					`usuario`.`segundoN`, `usuario`.`apellido` , `usuario`.`segundoA`, 
-					`usuario`.`ci`, `club`.`nombre_club`, `categoria`.`nombre_categoria`, 
-					`status_sistema`.`nombre_status_sistema`, 
-					`status_verificacion`.`nombre_verificacion` , `usuario`.`fecha_nac_us`, 
-					`usuario`.`fecha_registro_us`, `usuario`.`imagen_us` 
-					FROM `usuario`, `club`, `categoria`, `status_sistema`, `status_verificacion` 
-					WHERE ((`usuario`.`id_t_usuario` = 6
-					/*AND `usuario`.`id_status_sistema` = 1 */
-					
-					/* AND `usuario`.`id_categoria` = 5 */
-					/*	AND `usuario`.`id_status_sistema`= 1 */
-					/*AND `usuario`.`id_status_verificacion`= 2*/) 
-					AND (`usuario`.`id_club` = `club`.`id_club`) 
-					And (`usuario`.`id_categoria` = `categoria`.`id_categoria`) 
-					AND (`usuario`.`id_status_sistema` = `status_sistema`.`id_status_sistema`) 
-					AND (`usuario`.`id_status_verificacion`= `status_verificacion`.`id_status_verificacion`))";
+					$sql = "SELECT
+					`usuario`.`id_usuario`,
+					`usuario`.`nombre_usuario`,
+					`usuario`.`segundoN`,
+					`usuario`.`apellido`,
+					`usuario`.`segundoA`,
+					`usuario`.`ci`,
+					`club`.`nombre_club`,
+					`categoria`.`nombre_categoria`,
+					`status_sistema`.`nombre_status_sistema`,
+					`status_verificacion`.`nombre_verificacion`,
+					`usuario`.`fecha_nac_us`,
+					`usuario`.`fecha_registro_us`,
+					`usuario`.`imagen_us`
+				FROM
+					`usuario`,
+					`club`,
+					`categoria`,
+					`status_sistema`,
+					`status_verificacion`
+				WHERE
+					(
+						(
+							`usuario`.`id_t_usuario` = 6
+							/*AND `usuario`.`id_status_sistema` = 1 */
+							/* AND `usuario`.`id_categoria` = 5 */
+							/*	AND `usuario`.`id_status_sistema`= 1 */
+							/*AND `usuario`.`id_status_verificacion`= 2*/
+						) AND(`usuario`.`id_club` = `club`.`id_club`) AND(
+							`usuario`.`id_categoria` = `categoria`.`id_categoria`
+						) AND(
+							`usuario`.`id_status_sistema` = `status_sistema`.`id_status_sistema`
+						) AND(
+							`usuario`.`id_status_verificacion` = `status_verificacion`.`id_status_verificacion`
+						)
+					)";
 
 
 					$res = mysqli_query($conn, $sql);

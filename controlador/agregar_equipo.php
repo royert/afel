@@ -1,7 +1,7 @@
 <?php 
 
 
-require './modelo/conexion.php';
+require '../modelo/conexion.php';
 
 
 

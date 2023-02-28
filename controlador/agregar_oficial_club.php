@@ -38,7 +38,6 @@ if(isset($_POST['guardar'])){
 
 
 		$sql_ver_us = "SELECT
-		SELECT
 		`id_usuario`,
 		`nombre_usuario`,
 		`segundoN`,
@@ -65,7 +64,6 @@ if(isset($_POST['guardar'])){
 		`usuario` = '$usuario_us' ";
 
 		$sql_ver_ci = "SELECT
-		SELECT
 		`id_usuario`,
 		`nombre_usuario`,
 		`segundoN`,
@@ -184,6 +182,6 @@ if(isset($_POST['guardar'])){
 	</script>';
 }
 
-}
+
 
 ?>
