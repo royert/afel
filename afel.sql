@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-02-2023 a las 22:02:41
+-- Tiempo de generación: 28-02-2023 a las 21:40:34
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -666,11 +666,8 @@ CREATE TABLE `club` (
 --
 
 INSERT INTO `club` (`id_club`, `nombre_club`, `fecha_fund`, `fecha_reg`, `id_status_sistema`, `tipo_acta`, `img_acta`, `tipo_logo`, `img_logo`, `id_status_club`) VALUES
-(2, 'afel', '2022-12-13', '2022-12-26 11:32:19', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.47 AM (1).jpeg', 'image/jpeg', 'img/logo/aa.jpeg', 1),
-(3, 'el carmen', '2022-12-08', '2022-12-26 11:36:37', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/aa.jpeg', 1),
-(4, 'el bellone', '2022-12-08', '2022-12-26 11:37:24', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/WhatsApp Image 2022-12-01 at 12.05.47 AM (1).jpeg', 1),
-(5, 'seleccion 3', '2022-12-08', '2022-12-26 11:37:46', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/346-3464419_o-club-deportivo-lara-um-clube-de.jpg', 2),
-(6, 'sporting', '2022-12-08', '2022-12-26 11:38:19', 1, 'image/jpeg', 'img/acta/WhatsApp Image 2022-12-01 at 12.05.46 AM.jpeg', 'image/jpeg', 'img/logo/WhatsApp Image 2022-12-01 at 12.05.47 AM (1).jpeg', 1);
+(1, 'SIN CLUB', '0000-00-00', '2023-02-28 17:25:21', 1, '', '', '', '', 1),
+(2, 'Sporting', '2021-03-12', '2023-02-28 12:32:07', 1, 'image/png', 'img/acta/Sporting.png', 'image/png', 'img/logo/Sporting.png', 1);
 
 -- --------------------------------------------------------
 
@@ -765,38 +762,7 @@ CREATE TABLE `fichaje` (
 --
 
 INSERT INTO `fichaje` (`id_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
-(1, 5, 9, 1, '2023-01-26 00:00:00', '2023-12-31', 2, 'Urb Los Crepusculos'),
-(2, 5, 10, 1, '2023-01-26 00:00:00', '2023-12-31', 2, 'Urb Los Crepusculos'),
-(3, 5, 11, 1, '0000-00-00 00:00:00', '2023-12-31', 1, 'Urb Los Crepusculos'),
-(4, 5, 12, 1, '0000-00-00 00:00:00', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(5, 5, 13, 1, '2026-01-23 00:00:00', '1999-03-12', 2, 'asdasd'),
-(6, 5, 15, 1, '2023-01-26 00:00:00', '1999-03-12', 2, 'asdasdw'),
-(12, 5, 1, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(13, 5, 2, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(14, 5, 5, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(15, 5, 9, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(16, 5, 10, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(17, 5, 11, 1, '2023-02-01 09:38:49', '2023-12-31', 1, ''),
-(18, 5, 12, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(19, 5, 13, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(20, 5, 14, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(21, 5, 15, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(22, 5, 16, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(23, 5, 19, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(24, 5, 20, 1, '2023-02-03 04:33:51', '2023-12-31', 2, 'Urb Los Crepusculos'),
-(25, 5, 21, 1, '2023-02-13 06:03:55', '2023-03-31', 2, 'Urb Los Crepusculos'),
-(26, 5, 20, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(27, 5, 20, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(28, 5, 22, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(29, 5, 22, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(30, 5, 23, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(31, 5, 23, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(32, 5, 20, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
-(33, 5, 22, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
-(34, 5, 23, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
-(35, 5, 24, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
-(36, 5, 28, 1, '2023-02-15 09:27:32', '2023-12-31', 2, 'Urb Los Crepusculos'),
-(37, 5, 29, 1, '2023-02-15 09:28:33', '2023-12-31', 2, 'Urb Los Crepusculos');
+(1, 2, 3, 1, '2023-02-28 06:07:53', '2023-12-31', 2, 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -837,33 +803,7 @@ CREATE TABLE `historico_fichaje` (
 --
 
 INSERT INTO `historico_fichaje` (`id_h_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
-(1, 5, 15, 1, '2023-01-26 12:50:27', '1999-03-12', 2, 'asdasdw'),
-(2, 5, 1, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(3, 5, 2, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(4, 5, 5, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(5, 5, 9, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(6, 5, 10, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(7, 5, 11, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(8, 5, 12, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(9, 5, 13, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(10, 5, 14, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(11, 5, 15, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(12, 5, 16, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(13, 5, 19, 1, '2023-02-01 09:38:49', '2023-12-31', 2, ''),
-(14, 5, 20, 1, '2023-02-03 04:33:51', '2023-12-31', 2, 'Urb Los Crepusculos'),
-(15, 5, 21, 1, '2023-02-13 06:03:55', '2023-03-31', 2, 'Urb Los Crepusculos'),
-(16, 5, 20, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(17, 5, 20, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(18, 5, 22, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(19, 5, 22, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(20, 5, 23, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(21, 5, 23, 1, '2023-02-15 03:57:45', '1999-03-12', 2, 'Urb Los Crepusculos'),
-(22, 5, 20, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
-(23, 5, 22, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
-(24, 5, 23, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
-(25, 5, 24, 1, '2023-02-15 03:58:43', '2023-02-24', 2, 'Urb Los Crepusculos'),
-(26, 5, 28, 1, '2023-02-15 09:27:32', '2023-12-31', 2, 'Urb Los Crepusculos'),
-(27, 5, 29, 1, '2023-02-15 09:28:33', '2023-12-31', 2, 'Urb Los Crepusculos');
+(1, 2, 3, 1, '2023-02-28 06:07:53', '2023-12-31', 2, 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -2479,24 +2419,7 @@ CREATE TABLE `representante` (
 --
 
 INSERT INTO `representante` (`id_representante`, `nombre_representante`, `segundoN_representante`, `apellido_representante`, `segundoA_representante`, `ci_representante`, `fecha_nac`, `fecha_registro`, `tlf`, `direccion`, `ci_imagen_representante`, `tipo_imagen_representante`, `id_status_sistema`, `id_status_representante`) VALUES
-(1, 'YULABERSON', 'LABAS', 'PETRONILO', 'SINFOROSO', 12304932, '1999-03-12', '2023-01-23 04:18:01', 2147483647, 'Urb Los Crepusculos', '', '', 1, 1),
-(5, 'Keiberr', 'David', 'Perdomo', 'Jhsua', 14787989, '1999-02-15', '2023-01-26 12:28:06', 2147483647, 'Urb Los Crepusculos', '', '', 1, 1),
-(6, 'auyama', 'jose', 'petro', 'sanford', 21456543, '1999-03-12', '2026-01-23 00:00:00', 2147483647, 'Urb Los Crepusculos', '', '', 1, 1),
-(7, 'asdqw', 'asdas', 'dasdasd', 'asdasd', 12356806, '1990-03-12', '2023-01-26 12:45:53', 1234567, 'Urb Los Crepusculos', '', '', 1, 1),
-(8, 'asdqwe', 'adqwe', 'asdqwe', 'asdqwd', 12312341, '1566-03-12', '2023-01-26 12:46:48', 123123, 'Urb Los Crepusculos', '', '', 1, 1),
-(9, 'dasd', 'asda', 'sdasd', 'asdas', 123123, '1212-12-12', '2023-01-26 12:47:49', 123123, 'asdasd', '', '', 1, 1),
-(10, 'asdasdasd', 'asdasd', 'asdasda', 'sdasdasd', 2147483647, '1111-03-12', '2023-01-26 12:50:05', 123123, 'asdasdw', '', '', 1, 1),
-(11, 'asdasdasd', 'asdasd', 'asdasda', 'sdasdasd', 2323, '1111-03-12', '2023-01-26 12:50:27', 123123, 'asdasdw', '', '', 1, 1),
-(12, 'Keiberr', 'Romero', 'Perdomo', 'Escalona', 25478965, '1999-03-12', '2023-02-03 04:33:51', 2147483647, 'Urb Los Crepusculos', '', '', 1, 1),
-(13, 'Keiberr', 'Romero', 'Perdomo', 'Escalona', 26768416, '1999-03-12', '2023-02-13 06:03:55', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/IMG-20221127-WA0031.jpg', 'image/jpeg', 1, 1),
-(14, 'r', 'r', 'r', 'r', 1234, '2023-02-08', '2023-02-15 03:56:29', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/1629287252_471087_1632935001_noticiareportajes_grande.jpg', 'image/jpeg', 1, 1),
-(15, 'r', 'r', 'r', 'r', 1234, '2023-02-08', '2023-02-15 03:57:45', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/1629287252_471087_1632935001_noticiareportajes_grande.jpg', 'image/jpeg', 1, 1),
-(16, 'a', 'a', 'a', 'a', 41235234, '1999-03-12', '2023-02-15 03:58:43', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/1627992640838.png', 'image/png', 1, 1),
-(17, 'Luis', 'Fernando', 'Rodriguez', 'Perez', 26750277, '1999-01-10', '2023-02-15 09:09:24', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Bellones.jpg', 'image/jpeg', 1, 1),
-(18, 'feqw', 'few', 'fewq', 'fewq', 98765567, '1999-03-12', '2023-02-15 09:17:23', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Edades_page-0004.jpg', 'image/jpeg', 1, 1),
-(19, 'feqw', 'few', 'fewq', 'fewq', 98765566, '1999-03-12', '2023-02-15 09:18:06', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Edades_page-0004.jpg', 'image/jpeg', 1, 1),
-(20, 'feqw', 'few', 'fewq', 'fewq', 98762566, '1999-03-12', '2023-02-15 09:27:32', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Edades_page-0004.jpg', 'image/jpeg', 1, 1),
-(21, 'feqw', 'few', 'fewq', 'fewq', 12762566, '1999-03-12', '2023-02-15 09:28:33', 2147483647, 'Urb Los Crepusculos', 'img/papeles-repre/Edades_page-0004.jpg', 'image/jpeg', 1, 1);
+(1, 'Maria', 'Gabriela', 'Guerrero', 'Rojas', 17194396, '1983-05-23', '2023-02-28 06:07:53', 0, 'Pendiente', 'img/papeles-repre/SANTIAGO CASTILLO REP DOC.jpeg', 'image/jpeg', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2515,27 +2438,7 @@ CREATE TABLE `representante_to_usuario` (
 --
 
 INSERT INTO `representante_to_usuario` (`id_r_t_u`, `id_representante`, `id_usuario`) VALUES
-(1, 1, 5),
-(2, 5, 9),
-(3, 6, 10),
-(4, 7, 11),
-(5, 8, 12),
-(6, 9, 13),
-(7, 11, 15),
-(8, 12, 20),
-(9, 13, 21),
-(10, 14, 20),
-(12, 14, 22),
-(14, 14, 23),
-(11, 15, 20),
-(13, 15, 22),
-(15, 15, 23),
-(16, 16, 20),
-(17, 16, 22),
-(18, 16, 23),
-(19, 16, 24),
-(20, 20, 28),
-(21, 21, 29);
+(1, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -2676,28 +2579,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`, `segundoN`, `apellido`, `segundoA`, `ci`, `fecha_nac_us`, `fecha_registro_us`, `imagen_us`, `tipo_imagen`, `tipo_imagen_dt`, `image_dt`, `usuario`, `clave`, `id_t_usuario`, `id_status_sistema`, `id_club`, `id_categoria`, `id_status_verificacion`, `id_carnet_jug`) VALUES
-(1, 'roger', 'eduardo', 'romero', 'escalona', 26768416, '2022-11-09', '0000-00-00', 'img/foto-jug/milena.jpg', 'image/jpg', '0', '0', 'rere', 'bd134207f74532a8b094676c4a2ca9ed', 6, 1, 4, 8, 1, 1),
-(2, 'juan', 'eduardo', 'romero', 'mujica', 7362415, '0000-00-00', '0000-00-00', 'img/foto-jug/milena.jpg', 'image/jpg', '0', '0', 'juan', 'a94652aa97c7211ba8954dd15a3cf838', 6, 1, 5, 8, 1, 1),
-(5, 'YONKLEIBERSON', 'JESUS', 'CASANOVA', 'PEREZ', 25478965, '1999-03-12', '2023-01-23', 'img/foto-jug/PARTIDA NACIMIENTO ANDERSON BAEZ SUB12.jpg', 'image/jpeg', '0', '0', 'yon', '44c5d489dc9bc9bcfefec7dd22a8d4b9', 7, 1, 4, 6, 2, 1),
-(9, 'Juansito', 'Jose', 'Perez', 'Diaz', 25879654, '2010-02-12', '2023-01-26', 'img/foto-jug/SDC10075.JPG', 'image/jpeg', '0', '0', 'aae', 'cf34362ab126ce8338d8991cc1404980', 7, 2, 5, 4, 2, 1),
-(10, 'juancho', 'jacus', 'jasw', 'aseq', 45789456, '1999-10-12', '2023-01-26', 'img/foto-jug/milena.jpg', 'image/jpeg', '0', '0', 'eeq', 'e81d183b6de1ea62e8e967f08639f44c', 7, 1, 5, 4, 2, 1),
-(11, 'asd', 'asd', 'asd', 'asd', 12345678, '1999-03-12', '0000-00-00', 'img/foto-jug/photo_2021-03-27_19-39-33.jpg', 'image/jpeg', '0', '0', 'aswq', 'e4342892ef11682807c5a74c181ca576', 7, 1, 5, 6, 1, 1),
-(12, 'asdasdasd', 'asdasdasd', 'asdasdas', 'dasdasdasd', 123123123, '1119-03-12', '0000-00-00', 'img/foto-jug/Edades_page-0001.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'asdasd', 'a8f5f167f44f4964e6c998dee827110c', 7, 1, 5, 6, 2, 1),
-(13, 'qweasd', 'qwdasdq', 'wdqsdqw', 'dqsdqs', 123123, '1333-10-12', '2026-01-23', 'img/foto-jug/photo_2021-03-27_19-39-34.jpg', 'image/jpeg', '0', '0', 'asdasd12', '0acf03f408f90ea0dcba786d300620db', 7, 1, 5, 6, 2, 1),
-(14, 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2147483647, '1239-03-12', '2023-01-26', 'img/foto-jug/PARTIDA NACIMIENTO ANDERSON BAEZ SUB12.jpg', 'image/jpeg', '0', '0', '10239', 'a8f5f167f44f4964e6c998dee827110c', 7, 1, 5, 5, 2, 1),
-(15, 'asdasd', 'asdasd', 'asdasd', 'asdasd', 33124, '1239-03-12', '2023-01-26', 'img/foto-jug/PARTIDA NACIMIENTO ANDERSON BAEZ SUB12.jpg', 'image/jpeg', '0', '0', '102392', '47bce5c74f589f4867dbd57e9ca9f808', 7, 1, 5, 5, 2, 1),
-(16, 'jaja', 'jaja', 'jaja', 'jaja', 26768321, '0000-00-00', '0000-00-00', 'img/foto-jug/PARTIDA NACIMIENTO ANDERSON BAEZ SUB12.jpg', 'image/jpeg', '0', '0', 'afel', 'a94652aa97c7211ba8954dd15a3cf838', 4, 1, 2, 8, 1, 1),
-(19, 'juan', 'juan', 'juan', 'juan', 12345676, '1999-09-12', '2023-02-01', 'img/foto-ent/346-3464419_o-club-deportivo-lara-um-clube-de.png', 'image/png', '0', '0', 'asda', '5f039b4ef0058a1d652f13d612375a5b', 9, 1, 5, 6, 2, 1),
-(20, 'SANTIAGO', 'JOSE', 'CASTILLO', 'PEREZ', 33996682, '2012-02-01', '2023-02-03', 'img/foto-jug/Edades_page-0001.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'SANTIAGO', 'a6f30815a43f38ec6de95b9a9d74da37', 7, 2, 5, 6, 2, 1),
-(21, 'Roger', 'Eduardo', 'Romero', 'Escalona', 35789456, '2012-03-12', '2023-02-13', 'img/foto-jug/Edades_page-0002.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'aeq', '81922c6e7c4bdebebd7be669d60b7a59', 7, 1, 5, 7, 2, 1),
-(22, 'roger', 'r', 'r', 'r', 33996682, '1999-03-12', '2023-02-15', 'img/foto-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'r', '0cc175b9c0f1b6a831c399e269772661', 7, 1, 5, 4, 2, 1),
-(23, 'roger', 'r', 'r', 'r', 33996682, '1999-03-12', '2023-02-15', 'img/foto-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'rw', 'f1290186a5d0b1ceab27f4e77c0c5d68', 7, 1, 5, 4, 2, 1),
-(24, 'a', 'a', 'a', 'a', 33996682, '2023-02-22', '2023-02-15', 'img/foto-jug/57b896c9-88a9-4c34-92d2-44e72bc1b8a9.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/9cbbfcbc-a598-4c01-bb76-52340a55cb67.jpg', 'a', '0cc175b9c0f1b6a831c399e269772661', 7, 1, 5, 3, 2, 1),
-(25, 'Elvis', 'Jose', 'Perez', 'Perez', 18737201, '2010-02-25', '2023-02-15', 'img/foto-jug/Edades_page-0004.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'elvis', '8b28c7134887bb938e1ffed68456ffb2', 7, 1, 5, 7, 2, 1),
-(26, 're', 're', 're', 're', 1234321, '2022-01-01', '2023-02-15', 'img/foto-jug/Edades_page-0003.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/Edades_page-0005.jpg', 'reas', '8d8391fcc8148ac2628972ad541ad057', 7, 1, 5, 5, 2, 1),
-(27, 're', 're', 're', 're', 1234323, '2022-01-01', '2023-02-15', 'img/foto-jug/Edades_page-0003.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/Edades_page-0005.jpg', 're2as', '723e3c49d56dde1783e6b070e80d2836', 7, 1, 5, 5, 2, 1),
-(28, 're', 're', 're', 're', 12343233, '2022-01-01', '2023-02-15', 'img/foto-jug/Edades_page-0003.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/Edades_page-0005.jpg', 're2as2', 'e1671797c52e15f763380b45e841ec32', 7, 1, 5, 5, 2, 1),
-(29, 'fafa', 're', 're', 're', 33343233, '2022-01-01', '2023-02-15', 'img/foto-jug/Edades_page-0001.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'fafa', '89e6d2b383471fc370d828e552c19e65', 7, 1, 5, 5, 2, 1);
+(1, 'Elvis', 'Jose', 'Perez', 'Mendoza', 18737201, '0000-00-00', '0000-00-00', '', '', '', '', 'elvis', '8b28c7134887bb938e1ffed68456ffb2', 4, 1, 1, 8, 1, 1),
+(2, 'Carmen', 'A', 'Amaro', 'a', 123456, '1999-03-12', '2023-02-28', 'img/foto-jug/Sporting.png', 'image/png', 'image/png', 'img/papeles-jug/Sporting.png', 'sporting', 'd6d78c3165f36a6585caf50953ace0d8', 6, 1, 2, 8, 1, 1),
+(3, 'Santiago', 'Alberto', 'Castillo', 'Guerrero', 34761143, '2012-01-27', '2023-02-28', 'img/foto-jug/SANTIAGO CASTILLO FOTO.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/SANTIAGO CASTILLO REP DOC.jpeg', 'santiago', '2b50cc2b584df5c3e4eb5acc2b08b68e', 7, 1, 2, 7, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -2940,7 +2824,7 @@ ALTER TABLE `ciudades`
 -- AUTO_INCREMENT de la tabla `club`
 --
 ALTER TABLE `club`
-  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `equipo_tec`
@@ -2964,7 +2848,7 @@ ALTER TABLE `estados`
 -- AUTO_INCREMENT de la tabla `fichaje`
 --
 ALTER TABLE `fichaje`
-  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `historico`
@@ -2976,7 +2860,7 @@ ALTER TABLE `historico`
 -- AUTO_INCREMENT de la tabla `historico_fichaje`
 --
 ALTER TABLE `historico_fichaje`
-  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `modalidad`
@@ -3000,13 +2884,13 @@ ALTER TABLE `parroquias`
 -- AUTO_INCREMENT de la tabla `representante`
 --
 ALTER TABLE `representante`
-  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `representante_to_usuario`
 --
 ALTER TABLE `representante_to_usuario`
-  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `status_club`
@@ -3042,7 +2926,7 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
