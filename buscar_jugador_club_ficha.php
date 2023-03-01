@@ -332,7 +332,7 @@ session_start();
 
 			$tipo_jug = 7;
 		if (isset($_POST['buscar'])) {
-					$ac = $_POST['select-sis'];
+			$ac = $_POST['select-sis'];
 			$club = $_POST['select-club'];
 			$cat = $_POST['select-categoria'];
 			$ver = $_POST['select-ver'];
