@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2023 a las 15:35:39
+-- Tiempo de generación: 13-03-2023 a las 19:31:24
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -661,14 +661,6 @@ CREATE TABLE `club` (
   `id_status_club` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `club`
---
-
-INSERT INTO `club` (`id_club`, `nombre_club`, `fecha_fund`, `fecha_reg`, `id_status_sistema`, `tipo_acta`, `img_acta`, `tipo_logo`, `img_logo`, `id_status_club`) VALUES
-(1, 'SIN CLUB', '0000-00-00', '2023-02-28 17:25:21', 1, '', '', '', '', 1),
-(2, 'Sporting', '2021-03-12', '2023-02-28 12:32:07', 1, 'image/png', 'img/acta/Sporting.png', 'image/png', 'img/logo/Sporting.png', 1);
-
 -- --------------------------------------------------------
 
 --
@@ -757,13 +749,6 @@ CREATE TABLE `fichaje` (
   `direccion` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `fichaje`
---
-
-INSERT INTO `fichaje` (`id_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
-(1, 2, 3, 1, '2023-02-28 06:07:53', '2023-12-31', 2, 'Pendiente');
-
 -- --------------------------------------------------------
 
 --
@@ -797,13 +782,6 @@ CREATE TABLE `historico_fichaje` (
   `id_status_verificacion` int(11) NOT NULL,
   `direccion` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `historico_fichaje`
---
-
-INSERT INTO `historico_fichaje` (`id_h_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
-(1, 2, 3, 1, '2023-02-28 06:07:53', '2023-12-31', 2, 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -2414,13 +2392,6 @@ CREATE TABLE `representante` (
   `id_status_representante` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `representante`
---
-
-INSERT INTO `representante` (`id_representante`, `nombre_representante`, `segundoN_representante`, `apellido_representante`, `segundoA_representante`, `ci_representante`, `fecha_nac`, `fecha_registro`, `tlf`, `direccion`, `ci_imagen_representante`, `tipo_imagen_representante`, `id_status_sistema`, `id_status_representante`) VALUES
-(1, 'Maria', 'Gabriela', 'Guerrero', 'Rojas', 17194396, '1983-05-23', '2023-02-28 06:07:53', 0, 'Pendiente', 'img/papeles-repre/SANTIAGO CASTILLO REP DOC.jpeg', 'image/jpeg', 1, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -2432,13 +2403,6 @@ CREATE TABLE `representante_to_usuario` (
   `id_representante` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `representante_to_usuario`
---
-
-INSERT INTO `representante_to_usuario` (`id_r_t_u`, `id_representante`, `id_usuario`) VALUES
-(1, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -2574,15 +2538,6 @@ CREATE TABLE `usuario` (
   `id_carnet_jug` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Volcado de datos para la tabla `usuario`
---
-
-INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`, `segundoN`, `apellido`, `segundoA`, `ci`, `fecha_nac_us`, `fecha_registro_us`, `imagen_us`, `tipo_imagen`, `tipo_imagen_dt`, `image_dt`, `usuario`, `clave`, `id_t_usuario`, `id_status_sistema`, `id_club`, `id_categoria`, `id_status_verificacion`, `id_carnet_jug`) VALUES
-(1, 'Elvis', 'Jose', 'Perez', 'Mendoza', 18737201, '0000-00-00', '0000-00-00', '', '', '', '', 'elvis', '8b28c7134887bb938e1ffed68456ffb2', 4, 1, 1, 8, 1, 1),
-(2, 'Carmen', 'A', 'Amaro', 'a', 123456, '1999-03-12', '2023-02-28', 'img/foto-jug/Sporting.png', 'image/png', 'image/png', 'img/papeles-jug/Sporting.png', 'sporting', 'd6d78c3165f36a6585caf50953ace0d8', 6, 1, 2, 8, 1, 1),
-(3, 'Santiago', 'Alberto', 'Castillo', 'Guerrero', 34761143, '2012-01-27', '2023-02-28', 'img/foto-jug/SANTIAGO CASTILLO FOTO.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/SANTIAGO CASTILLO REP DOC.jpeg', 'santiago', '2b50cc2b584df5c3e4eb5acc2b08b68e', 7, 1, 2, 7, 2, 1);
-
 -- --------------------------------------------------------
 
 --
@@ -2590,7 +2545,7 @@ INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`, `segundoN`, `apellido`, `
 --
 DROP TABLE IF EXISTS `listado`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `listado`  AS SELECT `usuario`.`id_usuario` AS `id_usuario`, `usuario`.`nombre_usuario` AS `nombre_usuario`, `club`.`nombre_club` AS `nombre_club`, `usuario`.`segundoN` AS `segundoN`, `usuario`.`apellido` AS `apellido`, `usuario`.`segundoA` AS `segundoA`, `usuario`.`ci` AS `ci`, `usuario`.`fecha_nac_us` AS `fecha_nac_us`, `usuario`.`fecha_registro_us` AS `fecha_registro_us`, `usuario`.`imagen_us` AS `imagen_us`, `usuario`.`tipo_imagen` AS `tipo_imagen`, `usuario`.`usuario` AS `usuario`, `usuario`.`clave` AS `clave`, `usuario`.`id_t_usuario` AS `id_t_usuario`, `usuario`.`id_status_sistema` AS `id_status_sistema`, `usuario`.`id_club` AS `id_club`, `usuario`.`id_categoria` AS `id_categoria`, `usuario`.`id_status_verificacion` AS `id_status_verificacion`, `usuario`.`id_carnet_jug` AS `id_carnet_jug`, `categoria`.`nombre_categoria` AS `nombre_categoria`, `status_sistema`.`nombre_status_sistema` AS `nombre_status_sistema`, `status_verificacion`.`nombre_verificacion` AS `nombre_verificacion`, `tipo_usuario`.`nombre_tipo_usuario` AS `nombre_tipo_usuario` FROM (((((`usuario` join `club`) join `categoria`) join `status_sistema`) join `status_verificacion`) join `tipo_usuario`) WHERE `usuario`.`nombre_usuario` like '%' AND `usuario`.`segundoN` like '%' AND `usuario`.`apellido` like '%' AND `usuario`.`segundoA` like '%' AND `usuario`.`ci` like '%' AND `usuario`.`fecha_nac_us` like '%' AND `usuario`.`fecha_registro_us` like '%' AND `usuario`.`id_club` like '%' AND `club`.`id_club` = `usuario`.`id_club` AND `usuario`.`id_t_usuario` like '7' AND `tipo_usuario`.`id_t_usuario` = `usuario`.`id_t_usuario` AND `usuario`.`id_categoria` like '%' AND `categoria`.`id_categoria` = `usuario`.`id_categoria` AND `usuario`.`id_status_sistema` like '%' AND `status_sistema`.`id_status_sistema` = `usuario`.`id_status_sistema` AND `usuario`.`id_status_verificacion` like '%' AND `status_verificacion`.`id_status_verificacion` = `usuario`.`id_status_verificacion` ORDER BY `usuario`.`nombre_usuario` ASC  ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `listado`  AS SELECT `usuario`.`id_usuario` AS `id_usuario`, `usuario`.`nombre_usuario` AS `nombre_usuario`, `club`.`nombre_club` AS `nombre_club`, `usuario`.`segundoN` AS `segundoN`, `usuario`.`apellido` AS `apellido`, `usuario`.`segundoA` AS `segundoA`, `usuario`.`ci` AS `ci`, `usuario`.`fecha_nac_us` AS `fecha_nac_us`, `usuario`.`fecha_registro_us` AS `fecha_registro_us`, `usuario`.`imagen_us` AS `imagen_us`, `usuario`.`tipo_imagen` AS `tipo_imagen`, `usuario`.`usuario` AS `usuario`, `usuario`.`clave` AS `clave`, `usuario`.`id_t_usuario` AS `id_t_usuario`, `usuario`.`id_status_sistema` AS `id_status_sistema`, `usuario`.`id_club` AS `id_club`, `usuario`.`id_categoria` AS `id_categoria`, `usuario`.`id_status_verificacion` AS `id_status_verificacion`, `usuario`.`id_carnet_jug` AS `id_carnet_jug`, `categoria`.`nombre_categoria` AS `nombre_categoria`, `status_sistema`.`nombre_status_sistema` AS `nombre_status_sistema`, `status_verificacion`.`nombre_verificacion` AS `nombre_verificacion`, `tipo_usuario`.`nombre_tipo_usuario` AS `nombre_tipo_usuario` FROM (((((`usuario` join `club`) join `categoria`) join `status_sistema`) join `status_verificacion`) join `tipo_usuario`) WHERE `usuario`.`nombre_usuario` like '%' AND `usuario`.`segundoN` like '%' AND `usuario`.`apellido` like '%' AND `usuario`.`segundoA` like '%' AND `usuario`.`ci` like '%' AND `usuario`.`fecha_nac_us` like '%' AND `usuario`.`fecha_registro_us` like '%' AND `usuario`.`id_club` like '%' AND `club`.`id_club` = `usuario`.`id_club` AND `usuario`.`id_t_usuario` like '%7%' AND `tipo_usuario`.`id_t_usuario` = `usuario`.`id_t_usuario` AND `usuario`.`id_categoria` like '%' AND `categoria`.`id_categoria` = `usuario`.`id_categoria` AND `usuario`.`id_status_sistema` like '%' AND `status_sistema`.`id_status_sistema` = `usuario`.`id_status_sistema` AND `usuario`.`id_status_verificacion` like '%' AND `status_verificacion`.`id_status_verificacion` = `usuario`.`id_status_verificacion` ORDER BY `usuario`.`nombre_usuario` ASC  ;
 
 --
 -- Índices para tablas volcadas
@@ -2824,7 +2779,7 @@ ALTER TABLE `ciudades`
 -- AUTO_INCREMENT de la tabla `club`
 --
 ALTER TABLE `club`
-  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `equipo_tec`
@@ -2848,7 +2803,7 @@ ALTER TABLE `estados`
 -- AUTO_INCREMENT de la tabla `fichaje`
 --
 ALTER TABLE `fichaje`
-  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `historico`
@@ -2860,7 +2815,7 @@ ALTER TABLE `historico`
 -- AUTO_INCREMENT de la tabla `historico_fichaje`
 --
 ALTER TABLE `historico_fichaje`
-  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `modalidad`
@@ -2884,13 +2839,13 @@ ALTER TABLE `parroquias`
 -- AUTO_INCREMENT de la tabla `representante`
 --
 ALTER TABLE `representante`
-  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `representante_to_usuario`
 --
 ALTER TABLE `representante_to_usuario`
-  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `status_club`
@@ -2926,7 +2881,7 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
