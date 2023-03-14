@@ -130,7 +130,7 @@ $id_us = $_GET['id_user'];
 		include './modelo/conexion.php';
 		$id_club_us = $_SESSION['id_club'];
 
-		$sql = "SELECT `usuario`.`id_usuario`, `usuario`.`nombre_usuario` , `usuario`.`segundoN`, `usuario`.`apellido` , `usuario`.`segundoA`, `usuario`.`ci`, `club`.`nombre_club`, `categoria`.`nombre_categoria`, `status_sistema`.`nombre_status_sistema`, `status_verificacion`.`nombre_verificacion` , `usuario`.`fecha_nac_us`, `usuario`.`fecha_registro_us`, `usuario`.`imagen_us` 
+		$sql = "SELECT `usuario`.`id_usuario`, `usuario`.`nombre_usuario` , `usuario`.`segundoN`, `usuario`.`apellido` , `usuario`.`segundoA`, `usuario`.`ci`, `club`.`nombre_club`, `categoria`.`nombre_categoria`, `status_sistema`.`nombre_status_sistema`, `status_verificacion`.`nombre_verificacion` , `usuario`.`fecha_nac_us`, `usuario`.`fecha_registro_us`, `usuario`.`imagen_us`, `usuario`.`id_status_verificacion`, `usuario`.`id_club`, `usuario`.`id_status_sistema`
 		FROM `usuario`, `club`, `categoria`, `status_sistema`, `status_verificacion` 
 		WHERE ((`usuario`.`id_t_usuario` = 6
 		/*AND `usuario`.`id_status_sistema` = 1 */
@@ -146,11 +146,15 @@ $id_us = $_GET['id_user'];
 		$res = mysqli_query($conn, $sql);
 
 		while ($row = mysqli_fetch_assoc($res)) {
+			
 
+			$dato_id_sis = $row['id_status_sistema'];
+			$dato_id_ver = $row['id_status_verificacion'];
+			$dato_id_club = $row['id_club'];
 
 		?>
 
-
+			
 
 
 
@@ -198,7 +202,7 @@ $id_us = $_GET['id_user'];
 							</div>
 							<div class="col-sm-6">
 								<label for="inputAddress2">Fecha de Nacimiento</label>
-								<input type="date" class="form-control" id="inputAddress2" name="fecha_nac" value="<?php echo $row['fecha_nac']; ?>">
+								<input type="date" class="form-control" id="inputAddress2" name="fecha_nac" value="<?php echo $row['fecha_nac_us']; ?>">
 
 							</div>
 
@@ -221,11 +225,17 @@ $id_us = $_GET['id_user'];
 									while ($row = mysqli_fetch_array($res)) {
 
 
+										
 
 
+										if ($dato_id_sis == $row['id_status_sistema']) {
 
-										echo '<option value="' . $row['id_status_sistema'] . '">' . $row['nombre_status_sistema'] . '</option>';
-									?>
+
+											echo '<option value="' . $row['id_status_sistema'] . '" selected>' . $row['nombre_status_sistema'] . '</option>';
+										} else {
+											echo '<option value="' . $row['id_status_sistema'] . '">' . $row['nombre_status_sistema'] . '</option>';
+										}
+										?>
 
 
 
@@ -259,7 +269,13 @@ $id_us = $_GET['id_user'];
 
 
 
-										echo '<option value="' . $row['id_club'] . '">' . $row['nombre_club'] . '</option>';
+										if ($dato_id_club == $row['id_club']) {
+
+
+											echo '<option value="' . $row['id_club'] . '" selected>' . $row['nombre_club'] . '</option>';
+										} else {
+											echo '<option value="' . $row['id_club'] . '">' . $row['nombre_club'] . '</option>';
+										}
 									?>
 
 
@@ -284,7 +300,7 @@ $id_us = $_GET['id_user'];
 
 									include './modelo/conexion.php';
 
-									$sql = "SELECT `id_status_verificacion`, `nombre_verificacion` FROM `status_verificacion` WHERE `id_status_verificacion` = 2";
+									$sql = "SELECT `id_status_verificacion`, `nombre_verificacion` FROM `status_verificacion`";
 
 									$res = mysqli_query($conn, $sql);
 
@@ -296,7 +312,13 @@ $id_us = $_GET['id_user'];
 
 
 
-										echo '<option value="' . $row['id_status_verificacion'] . '">' . $row['nombre_verificacion'] . '</option>';
+										if ($dato_id_ver == $row['id_status_verificacion']) {
+
+
+											echo '<option value="' . $row['id_status_verificacion'] . '" selected>' . $row['nombre_verificacion'] . '</option>';
+										} else {
+											echo '<option value="' . $row['id_status_verificacion'] . '">' . $row['nombre_verificacion'] . '</option>';
+										}
 									?>
 
 

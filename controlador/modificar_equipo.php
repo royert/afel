@@ -51,7 +51,7 @@ if (isset($img_logo) && $img_logo != "" && isset($img_acta) && $img_acta != "")
 			echo mysqli_error($conn);
 		}
 }elseif (isset($img_logo) && $img_logo != "" && isset($img_acta) && $img_acta != "") {
-			$sql = "UPDATE `club` SET `nombre_club`='$name',`fecha_fund`='$fecha_fund',`id_status_sistema`='$status', `tipo_acta`='$tipo_acta',`img_acta`='$url_acta', `id_status_club` = '$status_af', `id_ligas` = '$status_ligas' WHERE `id_club`= '$id_club' ";
+			$sql = "UPDATE `club` SET `nombre_club`='$name',`fecha_fund`='$fecha_fund',`id_status_sistema`='$status', `tipo_acta`='$tipo_acta',`img_acta`='$url_acta', `id_status_club` = '$status_af' WHERE `id_club`= '$id_club' ";
 		$res = mysqli_query($conn, $sql);
 		if ($res) {
 
@@ -65,7 +65,7 @@ if (isset($img_logo) && $img_logo != "" && isset($img_acta) && $img_acta != "")
 }
 else{
 
-	$sql = "UPDATE `club` SET `nombre_club`='$name',`fecha_fund`='$fecha_fund',`id_status_sistema`='$status', `id_status_club` = '$status_af', `id_ligas` = '$status_ligas' WHERE `id_club`= '$id_club' ";
+	$sql = "UPDATE `club` SET `nombre_club`='$name',`fecha_fund`='$fecha_fund',`id_status_sistema`='$status', `id_status_club` = '$status_af' WHERE `id_club`= '$id_club' ";
 	$res = mysqli_query($conn, $sql);
 	if ($res) {
 		echo " bien";

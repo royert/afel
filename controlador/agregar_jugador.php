@@ -61,7 +61,7 @@
 			$id_status_repre = 1;
 
 			//control categoria y club
-			$c_cat = 8;
+			$c_cat = 17;
 			$c_club = 1;
 			//control status sistema y verificacion para fichaje
 			$v_status = 2;

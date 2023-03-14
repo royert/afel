@@ -33,7 +33,7 @@ if(isset($_POST['guardar'])){
 		$id_t_us = 6;
 		$id_status_sistema_us = '1';
 		$id_categoria = 8;
-		$id_club = $_POST['select-club'];
+		$id_club_us = $_POST['select-club'];
 		$id_status_verificacion = 1;
 
 
@@ -166,9 +166,10 @@ if(isset($_POST['guardar'])){
 				move_uploaded_file($imagen_us, '../img/foto-jug/'.$nombre_img_us);
 				move_uploaded_file($imagen_us_dt, '../img/foto-jug/' . $nombre_img_us_dt);
 				echo'<script type="text/javascript">
-				alert("Se ha registrado correctamente");
-				window.location.href="../agregar_oficial_club.php";
-				</script>';
+	alert("Registro Exitoso");
+	window.location.href="../agregar_oficial_club.php";
+	</script>';
+				
 			}else{
 				echo mysqli_error($conn);
 			}
