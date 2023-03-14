@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-03-2023 a las 19:31:24
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Tiempo de generación: 14-03-2023 a las 12:01:02
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -36,7 +36,7 @@ CREATE TABLE `admin` (
   `usuario_adm` varchar(60) NOT NULL,
   `contraseña` varchar(33) NOT NULL,
   `id_status_sistema` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `admin`
@@ -58,7 +58,7 @@ CREATE TABLE `carnet` (
   `id_adm` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
   `id_status_sistema` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -73,7 +73,7 @@ CREATE TABLE `carnets` (
   `carnet_back` varchar(300) NOT NULL,
   `tipo_carnet_front` varchar(30) NOT NULL,
   `tipo_carnet_back` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `carnets`
@@ -93,21 +93,30 @@ CREATE TABLE `categoria` (
   `nombre_categoria` varchar(60) NOT NULL,
   `edad_max` int(2) NOT NULL,
   `id_status_sistema` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `categoria`
 --
 
 INSERT INTO `categoria` (`id_categoria`, `nombre_categoria`, `edad_max`, `id_status_sistema`) VALUES
-(1, 'SUB 6', 5, 1),
-(2, 'SUB 7', 6, 1),
-(3, 'SUB 8', 7, 1),
-(4, 'SUB 9', 8, 1),
-(5, 'SUB 10', 9, 1),
-(6, 'SUB 11', 10, 1),
-(7, 'SUB 12', 11, 1),
-(8, 'SIN CATEGORIA', 0, 1);
+(1, 'SUB 5', 4, 1),
+(2, 'SUB 6', 5, 1),
+(3, 'SUB 7', 6, 1),
+(4, 'SUB 8', 7, 1),
+(5, 'SUB 9', 8, 1),
+(6, 'SUB 10', 9, 1),
+(7, 'SUB 11', 10, 1),
+(8, 'SUB 12', 11, 1),
+(9, 'SUB 13', 12, 1),
+(10, 'SUB 14', 13, 1),
+(11, 'SUB 15', 14, 1),
+(12, 'SUB 16', 15, 1),
+(13, 'SUB 17', 16, 1),
+(14, 'SUB 18', 17, 1),
+(15, 'SUB 19', 18, 1),
+(16, 'SUB 20', 19, 1),
+(17, 'SIN CATEGORIA', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -123,7 +132,7 @@ CREATE TABLE `cat_to_mod_atl` (
   `sala` int(11) NOT NULL,
   `campo` int(11) NOT NULL,
   `playa` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -136,7 +145,7 @@ CREATE TABLE `ciudades` (
   `id_estado` int(11) NOT NULL,
   `ciudad` varchar(200) NOT NULL,
   `capital` tinyint(1) NOT NULL DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `ciudades`
@@ -659,7 +668,16 @@ CREATE TABLE `club` (
   `tipo_logo` varchar(60) NOT NULL,
   `img_logo` varchar(300) NOT NULL,
   `id_status_club` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `club`
+--
+
+INSERT INTO `club` (`id_club`, `nombre_club`, `fecha_fund`, `fecha_reg`, `id_status_sistema`, `tipo_acta`, `img_acta`, `tipo_logo`, `img_logo`, `id_status_club`) VALUES
+(1, 'AFEL', '0000-00-00', '2023-03-14 04:23:32', 1, '', '', '', '', 1),
+(2, 'SIN CLUB', '0000-00-00', '2023-03-14 04:23:33', 1, '', '', '', '', 1),
+(3, 'Est. de los Luises', '2002-08-03', '2023-03-13 11:33:27', 1, 'image/jpeg', 'img/acta/photo_2023-03-13_23-32-00.jpg', 'image/jpeg', 'img/logo/photo_2023-03-13_23-32-00.jpg', 2);
 
 -- --------------------------------------------------------
 
@@ -673,7 +691,7 @@ CREATE TABLE `equipo_tec` (
   `id_usuario` int(11) NOT NULL,
   `id_t_usuario` int(11) NOT NULL,
   `id_status_sistema` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -687,7 +705,7 @@ CREATE TABLE `estadio` (
   `id_status_sistema` int(11) NOT NULL,
   `competencia` varchar(60) NOT NULL,
   `id_modalidad` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -699,7 +717,7 @@ CREATE TABLE `estados` (
   `id_estado` int(11) NOT NULL,
   `estado` varchar(250) NOT NULL,
   `iso_3166-2` varchar(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `estados`
@@ -747,7 +765,14 @@ CREATE TABLE `fichaje` (
   `fecha_f` date NOT NULL,
   `id_status_verificacion` int(11) NOT NULL,
   `direccion` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `fichaje`
+--
+
+INSERT INTO `fichaje` (`id_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
+(2, 3, 4, 1, '2023-03-14 06:00:56', '2023-12-31', 2, 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -764,7 +789,7 @@ CREATE TABLE `historico` (
   `id_club_l` int(11) NOT NULL,
   `id_club_v` int(11) NOT NULL,
   `id_status_sistema` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -781,7 +806,14 @@ CREATE TABLE `historico_fichaje` (
   `fecha_f` date NOT NULL,
   `id_status_verificacion` int(11) NOT NULL,
   `direccion` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `historico_fichaje`
+--
+
+INSERT INTO `historico_fichaje` (`id_h_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
+(1, 3, 4, 1, '2023-03-14 06:00:56', '2023-12-31', 2, 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -824,7 +856,7 @@ CREATE TABLE `listado` (
 CREATE TABLE `modalidad` (
   `id_modalidad` int(11) NOT NULL,
   `nom_modalidad` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `modalidad`
@@ -845,7 +877,7 @@ CREATE TABLE `municipios` (
   `id_municipio` int(11) NOT NULL,
   `id_estado` int(11) NOT NULL,
   `municipio` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `municipios`
@@ -1198,7 +1230,7 @@ CREATE TABLE `parroquias` (
   `id_parroquia` int(11) NOT NULL,
   `id_municipio` int(11) NOT NULL,
   `parroquia` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `parroquias`
@@ -2353,7 +2385,7 @@ INSERT INTO `parroquias` (`id_parroquia`, `id_municipio`, `parroquia`) VALUES
 CREATE TABLE `prueba` (
   `img` varchar(100) NOT NULL,
   `imgacta` mediumblob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `prueba`
@@ -2390,7 +2422,16 @@ CREATE TABLE `representante` (
   `tipo_imagen_representante` varchar(30) NOT NULL,
   `id_status_sistema` int(11) NOT NULL,
   `id_status_representante` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `representante`
+--
+
+INSERT INTO `representante` (`id_representante`, `nombre_representante`, `segundoN_representante`, `apellido_representante`, `segundoA_representante`, `ci_representante`, `fecha_nac`, `fecha_registro`, `tlf`, `direccion`, `ci_imagen_representante`, `tipo_imagen_representante`, `id_status_sistema`, `id_status_representante`) VALUES
+(1, 'Reina', 'Marlene', 'Sivira', 'Ramos', 12246843, '1974-02-21', '2023-03-14 04:49:37', 123456, 'Pendiente', 'img/papeles-repre/photo_2023-03-13_23-38-09.jpg', 'image/jpeg', 1, 1),
+(2, 'Reina', 'Marlene', 'Sivira', 'Ramos', 12246843, '1974-02-21', '2023-03-14 05:56:14', 123456, 'Pendiente', 'img/papeles-repre/photo_2023-03-13_23-38-09.jpg', 'image/jpeg', 1, 1),
+(3, 'Fanny', 'Coromoto', 'Rea', 'Amaro', 9612556, '1966-03-20', '2023-03-14 06:00:56', 123456, 'Pendiente', 'img/papeles-repre/photo_2023-03-14_00-59-18.jpg', 'image/jpeg', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2402,7 +2443,15 @@ CREATE TABLE `representante_to_usuario` (
   `id_r_t_u` int(11) NOT NULL,
   `id_representante` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `representante_to_usuario`
+--
+
+INSERT INTO `representante_to_usuario` (`id_r_t_u`, `id_representante`, `id_usuario`) VALUES
+(1, 1, 3),
+(2, 3, 4);
 
 -- --------------------------------------------------------
 
@@ -2412,8 +2461,8 @@ CREATE TABLE `representante_to_usuario` (
 
 CREATE TABLE `status_club` (
   `id_status_club` int(11) NOT NULL,
-  `nombre_status_club` varchar(30) CHARACTER SET utf8 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `nombre_status_club` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Volcado de datos para la tabla `status_club`
@@ -2432,7 +2481,7 @@ INSERT INTO `status_club` (`id_status_club`, `nombre_status_club`) VALUES
 CREATE TABLE `status_representante` (
   `id_status_representante` int(11) NOT NULL,
   `nombre_status` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `status_representante`
@@ -2452,7 +2501,7 @@ INSERT INTO `status_representante` (`id_status_representante`, `nombre_status`) 
 CREATE TABLE `status_sistema` (
   `id_status_sistema` int(11) NOT NULL,
   `nombre_status_sistema` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `status_sistema`
@@ -2471,7 +2520,7 @@ INSERT INTO `status_sistema` (`id_status_sistema`, `nombre_status_sistema`) VALU
 CREATE TABLE `status_verificacion` (
   `id_status_verificacion` int(11) NOT NULL,
   `nombre_verificacion` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `status_verificacion`
@@ -2491,7 +2540,7 @@ CREATE TABLE `tipo_usuario` (
   `id_t_usuario` int(11) NOT NULL,
   `nombre_tipo_usuario` varchar(30) NOT NULL,
   `id_status_sistema` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Volcado de datos para la tabla `tipo_usuario`
@@ -2536,7 +2585,17 @@ CREATE TABLE `usuario` (
   `id_categoria` int(11) NOT NULL,
   `id_status_verificacion` int(11) NOT NULL,
   `id_carnet_jug` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`, `segundoN`, `apellido`, `segundoA`, `ci`, `fecha_nac_us`, `fecha_registro_us`, `imagen_us`, `tipo_imagen`, `tipo_imagen_dt`, `image_dt`, `usuario`, `clave`, `id_t_usuario`, `id_status_sistema`, `id_club`, `id_categoria`, `id_status_verificacion`, `id_carnet_jug`) VALUES
+(1, 'Elvis', 'Jose', 'Perez', 'Mendoza', 1234, '0000-00-00', '0000-00-00', '', '', '', '', 'elvis', '8b28c7134887bb938e1ffed68456ffb2', 4, 1, 1, 17, 1, 1),
+(2, 'Robert', 'Jose', 'Toledo', 'Martinez', 16279919, '1982-11-19', '2023-03-14', 'img/foto-jug/photo_2023-03-14_00-52-14.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/photo_2023-03-14_00-52-14 (2).jpg', 'losluises', '430bedbc0cb91dc7cc33aa7dad1d95c8', 6, 1, 3, 8, 1, 1),
+(3, 'Jose', 'Manuel', 'Melo', 'Sivira', 34654646, '2011-06-04', '2023-03-14', 'img/foto-jug/photo_2023-03-13_23-37-43.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'josemelo', '83b5be1653bf9ed89f3aa4ec0c9f0a01', 7, 1, 3, 9, 2, 1),
+(4, 'Roberth', 'Jose', 'Marchan', 'Marquez', 34654608, '2011-12-10', '2023-03-14', 'img/foto-jug/photo_2023-03-14_00-59-14.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/photo_2023-03-14_00-59-21.jpg', 'roberthmarchan', 'ce23b6abe9c8ea2f0369a22b085dcc5c', 7, 1, 3, 9, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -2761,7 +2820,7 @@ ALTER TABLE `carnets`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `cat_to_mod_atl`
@@ -2779,7 +2838,7 @@ ALTER TABLE `ciudades`
 -- AUTO_INCREMENT de la tabla `club`
 --
 ALTER TABLE `club`
-  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `equipo_tec`
@@ -2803,7 +2862,7 @@ ALTER TABLE `estados`
 -- AUTO_INCREMENT de la tabla `fichaje`
 --
 ALTER TABLE `fichaje`
-  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `historico`
@@ -2815,7 +2874,7 @@ ALTER TABLE `historico`
 -- AUTO_INCREMENT de la tabla `historico_fichaje`
 --
 ALTER TABLE `historico_fichaje`
-  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `modalidad`
@@ -2839,13 +2898,13 @@ ALTER TABLE `parroquias`
 -- AUTO_INCREMENT de la tabla `representante`
 --
 ALTER TABLE `representante`
-  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `representante_to_usuario`
 --
 ALTER TABLE `representante_to_usuario`
-  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `status_club`
@@ -2881,7 +2940,7 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas
