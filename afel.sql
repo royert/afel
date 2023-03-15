@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-03-2023 a las 12:01:02
+-- Tiempo de generación: 15-03-2023 a las 06:34:16
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -677,7 +677,8 @@ CREATE TABLE `club` (
 INSERT INTO `club` (`id_club`, `nombre_club`, `fecha_fund`, `fecha_reg`, `id_status_sistema`, `tipo_acta`, `img_acta`, `tipo_logo`, `img_logo`, `id_status_club`) VALUES
 (1, 'AFEL', '0000-00-00', '2023-03-14 04:23:32', 1, '', '', '', '', 1),
 (2, 'SIN CLUB', '0000-00-00', '2023-03-14 04:23:33', 1, '', '', '', '', 1),
-(3, 'Est. de los Luises', '2002-08-03', '2023-03-13 11:33:27', 1, 'image/jpeg', 'img/acta/photo_2023-03-13_23-32-00.jpg', 'image/jpeg', 'img/logo/photo_2023-03-13_23-32-00.jpg', 2);
+(3, 'Est. de los Luises', '2002-08-03', '2023-03-13 11:33:27', 1, 'image/jpeg', 'img/acta/photo_2023-03-13_23-32-00.jpg', 'image/jpeg', 'img/logo/photo_2023-03-13_23-32-00.jpg', 2),
+(4, 'Talento Deportivo', '2023-03-07', '2023-03-15 12:29:41', 1, 'image/png', 'img/acta/1678536403801.png', 'image/png', 'img/logo/1678536403801.png', 2);
 
 -- --------------------------------------------------------
 
@@ -772,7 +773,15 @@ CREATE TABLE `fichaje` (
 --
 
 INSERT INTO `fichaje` (`id_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
-(2, 3, 4, 1, '2023-03-14 06:00:56', '2023-12-31', 2, 'Pendiente');
+(2, 3, 4, 1, '2023-03-14 06:00:56', '2023-12-31', 2, 'Pendiente'),
+(3, 4, 6, 1, '2023-03-15 05:48:44', '2023-12-31', 2, 'Pendiente'),
+(4, 4, 7, 1, '2023-03-15 06:08:51', '2023-12-31', 2, 'Pendiente'),
+(5, 4, 8, 1, '2023-03-15 06:12:42', '2022-12-31', 2, 'Pendiente'),
+(6, 4, 9, 1, '2023-03-15 06:15:04', '2023-12-31', 2, 'Pendiente'),
+(7, 4, 10, 1, '2023-03-15 06:17:57', '2023-12-31', 2, 'Pendiente'),
+(8, 4, 11, 1, '2023-03-15 06:20:18', '2023-12-31', 2, 'Pendiente'),
+(9, 4, 12, 1, '2023-03-15 06:24:37', '2023-12-31', 2, 'Pendiente'),
+(10, 4, 13, 1, '2023-03-15 06:26:55', '2023-12-31', 2, 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -813,7 +822,15 @@ CREATE TABLE `historico_fichaje` (
 --
 
 INSERT INTO `historico_fichaje` (`id_h_fichaje`, `id_club`, `id_usuario`, `id_status_sistema`, `fecha_i`, `fecha_f`, `id_status_verificacion`, `direccion`) VALUES
-(1, 3, 4, 1, '2023-03-14 06:00:56', '2023-12-31', 2, 'Pendiente');
+(1, 3, 4, 1, '2023-03-14 06:00:56', '2023-12-31', 2, 'Pendiente'),
+(2, 4, 6, 1, '2023-03-15 05:48:44', '2023-12-31', 2, 'Pendiente'),
+(3, 4, 7, 1, '2023-03-15 06:08:51', '2023-12-31', 2, 'Pendiente'),
+(4, 4, 8, 1, '2023-03-15 06:12:42', '2022-12-31', 2, 'Pendiente'),
+(5, 4, 9, 1, '2023-03-15 06:15:04', '2023-12-31', 2, 'Pendiente'),
+(6, 4, 10, 1, '2023-03-15 06:17:57', '2023-12-31', 2, 'Pendiente'),
+(7, 4, 11, 1, '2023-03-15 06:20:18', '2023-12-31', 2, 'Pendiente'),
+(8, 4, 12, 1, '2023-03-15 06:24:37', '2023-12-31', 2, 'Pendiente'),
+(9, 4, 13, 1, '2023-03-15 06:26:55', '2023-12-31', 2, 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -2431,7 +2448,15 @@ CREATE TABLE `representante` (
 INSERT INTO `representante` (`id_representante`, `nombre_representante`, `segundoN_representante`, `apellido_representante`, `segundoA_representante`, `ci_representante`, `fecha_nac`, `fecha_registro`, `tlf`, `direccion`, `ci_imagen_representante`, `tipo_imagen_representante`, `id_status_sistema`, `id_status_representante`) VALUES
 (1, 'Reina', 'Marlene', 'Sivira', 'Ramos', 12246843, '1974-02-21', '2023-03-14 04:49:37', 123456, 'Pendiente', 'img/papeles-repre/photo_2023-03-13_23-38-09.jpg', 'image/jpeg', 1, 1),
 (2, 'Reina', 'Marlene', 'Sivira', 'Ramos', 12246843, '1974-02-21', '2023-03-14 05:56:14', 123456, 'Pendiente', 'img/papeles-repre/photo_2023-03-13_23-38-09.jpg', 'image/jpeg', 1, 1),
-(3, 'Fanny', 'Coromoto', 'Rea', 'Amaro', 9612556, '1966-03-20', '2023-03-14 06:00:56', 123456, 'Pendiente', 'img/papeles-repre/photo_2023-03-14_00-59-18.jpg', 'image/jpeg', 1, 1);
+(3, 'Fanny', 'Coromoto', 'Rea', 'Amaro', 9612556, '1966-03-20', '2023-03-14 06:00:56', 123456, 'Pendiente', 'img/papeles-repre/photo_2023-03-14_00-59-18.jpg', 'image/jpeg', 1, 1),
+(4, 'Girleny', 'Carolina', 'Pacheco', 'DeReina', 13543887, '1977-01-13', '2023-03-15 05:48:44', 3, 'Pendiente', 'img/papeles-repre/CESAR REINA_page-0003.jpg', 'image/jpeg', 1, 1),
+(5, 'Enriqueydy', 'Maria', 'Bastidas', 'Lopez', 18897616, '1987-10-06', '2023-03-15 06:08:51', 12, 'Pendiente', 'img/papeles-repre/HECBERTH MANZANO_page-0003.jpg', 'image/jpeg', 1, 1),
+(6, 'Jose', 'Gregorio', 'Rodriguez', 'Ramirez', 7425938, '1969-01-04', '2023-03-15 06:12:42', 0, 'Pendiente', 'img/papeles-repre/JESUS RODRIGUEZ_page-0003.jpg', 'image/jpeg', 1, 1),
+(7, 'Paula', 'Andrea', 'Castaño', 'Mantilla', 22188749, '1977-02-08', '2023-03-15 06:15:04', 0, 'Pendiente', 'img/papeles-repre/ISAAC TORRES_page-0003.jpg', 'image/jpeg', 1, 1),
+(8, 'Naixelis', 'Neimar', 'Valera', 'Mendoza', 18736093, '1987-06-22', '2023-03-15 06:17:57', 0, 'Pendiente', 'img/papeles-repre/WILKER RODRIGUEZ_page-0003.jpg', 'image/jpeg', 1, 1),
+(9, 'Jhon', 'Ricardo', 'Ruiz', 'Perez', 13467188, '1977-11-21', '2023-03-15 06:20:18', 0, 'Pendiente', 'img/papeles-repre/JOHAN RUIZ_page-0003.jpg', 'image/jpeg', 1, 1),
+(10, 'Marielvis', 'Gabriela', 'Mendez', 'Hernandez', 19324894, '1990-05-25', '2023-03-15 06:24:37', 0, 'Pendiente', 'img/papeles-repre/GABRIEL ALONSO_page-0003.jpg', 'image/jpeg', 1, 1),
+(11, 'Hernanly', 'Aleidy', 'Cuicas', 'Martinez', 20925415, '1990-05-24', '2023-03-15 06:26:55', 0, 'Pendiente', 'img/papeles-repre/JEANCARLOS SANCHEZ_page-0003.jpg', 'image/jpeg', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -2451,7 +2476,15 @@ CREATE TABLE `representante_to_usuario` (
 
 INSERT INTO `representante_to_usuario` (`id_r_t_u`, `id_representante`, `id_usuario`) VALUES
 (1, 1, 3),
-(2, 3, 4);
+(2, 3, 4),
+(3, 4, 6),
+(4, 5, 7),
+(5, 6, 8),
+(6, 7, 9),
+(7, 8, 10),
+(8, 9, 11),
+(9, 10, 12),
+(10, 11, 13);
 
 -- --------------------------------------------------------
 
@@ -2595,7 +2628,16 @@ INSERT INTO `usuario` (`id_usuario`, `nombre_usuario`, `segundoN`, `apellido`, `
 (1, 'Elvis', 'Jose', 'Perez', 'Mendoza', 1234, '0000-00-00', '0000-00-00', '', '', '', '', 'elvis', '8b28c7134887bb938e1ffed68456ffb2', 4, 1, 1, 17, 1, 1),
 (2, 'Robert', 'Jose', 'Toledo', 'Martinez', 16279919, '1982-11-19', '2023-03-14', 'img/foto-jug/photo_2023-03-14_00-52-14.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/photo_2023-03-14_00-52-14 (2).jpg', 'losluises', '430bedbc0cb91dc7cc33aa7dad1d95c8', 6, 1, 3, 8, 1, 1),
 (3, 'Jose', 'Manuel', 'Melo', 'Sivira', 34654646, '2011-06-04', '2023-03-14', 'img/foto-jug/photo_2023-03-13_23-37-43.jpg', 'image/jpeg', '', 'img/papeles-jug/', 'josemelo', '83b5be1653bf9ed89f3aa4ec0c9f0a01', 7, 1, 3, 9, 2, 1),
-(4, 'Roberth', 'Jose', 'Marchan', 'Marquez', 34654608, '2011-12-10', '2023-03-14', 'img/foto-jug/photo_2023-03-14_00-59-14.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/photo_2023-03-14_00-59-21.jpg', 'roberthmarchan', 'ce23b6abe9c8ea2f0369a22b085dcc5c', 7, 1, 3, 9, 2, 1);
+(4, 'Roberth', 'Jose', 'Marchan', 'Marquez', 34654608, '2011-12-10', '2023-03-14', 'img/foto-jug/photo_2023-03-14_00-59-14.jpg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/photo_2023-03-14_00-59-21.jpg', 'roberthmarchan', 'ce23b6abe9c8ea2f0369a22b085dcc5c', 7, 1, 3, 9, 2, 1),
+(5, 'Kenny', 'N', 'Alvarado', 'N', 28297814, '2023-03-14', '2023-03-15', 'img/foto-jug/1678536403801.png', 'image/png', 'image/png', 'img/papeles-jug/1678536403801.png', 'tdtd', '1473726ef73758eecc3291c232d25d3c', 6, 1, 4, 8, 1, 1),
+(6, 'Cesar', 'Enrique', 'Reina', 'Osorio', 33809437, '2010-01-14', '2023-03-15', 'img/foto-jug/CESAR REINA.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/CESAR REINA_page-0002.jpg', 'cesarreina', 'aad51eef5177bf6ed67484ec9a7c38e9', 7, 1, 4, 11, 2, 1),
+(7, 'Hecberth', 'Jesus', 'Manzano', 'Bastidas', 32847482, '2009-06-05', '2023-03-15', 'img/foto-jug/HECNERTH MANZANO.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/HECBERTH MANZANO_page-0002.jpg', 'hecberthmanzano', '601cdcaa75b9ee54ec6387e40eb82caa', 7, 1, 4, 11, 2, 1),
+(8, 'Jesus', 'Enmanuel', 'Rodriguez', 'Rodriguez', 34195696, '2010-04-23', '2023-03-15', 'img/foto-jug/JESUS RODRIGUEZ.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/JESUS RODRIGUEZ_page-0002.jpg', 'jesusrodriguez', '177b4429d45ef1d21172e94d77026eb4', 7, 1, 4, 11, 2, 1),
+(9, 'Isaac', 'David', 'Torres', 'Corrales', 33497720, '2010-04-22', '2023-03-15', 'img/foto-jug/ISAAC TORREZ.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/ISAAC TORRES_page-0002.jpg', 'isaactorres', '1503e19f10ac58dbeca49ce9af92fffe', 7, 1, 4, 11, 2, 1),
+(10, 'Wilker', 'Alejandro', 'Rodriguez', 'Valera', 33571778, '2009-07-12', '2023-03-15', 'img/foto-jug/WILKER RODRIGUEZ.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/WILKER RODRIGUEZ_page-0002.jpg', 'wilkerrodriguez', 'dfff62c5c3f6a1dfc1613e74d4c4169a', 7, 1, 4, 11, 2, 1),
+(11, 'Jhoan', 'Sebastian', 'Ruiz', 'Rodriguez', 32864340, '2009-06-28', '2023-03-15', 'img/foto-jug/JHOAN RUIZ.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/JOHAN RUIZ_page-0002.jpg', 'jhoanruiz', 'd1c66d88e013b48a6e5f9745b097e2d0', 7, 1, 4, 11, 2, 1),
+(12, 'Gabriel', 'Enrique', 'Alonso', 'Mendez', 33604162, '2009-12-18', '2023-03-15', 'img/foto-jug/GABRIEL ALONSO.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/GABRIEL ALONSO_page-0002.jpg', 'gabrielalonso', 'b8a2a22b7f19fa8124f72aac4a0419af', 7, 1, 4, 11, 2, 1),
+(13, 'Jeancarlos', 'Moises', 'Sanchez', 'Cuicas', 33151209, '2009-10-21', '2023-03-15', 'img/foto-jug/JEANCARLOS SANCHEZ.jpeg', 'image/jpeg', 'image/jpeg', 'img/papeles-jug/JEANCARLOS SANCHEZ_page-0002.jpg', 'jeancarlossanchez', 'ddbc3a61ea9da87d3fe26a9eb7e1d616', 7, 1, 4, 11, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -2838,7 +2880,7 @@ ALTER TABLE `ciudades`
 -- AUTO_INCREMENT de la tabla `club`
 --
 ALTER TABLE `club`
-  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `equipo_tec`
@@ -2862,7 +2904,7 @@ ALTER TABLE `estados`
 -- AUTO_INCREMENT de la tabla `fichaje`
 --
 ALTER TABLE `fichaje`
-  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `historico`
@@ -2874,7 +2916,7 @@ ALTER TABLE `historico`
 -- AUTO_INCREMENT de la tabla `historico_fichaje`
 --
 ALTER TABLE `historico_fichaje`
-  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_h_fichaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `modalidad`
@@ -2898,13 +2940,13 @@ ALTER TABLE `parroquias`
 -- AUTO_INCREMENT de la tabla `representante`
 --
 ALTER TABLE `representante`
-  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_representante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `representante_to_usuario`
 --
 ALTER TABLE `representante_to_usuario`
-  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_r_t_u` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `status_club`
@@ -2940,7 +2982,7 @@ ALTER TABLE `tipo_usuario`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restricciones para tablas volcadas
